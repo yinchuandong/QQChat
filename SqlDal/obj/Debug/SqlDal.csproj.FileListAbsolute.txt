@@ -1,0 +1,11 @@
+E:\c#\QQChat\SqlDal\bin\Debug\SqlDal.dll
+E:\c#\QQChat\SqlDal\bin\Debug\SqlDal.pdb
+E:\c#\QQChat\SqlDal\bin\Debug\Bll.dll
+E:\c#\QQChat\SqlDal\bin\Debug\Model.dll
+E:\c#\QQChat\SqlDal\bin\Debug\Util.dll
+E:\c#\QQChat\SqlDal\bin\Debug\Bll.pdb
+E:\c#\QQChat\SqlDal\bin\Debug\Model.pdb
+E:\c#\QQChat\SqlDal\bin\Debug\Util.pdb
+E:\c#\QQChat\SqlDal\obj\Debug\ResolveAssemblyReference.cache
+E:\c#\QQChat\SqlDal\obj\Debug\SqlDal.dll
+E:\c#\QQChat\SqlDal\obj\Debug\SqlDal.pdb

@@ -1,0 +1,5 @@
+E:\c#\QQChat\Model\bin\Debug\Model.dll
+E:\c#\QQChat\Model\bin\Debug\Model.pdb
+E:\c#\QQChat\Model\obj\Debug\ResolveAssemblyReference.cache
+E:\c#\QQChat\Model\obj\Debug\Model.dll
+E:\c#\QQChat\Model\obj\Debug\Model.pdb
