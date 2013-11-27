@@ -1,0 +1,15 @@
+E:\c#\QQChat\MyWidget\bin\Debug\Widget.dll
+E:\c#\QQChat\MyWidget\bin\Debug\Widget.pdb
+E:\c#\QQChat\MyWidget\obj\Debug\ResolveAssemblyReference.cache
+E:\c#\QQChat\MyWidget\obj\Debug\Widget.Properties.Resources.resources
+E:\c#\QQChat\MyWidget\obj\Debug\Widget.ChatListBox.resources
+E:\c#\QQChat\MyWidget\obj\Debug\ResGen.read.1.tlog
+E:\c#\QQChat\MyWidget\obj\Debug\ResGen.read.10.tlog
+E:\c#\QQChat\MyWidget\obj\Debug\ResGen.read.7.tlog
+E:\c#\QQChat\MyWidget\obj\Debug\ResGen.read.8.tlog
+E:\c#\QQChat\MyWidget\obj\Debug\ResGen.write.1.tlog
+E:\c#\QQChat\MyWidget\obj\Debug\ResGen.write.10.tlog
+E:\c#\QQChat\MyWidget\obj\Debug\ResGen.write.7.tlog
+E:\c#\QQChat\MyWidget\obj\Debug\ResGen.write.8.tlog
+E:\c#\QQChat\MyWidget\obj\Debug\Widget.dll
+E:\c#\QQChat\MyWidget\obj\Debug\Widget.pdb

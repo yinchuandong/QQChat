@@ -16,3 +16,5 @@ E:\c#\QQChat\QQChat\bin\Debug\Bll.pdb
 E:\c#\QQChat\QQChat\bin\Debug\Model.pdb
 E:\c#\QQChat\QQChat\bin\Debug\SqlDal.pdb
 E:\c#\QQChat\QQChat\bin\Debug\Util.pdb
+E:\c#\QQChat\QQChat\bin\Debug\Widget.dll
+E:\c#\QQChat\QQChat\bin\Debug\Widget.pdb

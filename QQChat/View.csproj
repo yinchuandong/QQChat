@@ -94,6 +94,10 @@
       <Project>{6AF2077F-86FE-49AF-B5BC-5605877C4617}</Project>
       <Name>Util</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Widget\Widget.csproj">
+      <Project>{8F34E30F-DE61-416F-A3B0-B015AF578489}</Project>
+      <Name>Widget</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

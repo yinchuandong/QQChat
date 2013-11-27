@@ -28,13 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.chatListBox1 = new Widget.ChatListBox();
             this.SuspendLayout();
+            // 
+            // chatListBox1
+            // 
+            this.chatListBox1.BackColor = System.Drawing.Color.White;
+            this.chatListBox1.ForeColor = System.Drawing.Color.DarkOrange;
+            this.chatListBox1.Location = new System.Drawing.Point(12, 12);
+            this.chatListBox1.Name = "chatListBox1";
+            this.chatListBox1.Size = new System.Drawing.Size(161, 285);
+            this.chatListBox1.TabIndex = 0;
+            this.chatListBox1.Text = "chatListBox1";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(353, 333);
+            this.Controls.Add(this.chatListBox1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -43,6 +55,8 @@
         }
 
         #endregion
+
+        private Widget.ChatListBox chatListBox1;
     }
 }
 
