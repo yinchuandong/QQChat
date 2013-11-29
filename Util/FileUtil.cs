@@ -5,7 +5,9 @@ using System.Text;
 
 namespace Util
 {
-    public class Class1
+    public class FileUtil
     {
+        private String basePath = AppDomain.CurrentDomain.BaseDirectory;
+
     }
 }
