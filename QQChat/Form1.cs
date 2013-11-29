@@ -42,7 +42,7 @@ namespace QQChat
 
         private void chatListBox_MouseEnterHead(object sender, ChatListEventArgs e)
         {
-            MessageBox.Show(AppDomain.CurrentDomain.BaseDirectory);
+            //MessageBox.Show(AppDomain.CurrentDomain.BaseDirectory);
         }
     }
 }
