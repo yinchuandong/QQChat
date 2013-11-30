@@ -86,6 +86,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UiForm\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
@@ -123,6 +124,12 @@
       <Project>{8F34E30F-DE61-416F-A3B0-B015AF578489}</Project>
       <Name>Widget</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resource\confirm.png" />
+    <Content Include="Resource\login.png" />
+    <Content Include="Resource\login_banner.png" />
+    <None Include="Resource\register.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -32,29 +32,33 @@
             this.passwordTxt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.register = new System.Windows.Forms.Label();
             this.loginBtn = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.banner = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.banner)).BeginInit();
             this.SuspendLayout();
             // 
             // emailTxt
             // 
-            this.emailTxt.Location = new System.Drawing.Point(103, 112);
+            this.emailTxt.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.emailTxt.Location = new System.Drawing.Point(103, 140);
             this.emailTxt.Name = "emailTxt";
-            this.emailTxt.Size = new System.Drawing.Size(171, 21);
+            this.emailTxt.Size = new System.Drawing.Size(171, 29);
             this.emailTxt.TabIndex = 0;
             // 
             // passwordTxt
             // 
-            this.passwordTxt.Location = new System.Drawing.Point(103, 144);
+            this.passwordTxt.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.passwordTxt.Location = new System.Drawing.Point(103, 178);
             this.passwordTxt.Name = "passwordTxt";
-            this.passwordTxt.Size = new System.Drawing.Size(171, 21);
+            this.passwordTxt.Size = new System.Drawing.Size(171, 29);
             this.passwordTxt.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(42, 112);
+            this.label1.Location = new System.Drawing.Point(42, 140);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 21);
             this.label1.TabIndex = 2;
@@ -64,38 +68,51 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(42, 140);
+            this.label2.Location = new System.Drawing.Point(42, 174);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 21);
             this.label2.TabIndex = 3;
             this.label2.Text = "密码：";
             // 
+            // register
+            // 
+            this.register.AutoSize = true;
+            this.register.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.register.Location = new System.Drawing.Point(193, 235);
+            this.register.Name = "register";
+            this.register.Size = new System.Drawing.Size(101, 12);
+            this.register.TabIndex = 5;
+            this.register.Text = "还没账号？去注册";
+            this.register.Click += new System.EventHandler(this.register_Click);
+            this.register.Enter += new System.EventHandler(this.register_Enter);
+            this.register.Leave += new System.EventHandler(this.register_Leave);
+            // 
             // loginBtn
             // 
-            this.loginBtn.Location = new System.Drawing.Point(103, 178);
+            this.loginBtn.BackgroundImage = global::QQChat.Properties.Resources.login;
+            this.loginBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.loginBtn.Location = new System.Drawing.Point(103, 215);
             this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Size = new System.Drawing.Size(129, 37);
+            this.loginBtn.Size = new System.Drawing.Size(84, 37);
             this.loginBtn.TabIndex = 4;
-            this.loginBtn.Text = "登录";
             this.loginBtn.UseVisualStyleBackColor = true;
             this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
             // 
-            // label3
+            // banner
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(238, 203);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 12);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "还没账号？去注册";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.banner.Location = new System.Drawing.Point(70, 12);
+            this.banner.Name = "banner";
+            this.banner.Size = new System.Drawing.Size(247, 107);
+            this.banner.TabIndex = 6;
+            this.banner.TabStop = false;
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(369, 241);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(396, 278);
+            this.Controls.Add(this.banner);
+            this.Controls.Add(this.register);
             this.Controls.Add(this.loginBtn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -103,6 +120,8 @@
             this.Controls.Add(this.emailTxt);
             this.Name = "LoginForm";
             this.Text = "登陆";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.banner)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -115,6 +134,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button loginBtn;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label register;
+        private System.Windows.Forms.PictureBox banner;
     }
 }

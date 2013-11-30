@@ -193,7 +193,7 @@
             this.tipsAll.AutoSize = true;
             this.tipsAll.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tipsAll.ForeColor = System.Drawing.Color.Red;
-            this.tipsAll.Location = new System.Drawing.Point(251, 301);
+            this.tipsAll.Location = new System.Drawing.Point(220, 302);
             this.tipsAll.Name = "tipsAll";
             this.tipsAll.Size = new System.Drawing.Size(44, 17);
             this.tipsAll.TabIndex = 15;
@@ -201,12 +201,13 @@
             // 
             // submitBtn
             // 
+            this.submitBtn.BackgroundImage = global::QQChat.Properties.Resources.register;
+            this.submitBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.submitBtn.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.submitBtn.Location = new System.Drawing.Point(109, 290);
             this.submitBtn.Name = "submitBtn";
-            this.submitBtn.Size = new System.Drawing.Size(120, 36);
+            this.submitBtn.Size = new System.Drawing.Size(93, 36);
             this.submitBtn.TabIndex = 16;
-            this.submitBtn.Text = "提交";
             this.submitBtn.UseVisualStyleBackColor = true;
             // 
             // RegisterForm
