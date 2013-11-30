@@ -6,7 +6,6 @@ E:\c#\QQChat\QQChat\obj\x86\Debug\GenerateResource.read.1.tlog
 E:\c#\QQChat\QQChat\obj\x86\Debug\GenerateResource.write.1.tlog
 E:\c#\QQChat\QQChat\obj\x86\Debug\QQChat.exe
 E:\c#\QQChat\QQChat\obj\x86\Debug\QQChat.pdb
-E:\c#\QQChat\QQChat\obj\x86\Debug\QQChat.Form1.resources
 E:\c#\QQChat\QQChat\bin\Debug\QQChat.exe.config
 E:\c#\QQChat\QQChat\bin\Debug\Bll.dll
 E:\c#\QQChat\QQChat\bin\Debug\Model.dll
@@ -18,3 +17,7 @@ E:\c#\QQChat\QQChat\bin\Debug\SqlDal.pdb
 E:\c#\QQChat\QQChat\bin\Debug\Util.pdb
 E:\c#\QQChat\QQChat\bin\Debug\Widget.dll
 E:\c#\QQChat\QQChat\bin\Debug\Widget.pdb
+E:\c#\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.MainForm.resources
+E:\c#\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.LoginForm.resources
+E:\c#\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.BaseForm.resources
+E:\c#\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.RegisterForm.resources

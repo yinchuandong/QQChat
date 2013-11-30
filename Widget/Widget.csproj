@@ -57,6 +57,11 @@
     <Compile Include="_ChatListBox\ChatListSubItem.cs" />
     <Compile Include="_ChatListBox\ChatListSubItemConverter.cs" />
     <Compile Include="_ChatListBox\ChatListVScroll.cs" />
+    <Compile Include="_TabControl\Events.cs" />
+    <Compile Include="_TabControl\NativeMethods.cs" />
+    <Compile Include="_TabControl\TabControlEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
@@ -93,9 +98,7 @@
   <ItemGroup>
     <None Include="Resources\null.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="_TabControl\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

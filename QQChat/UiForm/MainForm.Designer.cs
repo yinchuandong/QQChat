@@ -1,6 +1,6 @@
-﻿namespace QQChat
+﻿namespace QQChat.UiForm
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -42,14 +42,14 @@
             this.chatListBox.Text = "chatListBox";
             this.chatListBox.MouseEnterHead += new Widget.ChatListBox.ChatListEventHandler(this.chatListBox_MouseEnterHead);
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(307, 457);
             this.Controls.Add(this.chatListBox);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "MainForm";
+            this.Text = "呵呵";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 

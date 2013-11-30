@@ -10,11 +10,11 @@ using SqlDal;
 
 using Widget._ChatListBox;
 
-namespace QQChat
+namespace QQChat.UiForm
 {
-    public partial class Form1 : Form
+    public partial class MainForm : BaseForm
     {
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
         }
