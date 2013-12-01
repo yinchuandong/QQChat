@@ -84,8 +84,8 @@
             this.register.TabIndex = 5;
             this.register.Text = "还没账号？去注册";
             this.register.Click += new System.EventHandler(this.register_Click);
-            this.register.Enter += new System.EventHandler(this.register_Enter);
-            this.register.Leave += new System.EventHandler(this.register_Leave);
+            this.register.MouseHover += new System.EventHandler(this.register_Enter);
+            this.register.MouseLeave += new System.EventHandler(this.register_Leave);
             // 
             // loginBtn
             // 

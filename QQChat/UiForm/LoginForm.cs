@@ -38,13 +38,11 @@ namespace QQChat.UiForm
         private void register_Enter(object sender, EventArgs e)
         {
             register.ForeColor = Color.Red;
-            MessageBox.Show("enter");
         }
 
         private void register_Leave(object sender, EventArgs e)
         {
             register.ForeColor = Color.Black;
-            MessageBox.Show("leave");
         }
 
     }
