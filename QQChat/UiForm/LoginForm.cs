@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+using Util;
+using Model;
+using SqlDal;
+
 namespace QQChat.UiForm
 {
     public partial class LoginForm : BaseForm
@@ -26,6 +30,13 @@ namespace QQChat.UiForm
         {
             new MainForm().Show();
             this.Hide();
+            User user = new User();
+            user.Username = "yindongdong222";
+            user.Password = "123456";
+            UserDal userDal = new UserDal();
+            //userDal.checkUniqueEmail("yincd520@sina.com");
+            userDal.update(user, 2);
+
         }
 
         //去注册的label click事件

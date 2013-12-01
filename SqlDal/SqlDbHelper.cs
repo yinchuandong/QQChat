@@ -109,7 +109,7 @@ namespace SqlDal
                     if(parameters != null){
                         foreach (SqlParameter p in parameters)
                         {
-                            command.Parameters.Add(command);
+                            command.Parameters.Add(p);
                         }
                     }
                     conn.Open();

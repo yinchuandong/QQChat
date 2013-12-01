@@ -40,7 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Chatroom.cs" />
+    <Compile Include="ChatroomMember.cs" />
+    <Compile Include="ChatroomMessage.cs" />
+    <Compile Include="Friend.cs" />
+    <Compile Include="Group.cs" />
+    <Compile Include="GroupMember.cs" />
+    <Compile Include="P2pMessage.cs" />
+    <Compile Include="User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
