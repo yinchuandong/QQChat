@@ -9,9 +9,9 @@ using System.Runtime.InteropServices;
 using System.Drawing.Drawing2D;
 using System.Drawing.Text;
 
-namespace MyWidget._UserControl
+namespace Widget._TabControl
 {
-    public partial class TabControlEx : TabControl
+    public class TabControlEx : TabControl
     {
         #region Fields
 

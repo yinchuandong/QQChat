@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using SqlDal;
 
 using Widget._ChatListBox;
+using Widget._TabControl;
 
 namespace QQChat.UiForm
 {
@@ -17,6 +18,7 @@ namespace QQChat.UiForm
         public MainForm()
         {
             InitializeComponent();
+           
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -24,20 +26,20 @@ namespace QQChat.UiForm
             //MessageBox.Show("12213");
             //String test = SqlDbHelper.ConnectString;
             //MessageBox.Show(SqlDbHelper.ConnectString);
-            chatListBox.IconSizeMode = ChatListItemIcon.Large;
-            Random rnd = new Random();
-            for(int i=0;i<10;i++)
-            {
-                ChatListItem item = new ChatListItem("group" + i);
-                for (int j = 0; j < 10; j++)
-                {
-                    ChatListSubItem subItem = new ChatListSubItem("nickname", "displayname" + j, "personalmsg");
-                    subItem.HeadImage = Image.FromFile("Head/1 (" + rnd.Next(0, 45) + ").png");
-                    subItem.Status = (ChatListSubItem.UserStatus)(j % 6);
-                    item.SubItems.Add(subItem);
-                }
-                chatListBox.Items.Add(item);
-            }
+            //chatListBox.IconSizeMode = ChatListItemIcon.Large;
+            //Random rnd = new Random();
+            //for(int i=0;i<10;i++)
+            //{
+            //    ChatListItem item = new ChatListItem("group" + i);
+            //    for (int j = 0; j < 10; j++)
+            //    {
+            //        ChatListSubItem subItem = new ChatListSubItem("nickname", "displayname" + j, "personalmsg");
+            //        subItem.HeadImage = Image.FromFile("Head/1 (" + rnd.Next(0, 45) + ").png");
+            //        subItem.Status = (ChatListSubItem.UserStatus)(j % 6);
+            //        item.SubItems.Add(subItem);
+            //    }
+            //    chatListBox.Items.Add(item);
+            //}
         }
 
         private void chatListBox_MouseEnterHead(object sender, ChatListEventArgs e)

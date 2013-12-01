@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.usernameTxt = new System.Windows.Forms.TextBox();
+            this.emailTxt = new System.Windows.Forms.TextBox();
+            this.passwordTxt = new System.Windows.Forms.TextBox();
+            this.repasswordTxt = new System.Windows.Forms.TextBox();
+            this.activeCodeTxt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.tips1 = new System.Windows.Forms.Label();
             this.tips5 = new System.Windows.Forms.Label();
             this.tips4 = new System.Windows.Forms.Label();
@@ -47,34 +47,46 @@
             this.submitBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // usernameTxt
             // 
-            this.textBox1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox1.Location = new System.Drawing.Point(109, 55);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(207, 26);
-            this.textBox1.TabIndex = 0;
+            this.usernameTxt.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.usernameTxt.Location = new System.Drawing.Point(109, 55);
+            this.usernameTxt.Name = "usernameTxt";
+            this.usernameTxt.Size = new System.Drawing.Size(207, 26);
+            this.usernameTxt.TabIndex = 0;
+            this.usernameTxt.Leave += new System.EventHandler(this.usernameTxt_Leave);
             // 
-            // textBox2
+            // emailTxt
             // 
-            this.textBox2.Location = new System.Drawing.Point(109, 102);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(207, 26);
-            this.textBox2.TabIndex = 1;
+            this.emailTxt.Location = new System.Drawing.Point(109, 102);
+            this.emailTxt.Name = "emailTxt";
+            this.emailTxt.Size = new System.Drawing.Size(207, 26);
+            this.emailTxt.TabIndex = 1;
+            this.emailTxt.Leave += new System.EventHandler(this.emailTxt_Leave);
             // 
-            // textBox3
+            // passwordTxt
             // 
-            this.textBox3.Location = new System.Drawing.Point(109, 150);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(207, 26);
-            this.textBox3.TabIndex = 2;
+            this.passwordTxt.Location = new System.Drawing.Point(109, 150);
+            this.passwordTxt.Name = "passwordTxt";
+            this.passwordTxt.Size = new System.Drawing.Size(207, 26);
+            this.passwordTxt.TabIndex = 2;
+            this.passwordTxt.Leave += new System.EventHandler(this.passwordTxt_Leave);
             // 
-            // textBox4
+            // repasswordTxt
             // 
-            this.textBox4.Location = new System.Drawing.Point(109, 197);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(207, 26);
-            this.textBox4.TabIndex = 3;
+            this.repasswordTxt.Location = new System.Drawing.Point(109, 197);
+            this.repasswordTxt.Name = "repasswordTxt";
+            this.repasswordTxt.Size = new System.Drawing.Size(207, 26);
+            this.repasswordTxt.TabIndex = 3;
+            this.repasswordTxt.Leave += new System.EventHandler(this.repasswordTxt_Leave);
+            // 
+            // activeCodeTxt
+            // 
+            this.activeCodeTxt.Location = new System.Drawing.Point(109, 244);
+            this.activeCodeTxt.Name = "activeCodeTxt";
+            this.activeCodeTxt.Size = new System.Drawing.Size(75, 26);
+            this.activeCodeTxt.TabIndex = 9;
+            this.activeCodeTxt.Leave += new System.EventHandler(this.activeCodeTxt_Leave);
             // 
             // label1
             // 
@@ -125,13 +137,6 @@
             this.label5.Size = new System.Drawing.Size(58, 21);
             this.label5.TabIndex = 8;
             this.label5.Text = "激活码";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(109, 244);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(75, 26);
-            this.textBox5.TabIndex = 9;
             // 
             // tips1
             // 
@@ -209,6 +214,7 @@
             this.submitBtn.Size = new System.Drawing.Size(93, 36);
             this.submitBtn.TabIndex = 16;
             this.submitBtn.UseVisualStyleBackColor = true;
+            this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
             // 
             // RegisterForm
             // 
@@ -222,16 +228,16 @@
             this.Controls.Add(this.tips4);
             this.Controls.Add(this.tips5);
             this.Controls.Add(this.tips1);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.activeCodeTxt);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.repasswordTxt);
+            this.Controls.Add(this.passwordTxt);
+            this.Controls.Add(this.emailTxt);
+            this.Controls.Add(this.usernameTxt);
             this.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Name = "RegisterForm";
             this.Text = "注册";
@@ -241,18 +247,19 @@
 
         }
 
+       
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox usernameTxt;
+        private System.Windows.Forms.TextBox emailTxt;
+        private System.Windows.Forms.TextBox passwordTxt;
+        private System.Windows.Forms.TextBox repasswordTxt;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox activeCodeTxt;
         private System.Windows.Forms.Label tips1;
         private System.Windows.Forms.Label tips5;
         private System.Windows.Forms.Label tips4;
