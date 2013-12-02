@@ -45,14 +45,17 @@
             this.emailTxt.Name = "emailTxt";
             this.emailTxt.Size = new System.Drawing.Size(171, 29);
             this.emailTxt.TabIndex = 0;
+            this.emailTxt.Text = "yincd520@sina.com";
             // 
             // passwordTxt
             // 
             this.passwordTxt.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.passwordTxt.Location = new System.Drawing.Point(103, 178);
             this.passwordTxt.Name = "passwordTxt";
+            this.passwordTxt.PasswordChar = '*';
             this.passwordTxt.Size = new System.Drawing.Size(171, 29);
             this.passwordTxt.TabIndex = 1;
+            this.passwordTxt.Text = "yincd520";
             // 
             // label1
             // 
@@ -84,8 +87,8 @@
             this.register.TabIndex = 5;
             this.register.Text = "还没账号？去注册";
             this.register.Click += new System.EventHandler(this.register_Click);
-            this.register.MouseHover += new System.EventHandler(this.register_Enter);
             this.register.MouseLeave += new System.EventHandler(this.register_Leave);
+            this.register.MouseHover += new System.EventHandler(this.register_Enter);
             // 
             // loginBtn
             // 

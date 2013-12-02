@@ -18,7 +18,7 @@ namespace SqlDal
         }
 
         //对数据库进行非连接的查询方法
-        public static DataTable ExecueteDataTable(string commandText, CommandType commandType, SqlParameter[] parameters){
+        public static DataTable ExecueteDataTable(string commandText, CommandType commandType, List<SqlParameter> parameters){
             DataTable data = new DataTable();
             using (SqlConnection conn = new SqlConnection(ConnectString)){
                 using(SqlCommand command = new SqlCommand(commandText, conn)){
@@ -47,7 +47,8 @@ namespace SqlDal
         }
 
         //有链接的查询
-        public static SqlDataReader ExecuteReader(String commandText, CommandType commandType, SqlParameter[] parameters){
+        public static SqlDataReader ExecuteReader(String commandText, CommandType commandType, List<SqlParameter> parameters)
+        {
             SqlConnection conn = new SqlConnection(ConnectString);
             SqlCommand command = new SqlCommand(commandText, conn);
             command.CommandType = commandType;
@@ -72,7 +73,8 @@ namespace SqlDal
         }
 
         //从数据库中获得单条记录
-        public static Object ExecuteScalar(string commandText, CommandType commandType, SqlParameter[] parameters){
+        public static Object ExecuteScalar(string commandText, CommandType commandType, List<SqlParameter> parameters)
+        {
             Object result = null;
             using(SqlConnection conn = new SqlConnection(ConnectString)){
                 using(SqlCommand command = new SqlCommand(commandText, conn)){
@@ -101,7 +103,8 @@ namespace SqlDal
             return ExecuteScalar(commandText, commandType);
         }
 
-        public static int ExecuteNoQuery(string commandText, CommandType commandType, SqlParameter[] parameters){
+        public static int ExecuteNoQuery(string commandText, CommandType commandType, List<SqlParameter> parameters)
+        {
             int count = 0;
             using(SqlConnection conn = new SqlConnection(ConnectString)){
                 using(SqlCommand command  = new SqlCommand(commandText, conn)){

@@ -35,8 +35,8 @@ namespace Model
             set { this.contents = value; }
         }
 
-        private string time;
-        public string Time
+        private DateTime? time;
+        public DateTime? Time
         {
             get { return this.time; }
             set {this.time = value;}

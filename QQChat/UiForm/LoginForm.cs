@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Util;
 using Model;
 using SqlDal;
+using Bll;
 
 namespace QQChat.UiForm
 {
@@ -28,22 +29,26 @@ namespace QQChat.UiForm
         //登陆按钮click事件
         private void loginBtn_Click(object sender, EventArgs e)
         {
-            new MainForm().Show();
-            this.Hide();
-            User user = new User();
-            user.Username = "yindongdong222";
-            user.Password = "123456";
-            UserDal userDal = new UserDal();
-            //userDal.checkUniqueEmail("yincd520@sina.com");
-            userDal.update(user, 2);
-
+            UserBll userBll = new UserBll();
+            string email = emailTxt.Text.Trim();
+            string password = passwordTxt.Text.Trim();
+            if (userBll.checkLogin(email,password))
+            {
+                SessionBll sessionBll = SessionBll.GetInstance();
+                User user = userBll.getUser(email);
+                sessionBll.User = user;
+                sessionBll.IsLogin = true;
+                new MainForm().Show();
+                this.Hide();
+            }else{
+                MessageBox.Show("用户名或密码错误");
+            }
         }
 
         //去注册的label click事件
         private void register_Click(object sender, EventArgs e)
         {
             new RegisterForm().Show();
-            this.Hide();
         }
 
         private void register_Enter(object sender, EventArgs e)

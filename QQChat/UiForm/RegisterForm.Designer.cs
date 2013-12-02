@@ -45,6 +45,8 @@
             this.tips2 = new System.Windows.Forms.Label();
             this.tipsAll = new System.Windows.Forms.Label();
             this.submitBtn = new System.Windows.Forms.Button();
+            this.sendMailBtn = new System.Windows.Forms.Button();
+            this.tipsMail = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // usernameTxt
@@ -66,25 +68,27 @@
             // 
             // passwordTxt
             // 
-            this.passwordTxt.Location = new System.Drawing.Point(109, 150);
+            this.passwordTxt.Location = new System.Drawing.Point(109, 221);
             this.passwordTxt.Name = "passwordTxt";
+            this.passwordTxt.PasswordChar = '*';
             this.passwordTxt.Size = new System.Drawing.Size(207, 26);
             this.passwordTxt.TabIndex = 2;
             this.passwordTxt.Leave += new System.EventHandler(this.passwordTxt_Leave);
             // 
             // repasswordTxt
             // 
-            this.repasswordTxt.Location = new System.Drawing.Point(109, 197);
+            this.repasswordTxt.Location = new System.Drawing.Point(109, 268);
             this.repasswordTxt.Name = "repasswordTxt";
+            this.repasswordTxt.PasswordChar = '*';
             this.repasswordTxt.Size = new System.Drawing.Size(207, 26);
             this.repasswordTxt.TabIndex = 3;
             this.repasswordTxt.Leave += new System.EventHandler(this.repasswordTxt_Leave);
             // 
             // activeCodeTxt
             // 
-            this.activeCodeTxt.Location = new System.Drawing.Point(109, 244);
+            this.activeCodeTxt.Location = new System.Drawing.Point(109, 178);
             this.activeCodeTxt.Name = "activeCodeTxt";
-            this.activeCodeTxt.Size = new System.Drawing.Size(75, 26);
+            this.activeCodeTxt.Size = new System.Drawing.Size(93, 26);
             this.activeCodeTxt.TabIndex = 9;
             this.activeCodeTxt.Leave += new System.EventHandler(this.activeCodeTxt_Leave);
             // 
@@ -112,7 +116,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(22, 153);
+            this.label3.Location = new System.Drawing.Point(22, 224);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 21);
             this.label3.TabIndex = 6;
@@ -122,7 +126,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label4.Location = new System.Drawing.Point(22, 202);
+            this.label4.Location = new System.Drawing.Point(22, 273);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(74, 21);
             this.label4.TabIndex = 7;
@@ -132,7 +136,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label5.Location = new System.Drawing.Point(22, 244);
+            this.label5.Location = new System.Drawing.Point(22, 178);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 21);
             this.label5.TabIndex = 8;
@@ -145,42 +149,41 @@
             this.tips1.ForeColor = System.Drawing.Color.Red;
             this.tips1.Location = new System.Drawing.Point(322, 59);
             this.tips1.Name = "tips1";
-            this.tips1.Size = new System.Drawing.Size(44, 17);
+            this.tips1.Size = new System.Drawing.Size(82, 17);
             this.tips1.TabIndex = 10;
-            this.tips1.Text = "提示框";
+            this.tips1.Text = "1-10位中英文";
             // 
             // tips5
             // 
             this.tips5.AutoSize = true;
             this.tips5.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tips5.ForeColor = System.Drawing.Color.Red;
-            this.tips5.Location = new System.Drawing.Point(190, 248);
+            this.tips5.Location = new System.Drawing.Point(211, 182);
             this.tips5.Name = "tips5";
-            this.tips5.Size = new System.Drawing.Size(44, 17);
+            this.tips5.Size = new System.Drawing.Size(128, 17);
             this.tips5.TabIndex = 11;
-            this.tips5.Text = "提示框";
+            this.tips5.Text = "请输入邮件中的验证码";
             // 
             // tips4
             // 
             this.tips4.AutoSize = true;
             this.tips4.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tips4.ForeColor = System.Drawing.Color.Red;
-            this.tips4.Location = new System.Drawing.Point(322, 201);
+            this.tips4.Location = new System.Drawing.Point(322, 272);
             this.tips4.Name = "tips4";
-            this.tips4.Size = new System.Drawing.Size(44, 17);
+            this.tips4.Size = new System.Drawing.Size(0, 17);
             this.tips4.TabIndex = 12;
-            this.tips4.Text = "提示框";
             // 
             // tips3
             // 
             this.tips3.AutoSize = true;
             this.tips3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tips3.ForeColor = System.Drawing.Color.Red;
-            this.tips3.Location = new System.Drawing.Point(322, 153);
+            this.tips3.Location = new System.Drawing.Point(322, 224);
             this.tips3.Name = "tips3";
-            this.tips3.Size = new System.Drawing.Size(44, 17);
+            this.tips3.Size = new System.Drawing.Size(106, 17);
             this.tips3.TabIndex = 13;
-            this.tips3.Text = "提示框";
+            this.tips3.Text = "6-16位数字和字母";
             // 
             // tips2
             // 
@@ -189,38 +192,59 @@
             this.tips2.ForeColor = System.Drawing.Color.Red;
             this.tips2.Location = new System.Drawing.Point(322, 106);
             this.tips2.Name = "tips2";
-            this.tips2.Size = new System.Drawing.Size(44, 17);
+            this.tips2.Size = new System.Drawing.Size(0, 17);
             this.tips2.TabIndex = 14;
-            this.tips2.Text = "提示框";
             // 
             // tipsAll
             // 
             this.tipsAll.AutoSize = true;
             this.tipsAll.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tipsAll.ForeColor = System.Drawing.Color.Red;
-            this.tipsAll.Location = new System.Drawing.Point(220, 302);
+            this.tipsAll.Location = new System.Drawing.Point(220, 322);
             this.tipsAll.Name = "tipsAll";
-            this.tipsAll.Size = new System.Drawing.Size(44, 17);
+            this.tipsAll.Size = new System.Drawing.Size(0, 17);
             this.tipsAll.TabIndex = 15;
-            this.tipsAll.Text = "提示框";
             // 
             // submitBtn
             // 
             this.submitBtn.BackgroundImage = global::QQChat.Properties.Resources.register;
             this.submitBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.submitBtn.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.submitBtn.Location = new System.Drawing.Point(109, 290);
+            this.submitBtn.Location = new System.Drawing.Point(109, 310);
             this.submitBtn.Name = "submitBtn";
             this.submitBtn.Size = new System.Drawing.Size(93, 36);
             this.submitBtn.TabIndex = 16;
             this.submitBtn.UseVisualStyleBackColor = true;
             this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
             // 
+            // sendMailBtn
+            // 
+            this.sendMailBtn.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.sendMailBtn.Location = new System.Drawing.Point(109, 134);
+            this.sendMailBtn.Name = "sendMailBtn";
+            this.sendMailBtn.Size = new System.Drawing.Size(93, 30);
+            this.sendMailBtn.TabIndex = 17;
+            this.sendMailBtn.Text = "验证邮箱";
+            this.sendMailBtn.UseVisualStyleBackColor = true;
+            this.sendMailBtn.Click += new System.EventHandler(this.sendMailBtn_Click);
+            // 
+            // tipsMail
+            // 
+            this.tipsMail.AutoSize = true;
+            this.tipsMail.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tipsMail.ForeColor = System.Drawing.Color.Red;
+            this.tipsMail.Location = new System.Drawing.Point(212, 145);
+            this.tipsMail.Name = "tipsMail";
+            this.tipsMail.Size = new System.Drawing.Size(0, 17);
+            this.tipsMail.TabIndex = 18;
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(453, 392);
+            this.Controls.Add(this.tipsMail);
+            this.Controls.Add(this.sendMailBtn);
             this.Controls.Add(this.submitBtn);
             this.Controls.Add(this.tipsAll);
             this.Controls.Add(this.tips2);
@@ -267,5 +291,7 @@
         private System.Windows.Forms.Label tips2;
         private System.Windows.Forms.Label tipsAll;
         private System.Windows.Forms.Button submitBtn;
+        private System.Windows.Forms.Button sendMailBtn;
+        private System.Windows.Forms.Label tipsMail;
     }
 }

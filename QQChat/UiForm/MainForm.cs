@@ -6,7 +6,10 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+
 using SqlDal;
+using Model;
+using Bll;
 
 using Widget._ChatListBox;
 using Widget._TabControl;
@@ -15,10 +18,13 @@ namespace QQChat.UiForm
 {
     public partial class MainForm : BaseForm
     {
+        private SessionBll session;
+        private User user;
         public MainForm()
         {
             InitializeComponent();
-           
+            session = SessionBll.GetInstance();
+            user = session.User;
         }
 
         private void MainForm_Load(object sender, EventArgs e)

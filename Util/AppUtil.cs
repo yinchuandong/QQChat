@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Security.Cryptography; 
+using System.Security.Cryptography;
 
+using System.Net;
+using System.Net.Mail;
 namespace Util
 {
     public class AppUtil
@@ -20,5 +22,19 @@ namespace Util
             }
             return OutString;
         }
+
+        public static void SendMail(string mailTo,string subject,string body)
+        {
+            string mailServerName = "smtp.qq.com";
+            string mailFrom = "2321771525@qq.com";
+            using(MailMessage message = new MailMessage(mailFrom,mailTo,subject,body))
+            {
+                SmtpClient mailClient = new SmtpClient(mailServerName);
+                mailClient.Credentials = new NetworkCredential("2321771525@qq.com", "yin543211");
+                mailClient.Send(message);      
+            }
+        }
+
+        
     }
 }

@@ -21,8 +21,8 @@ namespace Model
             set { this.uId = value; }
         }
 
-        private string time;
-        public string Time
+        private DateTime? time;
+        public DateTime? Time
         {
             get {return time;}
             set { this.time = value; }

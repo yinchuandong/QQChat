@@ -42,6 +42,13 @@ namespace Model
             set { this.age = value; }
         }
 
+        private DateTime? regTime;
+        public DateTime? RegTime
+        {
+            get { return regTime; }
+            set { this.regTime = value; }
+        }
+
         private int sex = -1;
         public int Sex
         {
@@ -63,8 +70,8 @@ namespace Model
             set { this.photo = value; }
         }
 
-        private string lastLoginTime = "";
-        public String LastLoginTime
+        private DateTime? lastLoginTime;
+        public DateTime? LastLoginTime
         {
             get { return this.lastLoginTime; }
             set {this.lastLoginTime = value; }

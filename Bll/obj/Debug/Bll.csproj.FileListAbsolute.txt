@@ -3,3 +3,9 @@ E:\c#\QQChat\Bll\bin\Debug\Bll.pdb
 E:\c#\QQChat\Bll\obj\Debug\ResolveAssemblyReference.cache
 E:\c#\QQChat\Bll\obj\Debug\Bll.dll
 E:\c#\QQChat\Bll\obj\Debug\Bll.pdb
+E:\c#\QQChat\Bll\bin\Debug\Model.dll
+E:\c#\QQChat\Bll\bin\Debug\SqlDal.dll
+E:\c#\QQChat\Bll\bin\Debug\Util.dll
+E:\c#\QQChat\Bll\bin\Debug\Model.pdb
+E:\c#\QQChat\Bll\bin\Debug\SqlDal.pdb
+E:\c#\QQChat\Bll\bin\Debug\Util.pdb

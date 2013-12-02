@@ -15,9 +15,9 @@ namespace SqlDal
         public bool checkLogin(string email, string password)
         {
             string sql = "select count(*) from [user] where email=@Email and password=@Password";
-            SqlParameter[] parameters  = new SqlParameter[2];
-            parameters[0] = new SqlParameter("@Email", SqlDbType.VarChar, 50);
-            parameters[1] = new SqlParameter("@Password", SqlDbType.VarChar, 50);
+            List<SqlParameter> parameters  = new List<SqlParameter>();
+            parameters.Add(new SqlParameter("@Email", SqlDbType.VarChar, 50));
+            parameters.Add(new SqlParameter("@Password", SqlDbType.VarChar, 50));
             parameters[0].Value = email;
             parameters[1].Value = AppUtil.Encrypt(password);
 
@@ -28,16 +28,32 @@ namespace SqlDal
                 return false;
         }
 
+        public DataTable getUserByEmail(string email)
+        {
+            string sql = "select [u_id] as [UId], [username] as [Username], [email] as [Email], [password] as [Password], " +
+                        "[regTime] as [RegTime], [age] as [Age], [sex] as [Sex], [sign] as [Sign], [photo] as [Photo], " +
+                        "[last_login_time] as [LastLoginTime], [last_login_ip] as [LastLoginIp], [status] as [Status] from [user] "+
+                        "where [email]=@Email";
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            SqlParameter Email = new SqlParameter("@Email", SqlDbType.VarChar, 50);
+            Email.Value = email.Trim();
+            parameters.Add(Email);
+
+            DataTable result = SqlDbHelper.ExecueteDataTable(sql, CommandType.Text, parameters);
+            //DataRow row = result.Rows[0];
+            //string uId = row["UId"].ToString();
+            return result;
+        }
+
         public bool register(User  user)
         {
-            string sql = "insert into [user] (username,email,password,last_login_time) values (@Username,@Email, @Password, @Time)";
-            SqlParameter[] parameters = 
-            {
-                new SqlParameter("@Username",SqlDbType.VarChar,50),
-                new SqlParameter("@Email", SqlDbType.VarChar, 50),
-                new SqlParameter("@Password", SqlDbType.VarChar, 50),
-                new SqlParameter("@Time",SqlDbType.DateTime)
-            };
+            string sql = "insert into [user] (username,email,password,regTime) values (@Username,@Email, @Password, @Time)";
+ 
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            parameters.Add(new SqlParameter("@Username",SqlDbType.VarChar,50));
+            parameters.Add(new SqlParameter("@Email", SqlDbType.VarChar, 50));
+            parameters.Add(new SqlParameter("@Password", SqlDbType.VarChar, 50));
+            parameters.Add(new SqlParameter("@Time",SqlDbType.DateTime));
             parameters[0].Value = user.Username;
             parameters[1].Value = user.Email;
             parameters[2].Value = AppUtil.Encrypt(user.Password);
@@ -52,10 +68,8 @@ namespace SqlDal
         public bool checkUniqueEmail(String email)
         {
             string sql = "select count(*) from [user] where email=@Email";
-            SqlParameter[] parameters = new SqlParameter[]
-            {
-                new SqlParameter("@Email",SqlDbType.VarChar, 50)
-            };
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            parameters.Add(new SqlParameter("@Email", SqlDbType.VarChar, 50));
             parameters[0].Value = email;
             int row = (int)SqlDbHelper.ExecuteScalar(sql,CommandType.Text,parameters);
             if (row >= 1)
@@ -66,77 +80,81 @@ namespace SqlDal
 
         public bool update(User user,int uId)
         {
-            SqlParameter[] parameters = new SqlParameter[]
-            {
-                new SqlParameter("@Username",SqlDbType.VarChar,50),
-                new SqlParameter("@Password", SqlDbType.VarChar, 50),
-                new SqlParameter("@Age", SqlDbType.Int,3),
-                new SqlParameter("@Sex", SqlDbType.Int,1),
-                new SqlParameter("@Sign", SqlDbType.VarChar, 200),
-                new SqlParameter("@photo", SqlDbType.VarChar,50),
-                new SqlParameter("@LastLoginTime",SqlDbType.DateTime),
-                new SqlParameter("@LastLoginIp",SqlDbType.VarChar, 50),
-                new SqlParameter("@Status", SqlDbType.Int,1),
-                new SqlParameter("@Uid", SqlDbType.Int,10)
-            };
-            parameters[0].Value = user.Username;
-            parameters[1].Value = user.Password;
-            parameters[2].Value = user.Age;
-            parameters[3].Value = user.Sex;
-            parameters[4].Value = user.Sign;
-            parameters[5].Value = user.Photo;
-            parameters[6].Value = DateTime.Now;
-            parameters[7].Value = user.LastLoginIp;
-            parameters[8].Value = user.Status;
+            List<SqlParameter> parameters = new List<SqlParameter>();
             StringBuilder sql = new StringBuilder();
             sql.Append("update [user] set");
+
             if (!user.Username.Equals("")) 
             {
                 sql.Append(" username=@Username,");
+                SqlParameter Username =  new SqlParameter("@Username",SqlDbType.VarChar,50);
+                Username.Value = user.Username;
+                parameters.Add(Username);
             }
             if (!user.Password.Equals(""))
             {
                 sql.Append(" password=@Password,");  
+                SqlParameter Password =  new SqlParameter("@Password", SqlDbType.VarChar, 50);
+                Password.Value = AppUtil.Encrypt(user.Password);
+                parameters.Add(Password);
             }
             if(user.Age != -1)
             {
                 sql.Append(" age=@Age,");
-
+                SqlParameter Age = new SqlParameter("@Age", SqlDbType.Int,3);
+                Age.Value = user.Age;
+                parameters.Add(Age);
             }
             if (user.Sex != -1)
             {
                 sql.Append(" sex=@Sex,");
-
+                SqlParameter Sex =  new SqlParameter("@Sex", SqlDbType.Int,1);
+                Sex.Value = user.Sex;
+                parameters.Add(Sex);
             }
             if (!user.Sign.Equals(""))
             {
                 sql.Append(" sign=@Sign,");
-                
+                SqlParameter Sign = new SqlParameter("@Sign", SqlDbType.VarChar, 200);
+                Sign.Value = user.Sign;
+                parameters.Add(Sign);
             }
             if (!user.Photo.Equals(""))
             {
                 sql.Append(" photo=@Photo,");
-                
+                SqlParameter Photo =  new SqlParameter("@photo", SqlDbType.VarChar,50);
+                Photo.Value = user.Photo;
+                parameters.Add(Photo);
             }
             if (!user.LastLoginIp.Equals(""))
             {
                 sql.Append(" last_login_ip=@LastLoginIp,");
-                
+                SqlParameter LastLoginIp = new SqlParameter("@LastLoginIp",SqlDbType.VarChar, 50);
+                LastLoginIp.Value = user.LastLoginIp;
+                parameters.Add(LastLoginIp);
             }
-            if (!user.LastLoginTime.Equals(""))
+            if (user.LastLoginTime != null)
             {
                 sql.Append(" last_login_time=@LastLoginTime,");
-                
+                SqlParameter LastLoginTime =  new SqlParameter("@LastLoginTime",SqlDbType.VarChar,50);
+                LastLoginTime.Value = user.LastLoginTime;
+                parameters.Add(LastLoginTime);
             }
             if(user.Status != -1 )
             {
                 sql.Append(" status=@Status,");
-                
+                SqlParameter Status = new SqlParameter("@Status", SqlDbType.Int,1);
+                Status.Value = user.Status;
+                parameters.Add(Status);
             }
+                
+            
             string sqlStr = sql.ToString();
             sqlStr = sqlStr.Substring(0, sqlStr.Length - 1);
             sqlStr += " where u_id=@Uid";
-            parameters[9].Value = uId;
+            SqlParameter UId = new SqlParameter("@Uid", SqlDbType.Int, 10);
+            UId.Value = uId;
+            parameters.Add(UId);
 
             int row = SqlDbHelper.ExecuteNoQuery(sqlStr, CommandType.Text, parameters);
             if (row >= 1)

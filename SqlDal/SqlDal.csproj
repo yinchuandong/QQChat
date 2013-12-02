@@ -46,10 +46,6 @@
     <Compile Include="UserDal.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Bll\Bll.csproj">
-      <Project>{B5D6A17D-B18A-4107-9A91-1423BB3F16D2}</Project>
-      <Name>Bll</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Model\Model.csproj">
       <Project>{3681DE5C-2973-40F9-890E-62BE9195B280}</Project>
       <Name>Model</Name>
