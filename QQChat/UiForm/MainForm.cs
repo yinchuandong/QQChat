@@ -14,12 +14,14 @@ using Bll;
 using Widget._ChatListBox;
 using Widget._TabControl;
 
+
 namespace QQChat.UiForm
 {
     public partial class MainForm : BaseForm
     {
         private SessionBll session;
         private User user;
+
         public MainForm()
         {
             InitializeComponent();
@@ -51,8 +53,12 @@ namespace QQChat.UiForm
             //MessageBox.Show(AppDomain.CurrentDomain.BaseDirectory);
         }
 
-       
+        private void friendListBox_DoubleClickSubItem(object sender, ChatListEventArgs e)
+        {
+            new P2pChatForm().Show();
+        }
 
-        //private void 
+
+        
     }
 }
