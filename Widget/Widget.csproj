@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -57,6 +58,13 @@
     <Compile Include="_ChatListBox\ChatListSubItem.cs" />
     <Compile Include="_ChatListBox\ChatListSubItemConverter.cs" />
     <Compile Include="_ChatListBox\ChatListVScroll.cs" />
+    <Compile Include="_ImagePopup\ImagePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_ImagePopup\ImagePopup.Designer.cs">
+      <DependentUpon>ImagePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_ImagePopup\Tools.cs" />
     <Compile Include="_TabControl\Events.cs" />
     <Compile Include="_TabControl\NativeMethods.cs" />
     <Compile Include="_TabControl\TabControlEx.cs">

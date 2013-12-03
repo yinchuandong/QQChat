@@ -28,25 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tabControl = new Widget._TabControl.TabControlEx();
             this.friendPage = new System.Windows.Forms.TabPage();
             this.friendListBox = new Widget.ChatListBox();
             this.groupPage = new System.Windows.Forms.TabPage();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl.SuspendLayout();
             this.friendPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -101,6 +93,7 @@
             this.friendListBox.Size = new System.Drawing.Size(235, 406);
             this.friendListBox.TabIndex = 0;
             this.friendListBox.Text = "friendListBox";
+            this.friendListBox.DoubleClickSubItem += new Widget.ChatListBox.ChatListEventHandler(this.friendListBox_DoubleClickSubItem);
             this.friendListBox.MouseEnterHead += new Widget.ChatListBox.ChatListEventHandler(this.friendListBox_MouseEnterHead);
             // 
             // groupPage
@@ -112,6 +105,14 @@
             this.groupPage.TabIndex = 1;
             this.groupPage.Text = "groupPage";
             this.groupPage.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(60, 60);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // MainForm
             // 
@@ -125,9 +126,9 @@
             this.Name = "MainForm";
             this.Text = "呵呵";
             this.Load += new System.EventHandler(this.MainForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl.ResumeLayout(false);
             this.friendPage.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

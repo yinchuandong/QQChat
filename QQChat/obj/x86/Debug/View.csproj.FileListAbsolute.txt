@@ -21,3 +21,4 @@ E:\c#\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.MainForm.resources
 E:\c#\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.LoginForm.resources
 E:\c#\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.BaseForm.resources
 E:\c#\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.RegisterForm.resources
+E:\c#\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.P2pChatForm.resources
