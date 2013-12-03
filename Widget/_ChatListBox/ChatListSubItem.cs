@@ -65,13 +65,13 @@ namespace Widget._ChatListBox
             }
         }
 
-        private int updPort;
+        private int udpPort;
         /// <summary>
         /// 获取或者设置用户Upd端口
         /// </summary>
-        public int UpdPort {
-            get { return updPort; }
-            set { updPort = value; }
+        public int UdpPort {
+            get { return udpPort; }
+            set { udpPort = value; }
         }
 
         private int tcpPort;

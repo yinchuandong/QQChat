@@ -33,7 +33,11 @@
             this.faceBtn = new System.Windows.Forms.Button();
             this.sendRichBox = new Widget._RichTextBox.ExRichTextBox();
             this.sendBtn = new System.Windows.Forms.Button();
+            this.headPicBox = new System.Windows.Forms.PictureBox();
+            this.nameTxt = new System.Windows.Forms.Label();
+            this.signTxt = new System.Windows.Forms.Label();
             this.toolPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.headPicBox)).BeginInit();
             this.SuspendLayout();
             // 
             // messageRichBox
@@ -84,11 +88,42 @@
             this.sendBtn.UseVisualStyleBackColor = true;
             this.sendBtn.Click += new System.EventHandler(this.sendBtn_Click);
             // 
+            // headPicBox
+            // 
+            this.headPicBox.Location = new System.Drawing.Point(3, 4);
+            this.headPicBox.Name = "headPicBox";
+            this.headPicBox.Size = new System.Drawing.Size(60, 60);
+            this.headPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.headPicBox.TabIndex = 4;
+            this.headPicBox.TabStop = false;
+            // 
+            // nameTxt
+            // 
+            this.nameTxt.AutoSize = true;
+            this.nameTxt.Font = new System.Drawing.Font("微软雅黑", 14F);
+            this.nameTxt.Location = new System.Drawing.Point(75, 6);
+            this.nameTxt.Name = "nameTxt";
+            this.nameTxt.Size = new System.Drawing.Size(69, 25);
+            this.nameTxt.TabIndex = 5;
+            this.nameTxt.Text = "尹川东";
+            // 
+            // signTxt
+            // 
+            this.signTxt.AutoSize = true;
+            this.signTxt.Location = new System.Drawing.Point(83, 38);
+            this.signTxt.Name = "signTxt";
+            this.signTxt.Size = new System.Drawing.Size(89, 12);
+            this.signTxt.TabIndex = 6;
+            this.signTxt.Text = "今天天气好好啊";
+            // 
             // P2pChatForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(498, 449);
+            this.Controls.Add(this.signTxt);
+            this.Controls.Add(this.nameTxt);
+            this.Controls.Add(this.headPicBox);
             this.Controls.Add(this.sendBtn);
             this.Controls.Add(this.sendRichBox);
             this.Controls.Add(this.toolPanel);
@@ -96,7 +131,9 @@
             this.Name = "P2pChatForm";
             this.Text = "P2pChatForm";
             this.toolPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.headPicBox)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -107,5 +144,8 @@
         private System.Windows.Forms.Button faceBtn;
         private Widget._RichTextBox.ExRichTextBox sendRichBox;
         private System.Windows.Forms.Button sendBtn;
+        private System.Windows.Forms.PictureBox headPicBox;
+        private System.Windows.Forms.Label nameTxt;
+        private System.Windows.Forms.Label signTxt;
     }
 }
