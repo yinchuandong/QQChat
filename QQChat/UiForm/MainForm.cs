@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using SqlDal;
 using Model;
 using Bll;
+using Util;
 
 using Widget._ChatListBox;
 using Widget._TabControl;
@@ -27,6 +28,7 @@ namespace QQChat.UiForm
             InitializeComponent();
             session = SessionBll.GetInstance();
             user = session.User;
+            string ip = AppUtil.GetLocalIp();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
