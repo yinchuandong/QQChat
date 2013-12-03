@@ -65,6 +65,12 @@
       <DependentUpon>ImagePopup.cs</DependentUpon>
     </Compile>
     <Compile Include="_ImagePopup\Tools.cs" />
+    <Compile Include="_RichTextBox\ExRichTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_RichTextBox\ExRichTextBox.Designer.cs">
+      <DependentUpon>ExRichTextBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="_TabControl\Events.cs" />
     <Compile Include="_TabControl\NativeMethods.cs" />
     <Compile Include="_TabControl\TabControlEx.cs">

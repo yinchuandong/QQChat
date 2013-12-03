@@ -28,3 +28,5 @@ E:\c#\QQChat\Widget\obj\Debug\ResGen.write.7.tlog
 E:\c#\QQChat\Widget\obj\Debug\ResGen.write.8.tlog
 E:\c#\QQChat\Widget\obj\Debug\Widget.dll
 E:\c#\QQChat\Widget\obj\Debug\Widget.pdb
+E:\c#\QQChat\Widget\obj\Debug\ResGen.read.9.tlog
+E:\c#\QQChat\Widget\obj\Debug\ResGen.write.9.tlog
