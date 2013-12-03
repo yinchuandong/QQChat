@@ -28,29 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.messageRichBox = new Widget._RichTextBox.ExRichTextBox();
+            this.toolPanel = new System.Windows.Forms.Panel();
             this.faceBtn = new System.Windows.Forms.Button();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.sendRichBox = new Widget._RichTextBox.ExRichTextBox();
             this.sendBtn = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.toolPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // richTextBox1
+            // messageRichBox
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(2, 69);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(484, 208);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.messageRichBox.HiglightColor = Widget._RichTextBox.RtfColor.White;
+            this.messageRichBox.Location = new System.Drawing.Point(2, 69);
+            this.messageRichBox.Name = "messageRichBox";
+            this.messageRichBox.Size = new System.Drawing.Size(484, 208);
+            this.messageRichBox.TabIndex = 0;
+            this.messageRichBox.Text = "";
+            this.messageRichBox.TextColor = Widget._RichTextBox.RtfColor.Black;
             // 
-            // panel1
+            // toolPanel
             // 
-            this.panel1.Controls.Add(this.faceBtn);
-            this.panel1.Location = new System.Drawing.Point(2, 277);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(483, 34);
-            this.panel1.TabIndex = 1;
+            this.toolPanel.Controls.Add(this.faceBtn);
+            this.toolPanel.Location = new System.Drawing.Point(2, 277);
+            this.toolPanel.Name = "toolPanel";
+            this.toolPanel.Size = new System.Drawing.Size(483, 34);
+            this.toolPanel.TabIndex = 1;
             // 
             // faceBtn
             // 
@@ -62,13 +64,15 @@
             this.faceBtn.UseVisualStyleBackColor = true;
             this.faceBtn.Click += new System.EventHandler(this.faceBtn_Click);
             // 
-            // richTextBox2
+            // sendRichBox
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(3, 310);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(482, 105);
-            this.richTextBox2.TabIndex = 2;
-            this.richTextBox2.Text = "";
+            this.sendRichBox.HiglightColor = Widget._RichTextBox.RtfColor.White;
+            this.sendRichBox.Location = new System.Drawing.Point(3, 310);
+            this.sendRichBox.Name = "sendRichBox";
+            this.sendRichBox.Size = new System.Drawing.Size(482, 105);
+            this.sendRichBox.TabIndex = 2;
+            this.sendRichBox.Text = "";
+            this.sendRichBox.TextColor = Widget._RichTextBox.RtfColor.Black;
             // 
             // sendBtn
             // 
@@ -78,6 +82,7 @@
             this.sendBtn.TabIndex = 3;
             this.sendBtn.Text = "发送";
             this.sendBtn.UseVisualStyleBackColor = true;
+            this.sendBtn.Click += new System.EventHandler(this.sendBtn_Click);
             // 
             // P2pChatForm
             // 
@@ -85,22 +90,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(498, 449);
             this.Controls.Add(this.sendBtn);
-            this.Controls.Add(this.richTextBox2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.sendRichBox);
+            this.Controls.Add(this.toolPanel);
+            this.Controls.Add(this.messageRichBox);
             this.Name = "P2pChatForm";
             this.Text = "P2pChatForm";
-            this.panel1.ResumeLayout(false);
+            this.toolPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Panel panel1;
+        private Widget._RichTextBox.ExRichTextBox messageRichBox;
+        private System.Windows.Forms.Panel toolPanel;
         private System.Windows.Forms.Button faceBtn;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private Widget._RichTextBox.ExRichTextBox sendRichBox;
         private System.Windows.Forms.Button sendBtn;
     }
 }
