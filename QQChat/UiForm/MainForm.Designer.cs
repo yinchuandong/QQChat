@@ -32,7 +32,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tabControl = new Widget._TabControl.TabControlEx();
             this.friendPage = new System.Windows.Forms.TabPage();
-            this.friendListBox = new Widget.ChatListBox();
             this.groupPage = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl.SuspendLayout();
@@ -75,7 +74,6 @@
             // 
             // friendPage
             // 
-            this.friendPage.Controls.Add(this.friendListBox);
             this.friendPage.Location = new System.Drawing.Point(4, 29);
             this.friendPage.Name = "friendPage";
             this.friendPage.Padding = new System.Windows.Forms.Padding(3);
@@ -83,18 +81,7 @@
             this.friendPage.TabIndex = 0;
             this.friendPage.Text = "friendPage";
             this.friendPage.UseVisualStyleBackColor = true;
-            // 
-            // friendListBox
-            // 
-            this.friendListBox.BackColor = System.Drawing.Color.White;
-            this.friendListBox.ForeColor = System.Drawing.Color.DarkOrange;
-            this.friendListBox.Location = new System.Drawing.Point(3, 3);
-            this.friendListBox.Name = "friendListBox";
-            this.friendListBox.Size = new System.Drawing.Size(235, 406);
-            this.friendListBox.TabIndex = 0;
-            this.friendListBox.Text = "friendListBox";
-            this.friendListBox.DoubleClickSubItem += new Widget.ChatListBox.ChatListEventHandler(this.friendListBox_DoubleClickSubItem);
-            this.friendListBox.MouseEnterHead += new Widget.ChatListBox.ChatListEventHandler(this.friendListBox_MouseEnterHead);
+         
             // 
             // groupPage
             // 
@@ -142,7 +129,6 @@
         private Widget._TabControl.TabControlEx tabControl;
         private System.Windows.Forms.TabPage friendPage;
         private System.Windows.Forms.TabPage groupPage;
-        private Widget.ChatListBox friendListBox;
     }
 }
 

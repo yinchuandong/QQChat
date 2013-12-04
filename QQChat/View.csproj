@@ -49,6 +49,12 @@
     <Compile Include="UiForm\BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UiForm\FriendListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UiForm\FriendListForm.Designer.cs">
+      <DependentUpon>FriendListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UiForm\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     </Compile>
     <EmbeddedResource Include="UiForm\BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UiForm\FriendListForm.resx">
+      <DependentUpon>FriendListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UiForm\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -120,6 +129,10 @@
     <ProjectReference Include="..\Model\Model.csproj">
       <Project>{3681DE5C-2973-40F9-890E-62BE9195B280}</Project>
       <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Socket\Socket.csproj">
+      <Project>{C02BD425-101C-4B72-A041-EC01C339F8E2}</Project>
+      <Name>Socket</Name>
     </ProjectReference>
     <ProjectReference Include="..\SqlDal\SqlDal.csproj">
       <Project>{52A923AE-116C-4C92-B465-313EB52C1212}</Project>

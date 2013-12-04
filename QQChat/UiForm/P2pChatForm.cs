@@ -12,6 +12,12 @@ using Model;
 using Bll;
 using Widget._ChatListBox;
 
+using System.Net.Sockets;
+using System.Threading;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
+
 namespace QQChat.UiForm
 {
     public partial class P2pChatForm : Form
@@ -49,7 +55,16 @@ namespace QQChat.UiForm
             }
         }
 
-        string faceName = "";//选择的表情的名字
+        private TcpClient serverSocket = null;
+        public TcpClient ServerSocket
+        {
+            get { return this.serverSocket; }
+            set { this.serverSocket = value; }
+        }
+
+      
+
+        private Thread receiveThread;
 
         #endregion
 
@@ -76,15 +91,23 @@ namespace QQChat.UiForm
             headPicBox.Image = guestItem.HeadImage;
             nameTxt.Text = guestItem.DisplayName;
             signTxt.Text = guestItem.PersonalMsg;
+            //clientSocket = new TcpClient(guestItem.IpAddress, 8009);
         }
+
         #endregion
 
         #region 绑定的事件
 
+        //界面加载完成事件
+        private void P2pChatForm_Load(object sender, EventArgs e)
+        {
+            receiveThread = new Thread(new ThreadStart(service));
+            receiveThread.Start();
+        }
+
         //表情框选择了表情之后的事件
         void faceForm_AddFace(object sender, SelectFaceArgs e)
         {
-            this.faceName = e.Img.FullName.Replace(Application.StartupPath + "\\", "");
             this.sendRichBox.InsertImage(e.Img.Image);
         }
 
@@ -102,8 +125,87 @@ namespace QQChat.UiForm
             sendRichBox.Text = String.Empty;
             messageRichBox.AppendRtf(msg);
             messageRichBox.ScrollToCaret();
+            P2pMessage message = new P2pMessage();
+            message.HostId = hostId;
+            message.GuestId = guestItem.ID;
+            message.GuestName = guestItem.DisplayName;
+            message.Contents = sendRichBox.Rtf;
+            message.Time = DateTime.Now;
+            this.send(message);
         }
 
         #endregion
+
+        #region 接收对方的消息
+        private void service()
+        {
+            while(true)
+            {
+                try
+                {
+                    byte[] buff = new byte[1024];
+                    MemoryStream mStream = new MemoryStream();
+                    mStream.Position = 0;
+                    NetworkStream nStream = serverSocket.GetStream();
+                    while (true)
+                    {
+                        int len = nStream.Read(buff, 0, buff.Length);
+                        mStream.Write(buff, 0, len);
+                        if (len < 1024)
+                        {
+                            break;
+                        }
+                    }
+                    BinaryFormatter formmater = new BinaryFormatter();
+                    mStream.Flush();
+                    mStream.Position = 0;
+                    if (mStream.Capacity > 0)
+                    {
+                        P2pMessage msg = (P2pMessage)formmater.Deserialize(mStream);
+                        appendText(msg.GuestName + "[" + msg.Time.ToString() + "] \r\n" + msg.Contents);
+                    }
+                }
+                catch (System.Exception ex)
+                {
+                    //MessageBox.Show("对方不在线");
+                }
+            }
+
+        }
+
+        public delegate void InvokeDelegate(string str);//事件委托，跨线程调用winform控件需要
+
+        private void appendText(String text)//给messageBox添加
+        {
+            if (messageRichBox.InvokeRequired)
+            {
+                InvokeDelegate invoke = new InvokeDelegate(appendText);
+                this.Invoke(invoke,new object[]{text});
+            }else{
+                this.messageRichBox.AppendText(text);
+            }
+        }
+        #endregion
+
+        #region 发送给对方消息
+        
+        private void send(P2pMessage message)
+        {
+            MemoryStream mStream = new MemoryStream();
+            BinaryFormatter formatter = new BinaryFormatter();
+            formatter.Serialize(mStream,message);
+            mStream.Flush();
+            mStream.Position = 0;
+            byte[] buff = new byte[1024];
+            int len = 0;
+            NetworkStream nStream = serverSocket.GetStream();
+            while ((len = mStream.Read(buff,0,buff.Length)) > 0)
+            {
+                nStream.Write(buff, 0, len);
+            }
+        }
+
+        #endregion
+
     }
 }

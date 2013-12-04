@@ -27,6 +27,13 @@ namespace Bll
             return list[0];
         }
 
+        public User getUser(int uId)
+        {
+            DataTable result = userDal.getUserById(uId);
+            IList<User> list = ModelConvertUtil<User>.ConvertToModel(result);
+            return list[0];
+        }
+
         //注册用户
         public bool register(User user)
         {

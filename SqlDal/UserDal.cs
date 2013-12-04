@@ -40,8 +40,21 @@ namespace SqlDal
             parameters.Add(Email);
 
             DataTable result = SqlDbHelper.ExecueteDataTable(sql, CommandType.Text, parameters);
-            //DataRow row = result.Rows[0];
-            //string uId = row["UId"].ToString();
+            return result;
+        }
+
+        public DataTable getUserById(int uId)
+        {
+            string sql = "select [u_id] as [UId], [username] as [Username], [email] as [Email], [password] as [Password], " +
+                        "[regTime] as [RegTime], [age] as [Age], [sex] as [Sex], [sign] as [Sign], [photo] as [Photo], " +
+                        "[last_login_time] as [LastLoginTime], [last_login_ip] as [LastLoginIp], [status] as [Status] from [user] " +
+                        "where [u_id]=@UId";
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            SqlParameter UId = new SqlParameter("@u_id", SqlDbType.VarChar, 50);
+            UId.Value = uId;
+            parameters.Add(UId);
+
+            DataTable result = SqlDbHelper.ExecueteDataTable(sql, CommandType.Text, parameters);
             return result;
         }
 
@@ -162,7 +175,6 @@ namespace SqlDal
             else
                 return false;
         }
-
     }
 
    

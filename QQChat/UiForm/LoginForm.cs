@@ -38,6 +38,10 @@ namespace QQChat.UiForm
                 User user = userBll.getUser(email);
                 sessionBll.User = user;
                 sessionBll.IsLogin = true;
+                User updateUser = new User();
+                updateUser.LastLoginIp = AppUtil.GetLocalIp();
+                updateUser.LastLoginTime = DateTime.Now;
+                userBll.update(updateUser, user.UId);
                 new MainForm().Show();
                 this.Hide();
             }else{

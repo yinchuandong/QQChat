@@ -55,7 +55,7 @@
             this.passwordTxt.PasswordChar = '*';
             this.passwordTxt.Size = new System.Drawing.Size(171, 29);
             this.passwordTxt.TabIndex = 1;
-            this.passwordTxt.Text = "yincd520";
+            this.passwordTxt.Text = "123456";
             // 
             // label1
             // 

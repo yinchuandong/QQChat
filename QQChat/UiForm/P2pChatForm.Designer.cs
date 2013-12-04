@@ -130,6 +130,7 @@
             this.Controls.Add(this.messageRichBox);
             this.Name = "P2pChatForm";
             this.Text = "P2pChatForm";
+            this.Load += new System.EventHandler(this.P2pChatForm_Load);
             this.toolPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.headPicBox)).EndInit();
             this.ResumeLayout(false);
