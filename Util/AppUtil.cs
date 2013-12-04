@@ -6,6 +6,7 @@ using System.Security.Cryptography;
 
 using System.Net;
 using System.Net.Mail;
+using System.Net.Sockets;
 namespace Util
 {
     public class AppUtil
@@ -35,6 +36,20 @@ namespace Util
             }
         }
 
+
+        public static string GetLocalIp()
+        {
+            IPHostEntry MyEntry = Dns.GetHostEntry(Dns.GetHostName());
+            IPAddress[] MyAddress = MyEntry.AddressList;
+            foreach(IPAddress ip in MyAddress)
+            {
+                if(ip.AddressFamily == AddressFamily.InterNetwork)
+                {
+                    return ip.ToString();
+                }
+            }
+            return "";
+        }
         
     }
 }

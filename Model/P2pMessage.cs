@@ -5,7 +5,8 @@ using System.Text;
 
 namespace Model
 {
-    class P2pMessage
+    [Serializable]
+    public class P2pMessage
     {
         private int mId;
         public int MId
@@ -26,6 +27,13 @@ namespace Model
         {
             get { return guestId; }
             set { this.guestId = value; }
+        }
+
+        private string guestName;
+        public string GuestName
+        {
+            get { return this.guestName; }
+            set { this.guestName = value; }
         }
 
         private string contents;

@@ -22,3 +22,6 @@ E:\c#\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.LoginForm.resources
 E:\c#\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.BaseForm.resources
 E:\c#\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.RegisterForm.resources
 E:\c#\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.P2pChatForm.resources
+E:\c#\QQChat\QQChat\bin\Debug\Socket.dll
+E:\c#\QQChat\QQChat\bin\Debug\Socket.pdb
+E:\c#\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.FriendListForm.resources
