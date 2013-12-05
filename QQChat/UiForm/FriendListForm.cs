@@ -78,30 +78,30 @@ namespace QQChat.UiForm
         private void friendListBox_DoubleClickSubItem(object sender, ChatListEventArgs e)
         {
             P2pChatForm form = new P2pChatForm(e.SelectSubItem);
-            int guestId = e.SelectSubItem.ID;
-            if (p2pServerSocket.SocketDict.ContainsKey(guestId))
-            {
-                TcpClient server = p2pServerSocket.SocketDict[guestId];
-                form.ServerSocket = server;
-            } 
-            else
-            {
-                try
-                {
-                    User guest = userBll.getUser("342916053@qq.com");
-                    string ip = guest.LastLoginIp;
-                    TcpClient client = new TcpClient(ip,8009);
-                    byte[] buff = new byte[1024];
-                    StreamWriter writer = new StreamWriter(client.GetStream());
-                    writer.WriteLine(user.UId); //告诉对方自己的id
-                    writer.Flush();
-                    form.ServerSocket = client;
-                }
-                catch (System.Exception ex)
-                {
+            //int guestId = e.SelectSubItem.ID;
+            //if (P2pServerSocket.socketDict.ContainsKey(guestId))
+            //{
+            //    TcpClient server = P2pServerSocket.socketDict[guestId];
+            //    form.ServerSocket = server;
+            //} 
+            //else
+            //{
+            //    try
+            //    {
+            //        User guest = userBll.getUser("342916053@qq.com");
+            //        string ip = guest.LastLoginIp;
+            //        TcpClient client = new TcpClient(ip,8009);
+            //        byte[] buff = new byte[1024];
+            //        StreamWriter writer = new StreamWriter(client.GetStream());
+            //        writer.WriteLine(user.UId); //告诉对方自己的id
+            //        writer.Flush();
+            //        form.ServerSocket = client;
+            //    }
+            //    catch (System.Exception ex)
+            //    {
                 	
-                }
-            }
+            //    }
+            //}
             form.Show();
         }
 
