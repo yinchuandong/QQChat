@@ -17,6 +17,7 @@ using System.Net.Sockets;
 using System.Threading;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Runtime.Serialization.Formatters.Soap ;
 using System.IO;
 
 namespace QQChat.UiForm
@@ -155,7 +156,7 @@ namespace QQChat.UiForm
                 {
                     string ip = guestModel.LastLoginIp;
                     TcpClient client = new TcpClient(ip, 8009);
-                    byte[] buff = new byte[1024];
+                    byte[] buff = new byte[4096];
                     StreamWriter writer = new StreamWriter(client.GetStream());
                     writer.WriteLine(session.User.UId); //告诉对方自己的id
                     writer.Flush();
@@ -176,7 +177,7 @@ namespace QQChat.UiForm
             {
                 try
                 {
-                    byte[] buff = new byte[1024];
+                    byte[] buff = new byte[4096];
                     MemoryStream mStream = new MemoryStream();
                     mStream.Position = 0;
                     NetworkStream nStream = serverSocket.GetStream();
@@ -184,18 +185,20 @@ namespace QQChat.UiForm
                     {
                         int len = nStream.Read(buff, 0, buff.Length);
                         mStream.Write(buff, 0, len);
-                        if (len < 1024)
+                        if (len < 4096)
                         {
                             break;
                         }
                     }
                     BinaryFormatter formmater = new BinaryFormatter();
-                    mStream.Flush();
+                    //DataContractSerializer formmater = new DataContractSerializer(typeof(P2pMessage));
+                    //mStream.Flush();
                     mStream.Position = 0;
                     if (mStream.Capacity > 0)
                     {
                         P2pMessage msg;
-                        msg = (P2pMessage)formmater.Deserialize(mStream);
+                        //msg = (P2pMessage)formmater.ReadObject(mStream);
+                        msg = formmater.Deserialize(mStream) as P2pMessage;
                         appendText(msg);
                     }
                 }catch(System.Runtime.Serialization.SerializationException ex)
@@ -210,7 +213,7 @@ namespace QQChat.UiForm
                     }
                     string ip = guestModel.LastLoginIp;
                     TcpClient client = new TcpClient(ip, 8009);
-                    byte[] buff = new byte[1024];
+                    byte[] buff = new byte[4096];
                     StreamWriter writer = new StreamWriter(client.GetStream());
                     writer.WriteLine(session.User.UId); //告诉对方自己的id
                     writer.Flush();
@@ -244,11 +247,13 @@ namespace QQChat.UiForm
             try
             {
                 MemoryStream mStream = new MemoryStream();
-                BinaryFormatter formatter = new BinaryFormatter();
+                //DataContractSerializer formatter = new DataContractSerializer(message.GetType()) ;
+                IFormatter formatter = new BinaryFormatter();
+                //formatter.WriteObject(mStream, message);
                 formatter.Serialize(mStream, message);
                 mStream.Flush();
                 mStream.Position = 0;
-                byte[] buff = new byte[1024];
+                byte[] buff = new byte[4096];
                 int len = 0;
                 NetworkStream nStream = serverSocket.GetStream();
                 while ((len = mStream.Read(buff, 0, buff.Length)) > 0)
