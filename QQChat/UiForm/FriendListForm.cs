@@ -17,6 +17,7 @@ using Socket;
 
 using Widget._ChatListBox;
 using Widget._TabControl;
+using System.IO;
 
 namespace QQChat.UiForm
 {
@@ -90,6 +91,10 @@ namespace QQChat.UiForm
                     User guest = userBll.getUser("342916053@qq.com");
                     string ip = guest.LastLoginIp;
                     TcpClient client = new TcpClient(ip,8009);
+                    byte[] buff = new byte[1024];
+                    StreamWriter writer = new StreamWriter(client.GetStream());
+                    writer.WriteLine(user.UId); //告诉对方自己的id
+                    writer.Flush();
                     form.ServerSocket = client;
                 }
                 catch (System.Exception ex)

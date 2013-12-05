@@ -182,7 +182,7 @@ namespace QQChat.UiForm
                 InvokeDelegate invoke = new InvokeDelegate(appendText);
                 this.Invoke(invoke,new object[]{text});
             }else{
-                this.messageRichBox.AppendText(text);
+                this.messageRichBox.AppendRtf(text);
             }
         }
         #endregion
