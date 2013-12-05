@@ -121,9 +121,8 @@ namespace QQChat.UiForm
         //发送消息的button
         private void sendBtn_Click(object sender, EventArgs e)
         {
-            string msg = sendRichBox.Text;
+            string msg = sendRichBox.Rtf;
             sendRichBox.Text = String.Empty;
-            messageRichBox.ScrollToCaret();
             P2pMessage message = new P2pMessage();
             message.HostId = hostId;
             message.GuestId = guestItem.ID;
@@ -131,6 +130,7 @@ namespace QQChat.UiForm
             message.Contents = msg;
             message.Time = DateTime.Now;
             this.send(message);
+            this.appendText(message);
         }
 
         #endregion
@@ -161,8 +161,7 @@ namespace QQChat.UiForm
                     if (mStream.Capacity > 0)
                     {
                         P2pMessage msg = (P2pMessage)formmater.Deserialize(mStream);
-                        //appendText(msg.GuestName + "[" + msg.Time.ToString() + "] \r\n" + msg.Contents);
-                        appendText(msg.Contents);
+                        appendText(msg);
                     }
                 }
                 catch (System.Exception ex)
@@ -173,16 +172,19 @@ namespace QQChat.UiForm
 
         }
 
-        public delegate void InvokeDelegate(string str);//事件委托，跨线程调用winform控件需要
+        public delegate void InvokeDelegate(P2pMessage msg);//事件委托，跨线程调用winform控件需要
 
-        private void appendText(String text)//给messageBox添加
+        private void appendText(P2pMessage msg)//给messageBox添加
         {
             if (messageRichBox.InvokeRequired)
             {
                 InvokeDelegate invoke = new InvokeDelegate(appendText);
-                this.Invoke(invoke,new object[]{text});
+                this.Invoke(invoke,new object[]{msg});
             }else{
-                this.messageRichBox.AppendRtf(text);
+                this.messageRichBox.AppendTextAsRtf(msg.GuestName + "[" + msg.Time.ToString() + "] \r\n");
+                this.messageRichBox.AppendRtf(msg.Contents);
+                this.messageRichBox.AppendTextAsRtf("\r\n");
+                this.messageRichBox.ScrollToCaret();
             }
         }
         #endregion
@@ -191,20 +193,27 @@ namespace QQChat.UiForm
         
         private void send(P2pMessage message)
         {
-            MemoryStream mStream = new MemoryStream();
-            BinaryFormatter formatter = new BinaryFormatter();
-            formatter.Serialize(mStream,message);
-            mStream.Flush();
-            mStream.Position = 0;
-            byte[] buff = new byte[1024];
-            int len = 0;
-            NetworkStream nStream = serverSocket.GetStream();
-            while ((len = mStream.Read(buff,0,buff.Length)) > 0)
+            try
             {
-                nStream.Write(buff, 0, len);
+                MemoryStream mStream = new MemoryStream();
+                BinaryFormatter formatter = new BinaryFormatter();
+                formatter.Serialize(mStream, message);
+                mStream.Flush();
+                mStream.Position = 0;
+                byte[] buff = new byte[1024];
+                int len = 0;
+                NetworkStream nStream = serverSocket.GetStream();
+                while ((len = mStream.Read(buff, 0, buff.Length)) > 0)
+                {
+                    nStream.Write(buff, 0, len);
+                }
+                mStream.Flush();
+                mStream.Position = 0;
             }
-            mStream.Flush();
-            mStream.Position = 0;
+            catch (System.Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
         }
 
         #endregion
