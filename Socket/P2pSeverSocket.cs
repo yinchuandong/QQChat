@@ -54,7 +54,10 @@ namespace Socket
                     if(!socketDict.ContainsKey(guestId))
                     {
                         socketDict.Add(guestId, client);
-                    } 
+                    }else
+                    {
+                        socketDict[guestId] = client;
+                    }  
                 }
                 catch (System.Exception ex)
                 {

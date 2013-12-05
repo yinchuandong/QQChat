@@ -17,6 +17,7 @@ using System.Net.Sockets;
 using System.Threading;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Runtime.Serialization.Formatters.Soap ;
 using System.IO;
 
 namespace QQChat.UiForm
@@ -189,7 +190,7 @@ namespace QQChat.UiForm
                             break;
                         }
                     }
-                    BinaryFormatter formmater = new BinaryFormatter();
+                    IFormatter formmater = new SoapFormatter();
                     mStream.Flush();
                     mStream.Position = 0;
                     if (mStream.Capacity > 0)
@@ -244,7 +245,8 @@ namespace QQChat.UiForm
             try
             {
                 MemoryStream mStream = new MemoryStream();
-                BinaryFormatter formatter = new BinaryFormatter();
+                IFormatter formatter = new SoapFormatter() ;
+                //IFormatter formatter = new BinaryFormatter();
                 formatter.Serialize(mStream, message);
                 mStream.Flush();
                 mStream.Position = 0;
