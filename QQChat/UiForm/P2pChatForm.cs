@@ -121,15 +121,14 @@ namespace QQChat.UiForm
         //发送消息的button
         private void sendBtn_Click(object sender, EventArgs e)
         {
-            string msg = sendRichBox.Rtf;
+            string msg = sendRichBox.Text;
             sendRichBox.Text = String.Empty;
-            messageRichBox.AppendRtf(msg);
             messageRichBox.ScrollToCaret();
             P2pMessage message = new P2pMessage();
             message.HostId = hostId;
             message.GuestId = guestItem.ID;
             message.GuestName = guestItem.DisplayName;
-            message.Contents = sendRichBox.Rtf;
+            message.Contents = msg;
             message.Time = DateTime.Now;
             this.send(message);
         }
@@ -162,7 +161,8 @@ namespace QQChat.UiForm
                     if (mStream.Capacity > 0)
                     {
                         P2pMessage msg = (P2pMessage)formmater.Deserialize(mStream);
-                        appendText(msg.GuestName + "[" + msg.Time.ToString() + "] \r\n" + msg.Contents);
+                        //appendText(msg.GuestName + "[" + msg.Time.ToString() + "] \r\n" + msg.Contents);
+                        appendText(msg.Contents);
                     }
                 }
                 catch (System.Exception ex)
@@ -203,6 +203,8 @@ namespace QQChat.UiForm
             {
                 nStream.Write(buff, 0, len);
             }
+            mStream.Flush();
+            mStream.Position = 0;
         }
 
         #endregion
