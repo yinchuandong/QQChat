@@ -28,6 +28,8 @@ namespace QQChat.UiForm
         #region 成员变量
 
         private UserBll userBll;
+        private GroupBll groupBll;
+        private FriendBll friendBll;
         private SessionBll session;
         private User user;
         public Dictionary<int, P2pChatForm> p2pFormList;
@@ -42,6 +44,8 @@ namespace QQChat.UiForm
             InitializeComponent();
             userBll = new UserBll();
             session = SessionBll.GetInstance();
+            groupBll = new GroupBll();
+            friendBll = new FriendBll();
             user = session.User;
             string ip = AppUtil.GetLocalIp();
             p2pFormList = new Dictionary<int, P2pChatForm>();
@@ -55,18 +59,35 @@ namespace QQChat.UiForm
         {
             friendListBox.IconSizeMode = ChatListItemIcon.Large;
             Random rnd = new Random();
-            for (int i = 0; i < 10; i++)
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    ChatListItem item = new ChatListItem("group" + i);
+            //    for (int j = 0; j < 10; j++)
+            //    {
+            //        ChatListSubItem subItem = new ChatListSubItem("nickname", "displayname" + j, "personalmsg");
+            //        subItem.HeadImage = Image.FromFile("Head/1 (" + rnd.Next(0, 45) + ").png");
+            //        subItem.Status = (ChatListSubItem.UserStatus)(j % 6);
+            //        subItem.ID = j;
+            //        item.SubItems.Add(subItem);
+            //    }
+            //    friendListBox.Items.Add(item);
+            //}
+            IList<Group> groupList = groupBll.getGroupList(user.UId);
+            foreach (Group group in groupList)
             {
-                ChatListItem item = new ChatListItem("group" + i);
-                for (int j = 0; j < 10; j++)
+                ChatListItem groupItem = new ChatListItem(group.Name);
+                IList<Friend> friendList = friendBll.getFriendByGroup(user.UId, group.GId);
+                foreach (Friend friend in friendList)
                 {
-                    ChatListSubItem subItem = new ChatListSubItem("nickname", "displayname" + j, "personalmsg");
-                    subItem.HeadImage = Image.FromFile("Head/1 (" + rnd.Next(0, 45) + ").png");
-                    subItem.Status = (ChatListSubItem.UserStatus)(j % 6);
-                    subItem.ID = j;
-                    item.SubItems.Add(subItem);
+                    User fModel = userBll.getUser(friend.FriendId);
+                    ChatListSubItem friendItem = new ChatListSubItem();
+                    friendItem.DisplayName = friend.FriendName;
+                    friendItem.ID = friend.FriendId;
+                    friendItem.HeadImage = Image.FromFile("Head/1 (" + rnd.Next(0, 45) + ").png");
+                    friend.NickName = friend.NickName;
+                    groupItem.SubItems.Add(friendItem);
                 }
-                friendListBox.Items.Add(item);
+                friendListBox.Items.Add(groupItem);
             }
         }
 
