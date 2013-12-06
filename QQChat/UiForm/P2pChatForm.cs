@@ -93,7 +93,7 @@ namespace QQChat.UiForm
         //初始化相关数据
         private void initData()
         {
-            guestModel = userBll.getUser("342916053@qq.com");
+            guestModel = userBll.getUser(guestItem.ID);
             headPicBox.Image = guestItem.HeadImage;
             nameTxt.Text = guestItem.DisplayName;
             signTxt.Text = guestItem.PersonalMsg;
