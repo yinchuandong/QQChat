@@ -54,7 +54,16 @@ namespace QQChat.UiForm
         //去注册的label click事件
         private void register_Click(object sender, EventArgs e)
         {
-            new RegisterForm().Show();
+            FriendBll friendBll = new FriendBll();
+            Friend friend = new Friend();
+            //friend.UId = 3;
+            //friend.FriendId = 4;
+            //friend.GId = 1;
+            //friend.Time = DateTime.Now;
+            //friend.NickName = "";
+            //friendBll.addFriend(friend);
+            //new RegisterForm().Show();
+            friendBll.getOneFriend(4);
         }
 
         private void register_Enter(object sender, EventArgs e)

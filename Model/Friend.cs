@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Model
 {
-    class Friend
+    public class Friend
     {
         private int uId;
         public int UId
@@ -14,11 +14,25 @@ namespace Model
             set {this.uId = value;}
         }
 
+        private int gId;
+        public int GId
+        {
+            get { return this.gId; }
+            set { this.gId = value; }
+        }
+
         private int friendId;
         public int FriendId
         {
             get { return friendId; }
             set { this.friendId = value;}
+        }
+
+        private string friendName;
+        public string FriendName
+        {
+            get { return this.friendName; }
+            set { this.friendName = value; }
         }
 
         private DateTime? time;

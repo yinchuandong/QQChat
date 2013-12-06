@@ -50,7 +50,7 @@ namespace SqlDal
                         "[last_login_time] as [LastLoginTime], [last_login_ip] as [LastLoginIp], [status] as [Status] from [user] " +
                         "where [u_id]=@UId";
             List<SqlParameter> parameters = new List<SqlParameter>();
-            SqlParameter UId = new SqlParameter("@u_id", SqlDbType.VarChar, 50);
+            SqlParameter UId = new SqlParameter("@UId", SqlDbType.VarChar, 50);
             UId.Value = uId;
             parameters.Add(UId);
 
