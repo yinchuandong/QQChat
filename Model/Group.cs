@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Model
 {
-    class Group
+    public class Group
     {
         private int gId;
         public int GId
@@ -19,6 +19,13 @@ namespace Model
         {
             get { return this.name; }
             set {this.name = value;}
+        }
+
+        private int uId;
+        public int UId
+        {
+            get { return this.uId; }
+            set { this.uId = value; }
         }
     }
 }
