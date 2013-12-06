@@ -156,6 +156,7 @@ namespace QQChat.UiForm
                 {
                     string ip = guestModel.LastLoginIp;
                     TcpClient client = new TcpClient(ip, 8009);
+                    P2pServerSocket.socketDict[guestId] = client;
                     byte[] buff = new byte[4096];
                     StreamWriter writer = new StreamWriter(client.GetStream());
                     writer.WriteLine(session.User.UId); //告诉对方自己的id
@@ -211,13 +212,14 @@ namespace QQChat.UiForm
                     {
                         P2pServerSocket.socketDict.Remove(guestId);
                     }
-                    string ip = guestModel.LastLoginIp;
-                    TcpClient client = new TcpClient(ip, 8009);
-                    byte[] buff = new byte[4096];
-                    StreamWriter writer = new StreamWriter(client.GetStream());
-                    writer.WriteLine(session.User.UId); //告诉对方自己的id
-                    writer.Flush();
-                    this.ServerSocket = client;
+                    initSocket();
+                    //string ip = guestModel.LastLoginIp;
+                    //TcpClient client = new TcpClient(ip, 8009);
+                    //byte[] buff = new byte[4096];
+                    //StreamWriter writer = new StreamWriter(client.GetStream());
+                    //writer.WriteLine(session.User.UId); //告诉对方自己的id
+                    //writer.Flush();
+                    //this.ServerSocket = client;
                 }
             }
 
@@ -232,7 +234,7 @@ namespace QQChat.UiForm
                 InvokeDelegate invoke = new InvokeDelegate(appendText);
                 this.Invoke(invoke,new object[]{msg});
             }else{
-                this.messageRichBox.AppendTextAsRtf(msg.GuestName + "[" + msg.Time.ToString() + "] \r\n");
+                this.messageRichBox.AppendText(msg.GuestName + " [" + msg.Time.ToString() + "] \r\n");
                 this.messageRichBox.AppendRtf(msg.Contents);
                 this.messageRichBox.AppendTextAsRtf("\r\n");
                 this.messageRichBox.ScrollToCaret();
