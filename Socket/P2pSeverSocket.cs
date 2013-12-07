@@ -17,12 +17,12 @@ namespace Socket
     {
         private TcpListener tcpListener;
         private Thread listenThread;
-        private Dictionary<int, TcpClient> socketDict;
-        public Dictionary<int, TcpClient> SocketDict
-        {
-            get { return this.socketDict; }
-            set { this.socketDict = value; }
-        }
+        public static Dictionary<int, TcpClient> socketDict;
+        //public Dictionary<int, TcpClient> SocketDict
+        //{
+        //    get { return this.socketDict; }
+        //    set { this.socketDict = value; }
+        //}
         
         public P2pServerSocket()
         {
@@ -54,7 +54,10 @@ namespace Socket
                     if(!socketDict.ContainsKey(guestId))
                     {
                         socketDict.Add(guestId, client);
-                    } 
+                    }else
+                    {
+                        socketDict[guestId] = client;
+                    }  
                 }
                 catch (System.Exception ex)
                 {

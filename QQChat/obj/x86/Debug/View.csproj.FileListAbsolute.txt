@@ -25,6 +25,7 @@ E:\c#\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.P2pChatForm.resources
 E:\c#\QQChat\QQChat\bin\Debug\Socket.dll
 E:\c#\QQChat\QQChat\bin\Debug\Socket.pdb
 E:\c#\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.FriendListForm.resources
+<<<<<<< HEAD
 E:\visual stadio workplace\QQChat-master\QQChat\QQChat\bin\Debug\QQChat.exe.config
 E:\visual stadio workplace\QQChat-master\QQChat\QQChat\obj\x86\Debug\QQChat.exe
 E:\visual stadio workplace\QQChat-master\QQChat\QQChat\obj\x86\Debug\QQChat.pdb
@@ -53,3 +54,32 @@ E:\visual stadio workplace\QQChat-master\QQChat\QQChat\obj\x86\Debug\QQChat.UiFo
 E:\visual stadio workplace\QQChat-master\QQChat\QQChat\obj\x86\Debug\GenerateResource.read.1.tlog
 E:\visual stadio workplace\QQChat-master\QQChat\QQChat\obj\x86\Debug\GenerateResource.write.1.tlog
 E:\visual stadio workplace\QQChat-master\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.AddFriendsForm.resources
+=======
+C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\bin\Debug\QQChat.exe.config
+C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\obj\x86\Debug\QQChat.exe
+C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\obj\x86\Debug\QQChat.pdb
+C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\bin\Debug\QQChat.exe
+C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\bin\Debug\QQChat.pdb
+C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\bin\Debug\Bll.dll
+C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\bin\Debug\Model.dll
+C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\bin\Debug\Socket.dll
+C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\bin\Debug\SqlDal.dll
+C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\bin\Debug\Util.dll
+C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\bin\Debug\Widget.dll
+C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\bin\Debug\Bll.pdb
+C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\bin\Debug\Model.pdb
+C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\bin\Debug\Socket.pdb
+C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\bin\Debug\SqlDal.pdb
+C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\bin\Debug\Util.pdb
+C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\bin\Debug\Widget.pdb
+C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\obj\x86\Debug\View.csprojResolveAssemblyReference.cache
+C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.BaseForm.resources
+C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.FriendListForm.resources
+C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.LoginForm.resources
+C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.MainForm.resources
+C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\obj\x86\Debug\QQChat.Properties.Resources.resources
+C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.P2pChatForm.resources
+C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.RegisterForm.resources
+C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.UserInfoForm.resources
+C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\obj\x86\Debug\View.csproj.GenerateResource.Cache
+>>>>>>> 913df0672ff7529ed1475b39b053c5150d50af11

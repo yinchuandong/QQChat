@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FriendsBll.cs" />
+    <Compile Include="FriendBll.cs" />
+    <Compile Include="GroupBll.cs" />
     <Compile Include="SessionBll.cs" />
     <Compile Include="UserBll.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

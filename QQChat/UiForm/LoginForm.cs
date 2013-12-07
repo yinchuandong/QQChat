@@ -36,11 +36,13 @@ namespace QQChat.UiForm
             {
                 SessionBll sessionBll = SessionBll.GetInstance();
                 User user = userBll.getUser(email);
+                user.LastLoginIp = AppUtil.GetLocalIp();
+                user.LastLoginTime = DateTime.Now;
                 sessionBll.User = user;
                 sessionBll.IsLogin = true;
                 User updateUser = new User();
-                updateUser.LastLoginIp = AppUtil.GetLocalIp();
-                updateUser.LastLoginTime = DateTime.Now;
+                updateUser.LastLoginIp = user.LastLoginIp;
+                updateUser.LastLoginTime = user.LastLoginTime;
                 userBll.update(updateUser, user.UId);
                 new MainForm().Show();
                 this.Hide();
@@ -52,7 +54,18 @@ namespace QQChat.UiForm
         //去注册的label click事件
         private void register_Click(object sender, EventArgs e)
         {
+            //FriendBll friendBll = new FriendBll();
+            //Friend friend = new Friend();
+            //friend.UId = 3;
+            //friend.FriendId = 4;
+            //friend.GId = 1;
+            //friend.Time = DateTime.Now;
+            //friend.NickName = "";
+            //friendBll.addFriend(friend);
             new RegisterForm().Show();
+            //friendBll.getOneFriend(3,4);
+            //GroupBll groupBll = new GroupBll();
+            //IList<Group> list= groupBll.getGroupList(3);
         }
 
         private void register_Enter(object sender, EventArgs e)
