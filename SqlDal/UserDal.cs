@@ -108,7 +108,7 @@ namespace SqlDal
             {
                 sql.Append(" password=@Password,");  
                 SqlParameter Password =  new SqlParameter("@Password", SqlDbType.VarChar, 50);
-                Password.Value = AppUtil.Encrypt(user.Password);
+                Password.Value = user.Password;
                 parameters.Add(Password);
             }
             if(user.Age != -1)

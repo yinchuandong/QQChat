@@ -25,3 +25,6 @@ E:\c#\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.P2pChatForm.resources
 E:\c#\QQChat\QQChat\bin\Debug\Socket.dll
 E:\c#\QQChat\QQChat\bin\Debug\Socket.pdb
 E:\c#\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.FriendListForm.resources
+C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\bin\Debug\QQChat.exe.config
+C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\obj\x86\Debug\QQChat.exe
+C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\obj\x86\Debug\QQChat.pdb
