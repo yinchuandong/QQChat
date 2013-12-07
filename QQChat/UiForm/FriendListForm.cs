@@ -59,19 +59,7 @@ namespace QQChat.UiForm
         {
             friendListBox.IconSizeMode = ChatListItemIcon.Large;
             Random rnd = new Random();
-            //for (int i = 0; i < 10; i++)
-            //{
-            //    ChatListItem item = new ChatListItem("group" + i);
-            //    for (int j = 0; j < 10; j++)
-            //    {
-            //        ChatListSubItem subItem = new ChatListSubItem("nickname", "displayname" + j, "personalmsg");
-            //        subItem.HeadImage = Image.FromFile("Head/1 (" + rnd.Next(0, 45) + ").png");
-            //        subItem.Status = (ChatListSubItem.UserStatus)(j % 6);
-            //        subItem.ID = j;
-            //        item.SubItems.Add(subItem);
-            //    }
-            //    friendListBox.Items.Add(item);
-            //}
+            
             IList<Group> groupList = groupBll.getGroupList(user.UId);
             foreach (Group group in groupList)
             {
@@ -84,7 +72,9 @@ namespace QQChat.UiForm
                     friendItem.DisplayName = friend.FriendName;
                     friendItem.ID = friend.FriendId;
                     friendItem.HeadImage = Image.FromFile("Head/1 (" + rnd.Next(0, 45) + ").png");
-                    friend.NickName = friend.NickName;
+                    friendItem.NicName = friend.NickName;
+                    friendItem.PersonalMsg = fModel.Sign;
+                    friendItem.IpAddress = fModel.LastLoginIp;
                     groupItem.SubItems.Add(friendItem);
                 }
                 friendListBox.Items.Add(groupItem);

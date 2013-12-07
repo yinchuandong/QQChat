@@ -69,6 +69,7 @@ namespace QQChat.UiForm
       
 
         private Thread receiveThread;
+        private bool receiveFlag = true;
 
         #endregion
 
@@ -86,6 +87,7 @@ namespace QQChat.UiForm
             session = SessionBll.GetInstance();
             hostId = session.User.UId;
             this.guestItem = guestItem;
+            this.guestId = guestItem.ID;
             initData();
             initSocket();
         }
@@ -93,11 +95,24 @@ namespace QQChat.UiForm
         //初始化相关数据
         private void initData()
         {
-            guestModel = userBll.getUser("342916053@qq.com");
+            guestModel = userBll.getUser(guestItem.ID);
             headPicBox.Image = guestItem.HeadImage;
             nameTxt.Text = guestItem.DisplayName;
             signTxt.Text = guestItem.PersonalMsg;
             //clientSocket = new TcpClient(guestItem.IpAddress, 8009);
+            //try
+            //{
+            //    P2pMessage msg = new P2pMessage();
+            //    msg.Time = DateTime.Now;
+            //    msg.GuestName = "";
+            //    msg.Contents = "";
+            //    appendText(msg);
+            //    sendRichBox.Text = string.Empty;
+            //}
+            //catch (System.Exception ex)
+            //{
+
+            //}
         }
 
         #endregion
@@ -139,6 +154,11 @@ namespace QQChat.UiForm
             this.appendText(message);
         }
 
+        private void OnFormClosed(object sender, FormClosedEventArgs e)
+        {
+            receiveFlag = false;
+        }
+
         #endregion
 
         #region 初始化socket
@@ -156,6 +176,7 @@ namespace QQChat.UiForm
                 {
                     string ip = guestModel.LastLoginIp;
                     TcpClient client = new TcpClient(ip, 8009);
+                    P2pServerSocket.socketDict[guestId] = client;
                     byte[] buff = new byte[4096];
                     StreamWriter writer = new StreamWriter(client.GetStream());
                     writer.WriteLine(session.User.UId); //告诉对方自己的id
@@ -173,10 +194,12 @@ namespace QQChat.UiForm
         #region 接收对方的消息
         private void service()
         {
-            while(true)
+            while(receiveFlag)
             {
+                P2pMessage msg = null; //接收到的信息对象，放这里主要是为了解决appendText的异步问题
                 try
                 {
+                    this.serverSocket = P2pServerSocket.socketDict[guestId];
                     byte[] buff = new byte[4096];
                     MemoryStream mStream = new MemoryStream();
                     mStream.Position = 0;
@@ -196,7 +219,6 @@ namespace QQChat.UiForm
                     mStream.Position = 0;
                     if (mStream.Capacity > 0)
                     {
-                        P2pMessage msg;
                         //msg = (P2pMessage)formmater.ReadObject(mStream);
                         msg = formmater.Deserialize(mStream) as P2pMessage;
                         appendText(msg);
@@ -205,19 +227,25 @@ namespace QQChat.UiForm
                 {
                     Console.WriteLine(ex.ToString());
                 }
-                catch (System.Exception ex)
+                catch (System.ObjectDisposedException ex)
                 {
+                    string test = ex.Message;
+                    //appendText(msg);
+                }
+                catch (System.Exception ex)//如果对方退出了程序
+                {
+                    if (serverSocket != null)
+                    {
+                        serverSocket.Close();
+                        serverSocket = null;
+                    }
+
                     if (P2pServerSocket.socketDict.ContainsKey(guestId))
                     {
                         P2pServerSocket.socketDict.Remove(guestId);
                     }
-                    string ip = guestModel.LastLoginIp;
-                    TcpClient client = new TcpClient(ip, 8009);
-                    byte[] buff = new byte[4096];
-                    StreamWriter writer = new StreamWriter(client.GetStream());
-                    writer.WriteLine(session.User.UId); //告诉对方自己的id
-                    writer.Flush();
-                    this.ServerSocket = client;
+                    initSocket();
+                    Thread.Sleep(1000);
                 }
             }
 
@@ -232,7 +260,7 @@ namespace QQChat.UiForm
                 InvokeDelegate invoke = new InvokeDelegate(appendText);
                 this.Invoke(invoke,new object[]{msg});
             }else{
-                this.messageRichBox.AppendTextAsRtf(msg.GuestName + "[" + msg.Time.ToString() + "] \r\n");
+                this.messageRichBox.AppendText(msg.GuestName + " [" + msg.Time.ToString() + "] \r\n");
                 this.messageRichBox.AppendRtf(msg.Contents);
                 this.messageRichBox.AppendTextAsRtf("\r\n");
                 this.messageRichBox.ScrollToCaret();
@@ -270,6 +298,7 @@ namespace QQChat.UiForm
         }
 
         #endregion
+
 
     }
 }
