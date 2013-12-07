@@ -9,3 +9,14 @@ E:\c#\QQChat\Bll\bin\Debug\Util.dll
 E:\c#\QQChat\Bll\bin\Debug\Model.pdb
 E:\c#\QQChat\Bll\bin\Debug\SqlDal.pdb
 E:\c#\QQChat\Bll\bin\Debug\Util.pdb
+C:\Users\Yuanyun\Documents\GitHub\QQChat\Bll\bin\Debug\Bll.dll
+C:\Users\Yuanyun\Documents\GitHub\QQChat\Bll\bin\Debug\Bll.pdb
+C:\Users\Yuanyun\Documents\GitHub\QQChat\Bll\bin\Debug\Model.dll
+C:\Users\Yuanyun\Documents\GitHub\QQChat\Bll\bin\Debug\SqlDal.dll
+C:\Users\Yuanyun\Documents\GitHub\QQChat\Bll\bin\Debug\Util.dll
+C:\Users\Yuanyun\Documents\GitHub\QQChat\Bll\bin\Debug\Model.pdb
+C:\Users\Yuanyun\Documents\GitHub\QQChat\Bll\bin\Debug\SqlDal.pdb
+C:\Users\Yuanyun\Documents\GitHub\QQChat\Bll\bin\Debug\Util.pdb
+C:\Users\Yuanyun\Documents\GitHub\QQChat\Bll\obj\Debug\Bll.csprojResolveAssemblyReference.cache
+C:\Users\Yuanyun\Documents\GitHub\QQChat\Bll\obj\Debug\Bll.dll
+C:\Users\Yuanyun\Documents\GitHub\QQChat\Bll\obj\Debug\Bll.pdb

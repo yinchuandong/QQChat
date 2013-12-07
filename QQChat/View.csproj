@@ -83,6 +83,12 @@
     <Compile Include="UiForm\RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UiForm\UserInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UiForm\UserInfoForm.designer.cs">
+      <DependentUpon>UserInfoForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="UiForm\BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UiForm\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UiForm\UserInfoForm.resx">
+      <DependentUpon>UserInfoForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="ClassDiagram1.cd" />

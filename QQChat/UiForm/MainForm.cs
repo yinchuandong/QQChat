@@ -39,6 +39,11 @@ namespace QQChat.UiForm
 
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            new UserInfoForm().Show();
+        }
+
 
         
     }
