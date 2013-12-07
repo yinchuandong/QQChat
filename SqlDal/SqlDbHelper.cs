@@ -58,8 +58,8 @@ namespace SqlDal
                     command.Parameters.Add(p);
                 }
             }
-            conn.Open();
-            return command.ExecuteReader(CommandBehavior.CloseConnection);
+            conn.Open();           
+           return command.ExecuteReader(CommandBehavior.CloseConnection);
         }
 
         //overload

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.friendListBox = new Widget.ChatListBox();
+            this.addFriendButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // friendListBox
@@ -37,19 +38,30 @@
             this.friendListBox.ForeColor = System.Drawing.Color.DarkOrange;
             this.friendListBox.Location = new System.Drawing.Point(3, 3);
             this.friendListBox.Name = "friendListBox";
-            this.friendListBox.Size = new System.Drawing.Size(235, 406);
+            this.friendListBox.Size = new System.Drawing.Size(235, 377);
             this.friendListBox.TabIndex = 0;
             this.friendListBox.Text = "friendListBox";
             this.friendListBox.DoubleClickSubItem += new Widget.ChatListBox.ChatListEventHandler(this.friendListBox_DoubleClickSubItem);
             this.friendListBox.MouseEnterHead += new Widget.ChatListBox.ChatListEventHandler(this.friendListBox_MouseEnterHead);
+            // 
+            // addFriendButton
+            // 
+            this.addFriendButton.Location = new System.Drawing.Point(148, 386);
+            this.addFriendButton.Name = "addFriendButton";
+            this.addFriendButton.Size = new System.Drawing.Size(75, 23);
+            this.addFriendButton.TabIndex = 1;
+            this.addFriendButton.Text = "添加好友";
+            this.addFriendButton.UseVisualStyleBackColor = true;
+            this.addFriendButton.Click += new System.EventHandler(this.addFriendButton_Click);
             // 
             // FriendListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(239, 412);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Controls.Add(this.addFriendButton);
             this.Controls.Add(this.friendListBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FriendListForm";
             this.Text = "FriendListForm";
             this.Load += new System.EventHandler(this.FriendListForm_Load);
@@ -60,5 +72,6 @@
         #endregion
 
         private Widget.ChatListBox friendListBox;
+        private System.Windows.Forms.Button addFriendButton;
     }
 }

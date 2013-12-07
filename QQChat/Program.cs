@@ -15,7 +15,7 @@ namespace QQChat
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new UiForm.LoginForm());
+            Application.Run(new UiForm.AddFriendsForm());
         }
     }
 }

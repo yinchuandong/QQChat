@@ -35,7 +35,6 @@
             this.groupPage = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl.SuspendLayout();
-            this.friendPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,7 +80,6 @@
             this.friendPage.TabIndex = 0;
             this.friendPage.Text = "friendPage";
             this.friendPage.UseVisualStyleBackColor = true;
-         
             // 
             // groupPage
             // 
@@ -105,7 +103,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(255, 528);
+            this.ClientSize = new System.Drawing.Size(252, 522);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -114,7 +112,6 @@
             this.Text = "呵呵";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.tabControl.ResumeLayout(false);
-            this.friendPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -7,3 +7,12 @@ E:\c#\QQChat\SqlDal\bin\Debug\Util.pdb
 E:\c#\QQChat\SqlDal\obj\Debug\ResolveAssemblyReference.cache
 E:\c#\QQChat\SqlDal\obj\Debug\SqlDal.dll
 E:\c#\QQChat\SqlDal\obj\Debug\SqlDal.pdb
+E:\visual stadio workplace\QQChat-master\QQChat\SqlDal\bin\Debug\SqlDal.dll
+E:\visual stadio workplace\QQChat-master\QQChat\SqlDal\bin\Debug\SqlDal.pdb
+E:\visual stadio workplace\QQChat-master\QQChat\SqlDal\bin\Debug\Model.dll
+E:\visual stadio workplace\QQChat-master\QQChat\SqlDal\bin\Debug\Util.dll
+E:\visual stadio workplace\QQChat-master\QQChat\SqlDal\bin\Debug\Model.pdb
+E:\visual stadio workplace\QQChat-master\QQChat\SqlDal\bin\Debug\Util.pdb
+E:\visual stadio workplace\QQChat-master\QQChat\SqlDal\obj\Debug\ResolveAssemblyReference.cache
+E:\visual stadio workplace\QQChat-master\QQChat\SqlDal\obj\Debug\SqlDal.dll
+E:\visual stadio workplace\QQChat-master\QQChat\SqlDal\obj\Debug\SqlDal.pdb

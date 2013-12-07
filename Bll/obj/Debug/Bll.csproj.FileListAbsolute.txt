@@ -9,3 +9,14 @@ E:\c#\QQChat\Bll\bin\Debug\Util.dll
 E:\c#\QQChat\Bll\bin\Debug\Model.pdb
 E:\c#\QQChat\Bll\bin\Debug\SqlDal.pdb
 E:\c#\QQChat\Bll\bin\Debug\Util.pdb
+E:\visual stadio workplace\QQChat-master\QQChat\Bll\bin\Debug\Bll.dll
+E:\visual stadio workplace\QQChat-master\QQChat\Bll\bin\Debug\Bll.pdb
+E:\visual stadio workplace\QQChat-master\QQChat\Bll\bin\Debug\Model.dll
+E:\visual stadio workplace\QQChat-master\QQChat\Bll\bin\Debug\SqlDal.dll
+E:\visual stadio workplace\QQChat-master\QQChat\Bll\bin\Debug\Util.dll
+E:\visual stadio workplace\QQChat-master\QQChat\Bll\bin\Debug\Model.pdb
+E:\visual stadio workplace\QQChat-master\QQChat\Bll\bin\Debug\SqlDal.pdb
+E:\visual stadio workplace\QQChat-master\QQChat\Bll\bin\Debug\Util.pdb
+E:\visual stadio workplace\QQChat-master\QQChat\Bll\obj\Debug\ResolveAssemblyReference.cache
+E:\visual stadio workplace\QQChat-master\QQChat\Bll\obj\Debug\Bll.dll
+E:\visual stadio workplace\QQChat-master\QQChat\Bll\obj\Debug\Bll.pdb

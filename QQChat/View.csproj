@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UiForm\AddFriendsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UiForm\AddFriendsForm.Designer.cs">
+      <DependentUpon>AddFriendsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UiForm\BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,9 @@
     <Compile Include="UiForm\RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UiForm\AddFriendsForm.resx">
+      <DependentUpon>AddFriendsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UiForm\BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -109,7 +118,9 @@
     <EmbeddedResource Include="UiForm\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

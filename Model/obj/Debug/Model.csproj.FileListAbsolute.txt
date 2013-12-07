@@ -3,3 +3,8 @@ E:\c#\QQChat\Model\bin\Debug\Model.pdb
 E:\c#\QQChat\Model\obj\Debug\ResolveAssemblyReference.cache
 E:\c#\QQChat\Model\obj\Debug\Model.dll
 E:\c#\QQChat\Model\obj\Debug\Model.pdb
+E:\visual stadio workplace\QQChat-master\QQChat\Model\bin\Debug\Model.dll
+E:\visual stadio workplace\QQChat-master\QQChat\Model\bin\Debug\Model.pdb
+E:\visual stadio workplace\QQChat-master\QQChat\Model\obj\Debug\ResolveAssemblyReference.cache
+E:\visual stadio workplace\QQChat-master\QQChat\Model\obj\Debug\Model.dll
+E:\visual stadio workplace\QQChat-master\QQChat\Model\obj\Debug\Model.pdb
