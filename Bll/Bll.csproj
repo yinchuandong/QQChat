@@ -40,7 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FriendsBll.cs" />
     <Compile Include="FriendBll.cs" />
     <Compile Include="GroupBll.cs" />
     <Compile Include="SessionBll.cs" />

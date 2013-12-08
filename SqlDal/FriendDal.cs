@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using System.Data.SqlClient;
+using System.Collections;
 
 using Model;
 using Util;
@@ -90,5 +91,90 @@ namespace SqlDal
             int result = SqlDbHelper.ExecuteNoQuery(sql, CommandType.Text, parameters);
             return result;
         }
+
+        //判断好友关系
+        public bool IsFriend(int curr_ID, int search_ID)
+        {
+            string sql = "select count(*) from [friend] where u_id=@curr_ID and friend_id=@search_ID";
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            parameters.Add(new SqlParameter("@curr_ID", SqlDbType.Int));
+            parameters.Add(new SqlParameter("@search_ID", SqlDbType.Int));
+            parameters[0].Value = curr_ID;
+            parameters[1].Value = search_ID;
+            int result = (int)SqlDbHelper.ExecuteScalar(sql, CommandType.Text, parameters);
+            if (result == 1)
+                return true;
+            else
+                return false;
+        }
+
+        //根据用户名查找用户
+        public SqlDataReader searchFriendByName(string name)
+        {
+            string sqlStr = "select * from [user] where username like '%" + name + "%'";
+            SqlDataReader result = SqlDbHelper.ExecuteReader(sqlStr, CommandType.Text, null);
+            return result;
+        }
+
+        //查找用户
+        public ArrayList searchUser(string key)
+        {
+            ArrayList userList = new ArrayList();
+            SqlDataReader reader = searchFriendByName(key);
+            if (reader.HasRows)
+            {
+                User user;
+                while (reader.Read())
+                {
+                    user = new User();
+                    if (!(reader["u_id"] is System.DBNull))
+                    {
+                        user.UId = Convert.ToInt32(reader["u_id"].ToString().Trim());
+                    }
+                    if (!(reader["username"] is System.DBNull))
+                    {
+                        user.Username = reader["username"].ToString().Trim();
+                    }
+                    if (!(reader["age"] is System.DBNull))
+                    {
+                        user.Age = Convert.ToInt32(reader["age"].ToString().Trim());
+                    }
+                    if (!(reader["regTime"] is System.DBNull))
+                    {
+                        user.RegTime = Convert.ToDateTime(reader["regTime"].ToString());
+                    }
+                    if (!(reader["sex"] is System.DBNull))
+                    {
+                        user.Sex = Convert.ToInt32(reader["sex"].ToString().Trim());
+                    }
+                    if (!(reader["sign"] is System.DBNull))
+                    {
+                        user.Sign = reader["sign"].ToString();
+                    }
+                    if (!(reader["photo"] is System.DBNull))
+                    {
+                        user.Photo = reader["photo"].ToString();
+                    }
+                    if (!(reader["last_login_ip"] is System.DBNull))
+                    {
+                        user.LastLoginIp = reader["last_login_ip"].ToString();
+                    }
+                    if (!(reader["last_login_time"] is System.DBNull))
+                    {
+                        user.LastLoginTime = Convert.ToDateTime(reader["last_login_time"].ToString());
+                    }
+                    if (!(reader["status"] is System.DBNull))
+                    {
+                        user.Status = Convert.ToInt32(reader["status"].ToString());
+                    }
+                    userList.Add(user);
+                }
+            }
+
+            reader.Close();
+            return userList;
+        }
+
+        
     }
 }

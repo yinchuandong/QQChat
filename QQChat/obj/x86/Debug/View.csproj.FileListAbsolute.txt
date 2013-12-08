@@ -83,3 +83,6 @@ C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.Regi
 C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.UserInfoForm.resources
 C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\obj\x86\Debug\View.csproj.GenerateResource.Cache
 >>>>>>> 913df0672ff7529ed1475b39b053c5150d50af11
+E:\visual stadio workplace\QQChat-master\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.UserInfoForm.resources
+E:\visual stadio workplace\QQChat-master\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.Test.resources
+E:\visual stadio workplace\QQChat-master\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.ChooseGroup.resources

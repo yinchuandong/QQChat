@@ -118,7 +118,7 @@ namespace QQChat.UiForm
         //添加好友
         private void addFriendButton_Click(object sender, EventArgs e)
         {
-
+            new AddFriendsForm(user);
         }
 
        
