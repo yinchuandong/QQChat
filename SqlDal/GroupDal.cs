@@ -12,7 +12,7 @@ namespace SqlDal
 {
     public class GroupDal
     {
-        //获得群列表
+        //获得好友分组列表
         public DataTable getGroupList(int uId)
         {
             string sql = "select u_id as UId, g_id as GId, name as Name"
@@ -25,7 +25,7 @@ namespace SqlDal
             return result;
         }
 
-        //添加群
+        //添加好友分组
         public int addGroup(Model.Group group)
         {
             string sql = "insert into [group] ([u_id],[name]) values (@UId,@Name)";

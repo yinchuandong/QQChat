@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Model
 {
-    class ChatroomMessage
+  public  class ChatroomMessage
     {
         private int mId;
         public int MId

@@ -15,3 +15,4 @@ C:\Users\Yuanyun\Documents\GitHub\QQChat\SqlDal\bin\Debug\Model.pdb
 C:\Users\Yuanyun\Documents\GitHub\QQChat\SqlDal\bin\Debug\Util.pdb
 C:\Users\Yuanyun\Documents\GitHub\QQChat\SqlDal\obj\Debug\SqlDal.dll
 C:\Users\Yuanyun\Documents\GitHub\QQChat\SqlDal\obj\Debug\SqlDal.pdb
+C:\Users\Yuanyun\Documents\GitHub\QQChat\SqlDal\obj\Debug\SqlDal.csprojResolveAssemblyReference.cache

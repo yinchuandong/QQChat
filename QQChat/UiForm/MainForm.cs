@@ -23,12 +23,16 @@ namespace QQChat.UiForm
 {
     public partial class MainForm : BaseForm
     {
-
+        private User user;
+        private SessionBll session;
         public MainForm()
         {
+            session = SessionBll.GetInstance();
+            user = session.User;
             InitializeComponent();
+            NickName_label.Text = user.Username;
+            Sign_label.Text = user.Sign;
         }
-
         private void MainForm_Load(object sender, EventArgs e)
         {
             FriendListForm friendListForm = new FriendListForm();
@@ -36,6 +40,12 @@ namespace QQChat.UiForm
             friendListForm.Dock = DockStyle.Fill;
             friendPage.Controls.Add(friendListForm);
             friendListForm.Show();
+
+            GroupListForm groupListForm = new GroupListForm();
+            groupListForm.TopLevel = false;
+            groupListForm.Dock = DockStyle.Fill;
+            groupPage.Controls.Add(groupListForm);
+            groupListForm.Show();
 
         }
 

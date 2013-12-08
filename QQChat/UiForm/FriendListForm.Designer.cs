@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.friendListBox = new Widget.ChatListBox();
             this.SuspendLayout();
             // 
@@ -48,8 +50,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(239, 412);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Controls.Add(this.friendListBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FriendListForm";
             this.Text = "FriendListForm";
             this.Load += new System.EventHandler(this.FriendListForm_Load);
@@ -60,5 +62,6 @@
         #endregion
 
         private Widget.ChatListBox friendListBox;
+        private System.IO.Ports.SerialPort serialPort1;
     }
 }

@@ -3,3 +3,8 @@ E:\c#\QQChat\Util\bin\Debug\Util.pdb
 E:\c#\QQChat\Util\obj\Debug\ResolveAssemblyReference.cache
 E:\c#\QQChat\Util\obj\Debug\Util.dll
 E:\c#\QQChat\Util\obj\Debug\Util.pdb
+C:\Users\Yuanyun\Documents\GitHub\QQChat\Util\bin\Debug\Util.dll
+C:\Users\Yuanyun\Documents\GitHub\QQChat\Util\bin\Debug\Util.pdb
+C:\Users\Yuanyun\Documents\GitHub\QQChat\Util\obj\Debug\Util.csprojResolveAssemblyReference.cache
+C:\Users\Yuanyun\Documents\GitHub\QQChat\Util\obj\Debug\Util.dll
+C:\Users\Yuanyun\Documents\GitHub\QQChat\Util\obj\Debug\Util.pdb

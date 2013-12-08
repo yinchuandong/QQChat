@@ -41,7 +41,8 @@ namespace QQChat.UiForm
             label_NickName.Text = Convert.ToString(user.Username) ;
             label_Email.Text = Convert.ToString(user.Email);
             Sign_textBox.Text = Convert.ToString(user.Sign);
-            Sign_textBox.ReadOnly = true;        
+            Sign_textBox.ReadOnly = true;
+            
         }
 
         private void EditInfo_Click(object sender, EventArgs e)
@@ -49,7 +50,6 @@ namespace QQChat.UiForm
             UserInfopanel.Hide();
             Sign_textBox.Enabled = true;
             Sign_textBox.ReadOnly =false;
-            Sign_textBox.BackColor = System.Drawing.Color.White;
             if (user.Sex == -1)
                SexChoice_comboBox.Text = "男";
             else

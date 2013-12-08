@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChatRoomMemberDal.cs" />
     <Compile Include="FriendDal.cs" />
     <Compile Include="GroupDal.cs" />
     <Compile Include="SqlDbHelper.cs" />
