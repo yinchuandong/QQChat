@@ -14,7 +14,7 @@ namespace Bll
     public class GroupBll
     {
         private GroupDal groupDal = new GroupDal();
-        //获得群列表
+        //获得好友分组列表
         public IList<Model.Group> getGroupList(int uId)
         {
             DataTable result = groupDal.getGroupList(uId);
@@ -22,7 +22,7 @@ namespace Bll
             return list;
         }
 
-        //添加群
+        //添加好友分组
         public bool addGroup(Model.Group group)
         {
             int result = groupDal.addGroup(group);

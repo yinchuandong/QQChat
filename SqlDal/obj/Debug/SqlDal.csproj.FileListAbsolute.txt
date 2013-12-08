@@ -26,4 +26,8 @@ C:\Users\Yuanyun\Documents\GitHub\QQChat\SqlDal\bin\Debug\Model.pdb
 C:\Users\Yuanyun\Documents\GitHub\QQChat\SqlDal\bin\Debug\Util.pdb
 C:\Users\Yuanyun\Documents\GitHub\QQChat\SqlDal\obj\Debug\SqlDal.dll
 C:\Users\Yuanyun\Documents\GitHub\QQChat\SqlDal\obj\Debug\SqlDal.pdb
+<<<<<<< HEAD
 >>>>>>> 913df0672ff7529ed1475b39b053c5150d50af11
+=======
+C:\Users\Yuanyun\Documents\GitHub\QQChat\SqlDal\obj\Debug\SqlDal.csprojResolveAssemblyReference.cache
+>>>>>>> f4834623f93eade1b69378474ef8482456ac5eb0

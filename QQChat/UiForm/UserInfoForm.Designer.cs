@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserInfoForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.Sign_textBox = new System.Windows.Forms.RichTextBox();
             this.UserName_label = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.EditInfo = new System.Windows.Forms.Button();
             this.EditInfo_Panel = new System.Windows.Forms.Panel();
-            this.label2_Uid = new System.Windows.Forms.Label();
             this.Uid_label = new System.Windows.Forms.Label();
             this.NickName_textBox = new System.Windows.Forms.TextBox();
             this.NickName_label = new System.Windows.Forms.Label();
@@ -44,6 +44,7 @@
             this.Age_label = new System.Windows.Forms.Label();
             this.SexChoice_comboBox = new System.Windows.Forms.ComboBox();
             this.Sex_label = new System.Windows.Forms.Label();
+            this.label2_Uid = new System.Windows.Forms.Label();
             this.UserInfopanel = new System.Windows.Forms.Panel();
             this.label_Email = new System.Windows.Forms.Label();
             this.label_Age = new System.Windows.Forms.Label();
@@ -57,24 +58,30 @@
             this.label5 = new System.Windows.Forms.Label();
             this.Save_button = new System.Windows.Forms.Button();
             this.BackUpdate = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.EditInfo_Panel.SuspendLayout();
             this.UserInfopanel.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.Sign_textBox);
             this.panel1.Controls.Add(this.UserName_label);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(3, 2);
+            this.panel1.Location = new System.Drawing.Point(3, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(292, 130);
+            this.panel1.Size = new System.Drawing.Size(292, 132);
             this.panel1.TabIndex = 0;
             // 
             // Sign_textBox
             // 
+            this.Sign_textBox.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Sign_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Sign_textBox.Location = new System.Drawing.Point(119, 54);
             this.Sign_textBox.Name = "Sign_textBox";
@@ -85,6 +92,7 @@
             // UserName_label
             // 
             this.UserName_label.AutoSize = true;
+            this.UserName_label.BackColor = System.Drawing.Color.Transparent;
             this.UserName_label.Font = new System.Drawing.Font("华文行楷", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.UserName_label.ForeColor = System.Drawing.Color.Fuchsia;
             this.UserName_label.Location = new System.Drawing.Point(152, 19);
@@ -103,17 +111,18 @@
             // 
             // EditInfo
             // 
-            this.EditInfo.Location = new System.Drawing.Point(122, 139);
+            this.EditInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.EditInfo.Location = new System.Drawing.Point(110, 0);
             this.EditInfo.Name = "EditInfo";
             this.EditInfo.Size = new System.Drawing.Size(67, 26);
             this.EditInfo.TabIndex = 2;
             this.EditInfo.Text = "编辑资料";
-            this.EditInfo.UseVisualStyleBackColor = true;
+            this.EditInfo.UseVisualStyleBackColor = false;
             this.EditInfo.Click += new System.EventHandler(this.EditInfo_Click);
             // 
             // EditInfo_Panel
             // 
-            this.EditInfo_Panel.Controls.Add(this.label2_Uid);
+            this.EditInfo_Panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EditInfo_Panel.BackgroundImage")));
             this.EditInfo_Panel.Controls.Add(this.Uid_label);
             this.EditInfo_Panel.Controls.Add(this.NickName_textBox);
             this.EditInfo_Panel.Controls.Add(this.NickName_label);
@@ -123,23 +132,16 @@
             this.EditInfo_Panel.Controls.Add(this.Age_label);
             this.EditInfo_Panel.Controls.Add(this.SexChoice_comboBox);
             this.EditInfo_Panel.Controls.Add(this.Sex_label);
+            this.EditInfo_Panel.Controls.Add(this.label2_Uid);
             this.EditInfo_Panel.Location = new System.Drawing.Point(3, 171);
             this.EditInfo_Panel.Name = "EditInfo_Panel";
             this.EditInfo_Panel.Size = new System.Drawing.Size(292, 313);
             this.EditInfo_Panel.TabIndex = 1;
             // 
-            // label2_Uid
-            // 
-            this.label2_Uid.AutoSize = true;
-            this.label2_Uid.Location = new System.Drawing.Point(71, 32);
-            this.label2_Uid.Name = "label2_Uid";
-            this.label2_Uid.Size = new System.Drawing.Size(41, 12);
-            this.label2_Uid.TabIndex = 11;
-            this.label2_Uid.Text = "label6";
-            // 
             // Uid_label
             // 
             this.Uid_label.AutoSize = true;
+            this.Uid_label.BackColor = System.Drawing.Color.Transparent;
             this.Uid_label.Location = new System.Drawing.Point(23, 32);
             this.Uid_label.Name = "Uid_label";
             this.Uid_label.Size = new System.Drawing.Size(41, 12);
@@ -149,7 +151,7 @@
             // NickName_textBox
             // 
             this.NickName_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.NickName_textBox.Location = new System.Drawing.Point(73, 91);
+            this.NickName_textBox.Location = new System.Drawing.Point(94, 91);
             this.NickName_textBox.Name = "NickName_textBox";
             this.NickName_textBox.Size = new System.Drawing.Size(113, 14);
             this.NickName_textBox.TabIndex = 7;
@@ -157,6 +159,7 @@
             // NickName_label
             // 
             this.NickName_label.AutoSize = true;
+            this.NickName_label.BackColor = System.Drawing.Color.Transparent;
             this.NickName_label.Location = new System.Drawing.Point(23, 93);
             this.NickName_label.Name = "NickName_label";
             this.NickName_label.Size = new System.Drawing.Size(41, 12);
@@ -166,7 +169,7 @@
             // Email_textBox
             // 
             this.Email_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Email_textBox.Location = new System.Drawing.Point(73, 274);
+            this.Email_textBox.Location = new System.Drawing.Point(94, 281);
             this.Email_textBox.Name = "Email_textBox";
             this.Email_textBox.Size = new System.Drawing.Size(147, 14);
             this.Email_textBox.TabIndex = 5;
@@ -174,6 +177,7 @@
             // Email_label
             // 
             this.Email_label.AutoSize = true;
+            this.Email_label.BackColor = System.Drawing.Color.Transparent;
             this.Email_label.Location = new System.Drawing.Point(23, 283);
             this.Email_label.Name = "Email_label";
             this.Email_label.Size = new System.Drawing.Size(41, 12);
@@ -183,7 +187,7 @@
             // Age_textBox
             // 
             this.Age_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Age_textBox.Location = new System.Drawing.Point(73, 213);
+            this.Age_textBox.Location = new System.Drawing.Point(94, 214);
             this.Age_textBox.Name = "Age_textBox";
             this.Age_textBox.Size = new System.Drawing.Size(38, 14);
             this.Age_textBox.TabIndex = 3;
@@ -191,6 +195,7 @@
             // Age_label
             // 
             this.Age_label.AutoSize = true;
+            this.Age_label.BackColor = System.Drawing.Color.Transparent;
             this.Age_label.Location = new System.Drawing.Point(23, 216);
             this.Age_label.Name = "Age_label";
             this.Age_label.Size = new System.Drawing.Size(41, 12);
@@ -203,7 +208,7 @@
             this.SexChoice_comboBox.Items.AddRange(new object[] {
             "男",
             "女"});
-            this.SexChoice_comboBox.Location = new System.Drawing.Point(73, 151);
+            this.SexChoice_comboBox.Location = new System.Drawing.Point(94, 148);
             this.SexChoice_comboBox.Name = "SexChoice_comboBox";
             this.SexChoice_comboBox.Size = new System.Drawing.Size(38, 20);
             this.SexChoice_comboBox.TabIndex = 1;
@@ -211,14 +216,26 @@
             // Sex_label
             // 
             this.Sex_label.AutoSize = true;
+            this.Sex_label.BackColor = System.Drawing.Color.Transparent;
             this.Sex_label.Location = new System.Drawing.Point(23, 151);
             this.Sex_label.Name = "Sex_label";
             this.Sex_label.Size = new System.Drawing.Size(41, 12);
             this.Sex_label.TabIndex = 0;
             this.Sex_label.Text = "性别：";
             // 
+            // label2_Uid
+            // 
+            this.label2_Uid.AutoSize = true;
+            this.label2_Uid.BackColor = System.Drawing.Color.Transparent;
+            this.label2_Uid.Location = new System.Drawing.Point(92, 32);
+            this.label2_Uid.Name = "label2_Uid";
+            this.label2_Uid.Size = new System.Drawing.Size(41, 12);
+            this.label2_Uid.TabIndex = 11;
+            this.label2_Uid.Text = "label6";
+            // 
             // UserInfopanel
             // 
+            this.UserInfopanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("UserInfopanel.BackgroundImage")));
             this.UserInfopanel.Controls.Add(this.label_Email);
             this.UserInfopanel.Controls.Add(this.label_Age);
             this.UserInfopanel.Controls.Add(this.label_Sex);
@@ -237,6 +254,7 @@
             // label_Email
             // 
             this.label_Email.AutoSize = true;
+            this.label_Email.BackColor = System.Drawing.Color.Transparent;
             this.label_Email.Location = new System.Drawing.Point(92, 280);
             this.label_Email.Name = "label_Email";
             this.label_Email.Size = new System.Drawing.Size(41, 12);
@@ -246,6 +264,7 @@
             // label_Age
             // 
             this.label_Age.AutoSize = true;
+            this.label_Age.BackColor = System.Drawing.Color.Transparent;
             this.label_Age.Location = new System.Drawing.Point(92, 216);
             this.label_Age.Name = "label_Age";
             this.label_Age.Size = new System.Drawing.Size(41, 12);
@@ -255,6 +274,7 @@
             // label_Sex
             // 
             this.label_Sex.AutoSize = true;
+            this.label_Sex.BackColor = System.Drawing.Color.Transparent;
             this.label_Sex.Location = new System.Drawing.Point(95, 151);
             this.label_Sex.Name = "label_Sex";
             this.label_Sex.Size = new System.Drawing.Size(41, 12);
@@ -264,6 +284,7 @@
             // label_NickName
             // 
             this.label_NickName.AutoSize = true;
+            this.label_NickName.BackColor = System.Drawing.Color.Transparent;
             this.label_NickName.Location = new System.Drawing.Point(95, 90);
             this.label_NickName.Name = "label_NickName";
             this.label_NickName.Size = new System.Drawing.Size(41, 12);
@@ -273,6 +294,7 @@
             // label_Uid
             // 
             this.label_Uid.AutoSize = true;
+            this.label_Uid.BackColor = System.Drawing.Color.Transparent;
             this.label_Uid.Location = new System.Drawing.Point(95, 28);
             this.label_Uid.Name = "label_Uid";
             this.label_Uid.Size = new System.Drawing.Size(41, 12);
@@ -282,6 +304,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(23, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 12);
@@ -291,6 +314,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(23, 93);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 12);
@@ -300,6 +324,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(23, 283);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 12);
@@ -309,6 +334,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Location = new System.Drawing.Point(23, 216);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 12);
@@ -318,6 +344,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Location = new System.Drawing.Point(23, 151);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(41, 12);
@@ -326,33 +353,45 @@
             // 
             // Save_button
             // 
-            this.Save_button.Location = new System.Drawing.Point(222, 139);
+            this.Save_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Save_button.Location = new System.Drawing.Point(225, 0);
             this.Save_button.Name = "Save_button";
             this.Save_button.Size = new System.Drawing.Size(67, 26);
             this.Save_button.TabIndex = 8;
             this.Save_button.Text = "保存";
-            this.Save_button.UseVisualStyleBackColor = true;
+            this.Save_button.UseVisualStyleBackColor = false;
             this.Save_button.Click += new System.EventHandler(this.Save_button_Click);
             // 
             // BackUpdate
             // 
-            this.BackUpdate.Location = new System.Drawing.Point(12, 139);
+            this.BackUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.BackUpdate.Location = new System.Drawing.Point(0, 0);
             this.BackUpdate.Name = "BackUpdate";
             this.BackUpdate.Size = new System.Drawing.Size(67, 26);
             this.BackUpdate.TabIndex = 11;
             this.BackUpdate.Text = "返回";
-            this.BackUpdate.UseVisualStyleBackColor = true;
+            this.BackUpdate.UseVisualStyleBackColor = false;
             this.BackUpdate.Click += new System.EventHandler(this.backUpdate_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.Controls.Add(this.Save_button);
+            this.panel2.Controls.Add(this.BackUpdate);
+            this.panel2.Controls.Add(this.EditInfo);
+            this.panel2.Location = new System.Drawing.Point(3, 138);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(292, 27);
+            this.panel2.TabIndex = 12;
             // 
             // UserInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(301, 488);
-            this.Controls.Add(this.BackUpdate);
-            this.Controls.Add(this.Save_button);
             this.Controls.Add(this.UserInfopanel);
-            this.Controls.Add(this.EditInfo);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.EditInfo_Panel);
             this.Name = "UserInfoForm";
@@ -364,6 +403,7 @@
             this.EditInfo_Panel.PerformLayout();
             this.UserInfopanel.ResumeLayout(false);
             this.UserInfopanel.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -397,7 +437,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label2_Uid;
         private System.Windows.Forms.Button BackUpdate;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label2_Uid;
     }
 }

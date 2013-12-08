@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Model
 {
-    class Chatroom
+   public class Chatroom
     {
         private int cId;
         public int CId

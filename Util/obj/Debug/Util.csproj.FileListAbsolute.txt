@@ -3,8 +3,16 @@ E:\c#\QQChat\Util\bin\Debug\Util.pdb
 E:\c#\QQChat\Util\obj\Debug\ResolveAssemblyReference.cache
 E:\c#\QQChat\Util\obj\Debug\Util.dll
 E:\c#\QQChat\Util\obj\Debug\Util.pdb
+<<<<<<< HEAD
 E:\visual stadio workplace\QQChat-master\QQChat\Util\bin\Debug\Util.dll
 E:\visual stadio workplace\QQChat-master\QQChat\Util\bin\Debug\Util.pdb
 E:\visual stadio workplace\QQChat-master\QQChat\Util\obj\Debug\ResolveAssemblyReference.cache
 E:\visual stadio workplace\QQChat-master\QQChat\Util\obj\Debug\Util.dll
 E:\visual stadio workplace\QQChat-master\QQChat\Util\obj\Debug\Util.pdb
+=======
+C:\Users\Yuanyun\Documents\GitHub\QQChat\Util\bin\Debug\Util.dll
+C:\Users\Yuanyun\Documents\GitHub\QQChat\Util\bin\Debug\Util.pdb
+C:\Users\Yuanyun\Documents\GitHub\QQChat\Util\obj\Debug\Util.csprojResolveAssemblyReference.cache
+C:\Users\Yuanyun\Documents\GitHub\QQChat\Util\obj\Debug\Util.dll
+C:\Users\Yuanyun\Documents\GitHub\QQChat\Util\obj\Debug\Util.pdb
+>>>>>>> f4834623f93eade1b69378474ef8482456ac5eb0

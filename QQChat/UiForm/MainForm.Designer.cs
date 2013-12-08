@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.Sign_label = new System.Windows.Forms.Label();
+            this.NickName_label = new System.Windows.Forms.Label();
             this.tabControl = new Widget._TabControl.TabControlEx();
             this.friendPage = new System.Windows.Forms.TabPage();
             this.groupPage = new System.Windows.Forms.TabPage();
@@ -38,23 +38,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // Sign_label
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(78, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 12);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "编辑个性签名";
+            this.Sign_label.AutoSize = true;
+            this.Sign_label.Location = new System.Drawing.Point(124, 46);
+            this.Sign_label.Name = "Sign_label";
+            this.Sign_label.Size = new System.Drawing.Size(77, 12);
+            this.Sign_label.TabIndex = 2;
+            this.Sign_label.Text = "编辑个性签名";
             // 
-            // label2
+            // NickName_label
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(112, 12);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 12);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "用户的昵称";
+            this.NickName_label.AutoSize = true;
+            this.NickName_label.Font = new System.Drawing.Font("华文行楷", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.NickName_label.ForeColor = System.Drawing.Color.Magenta;
+            this.NickName_label.Location = new System.Drawing.Point(111, 12);
+            this.NickName_label.Name = "NickName_label";
+            this.NickName_label.Size = new System.Drawing.Size(115, 21);
+            this.NickName_label.TabIndex = 3;
+            this.NickName_label.Text = "用户的昵称";
             // 
             // tabControl
             // 
@@ -106,8 +108,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(252, 522);
             this.Controls.Add(this.tabControl);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.NickName_label);
+            this.Controls.Add(this.Sign_label);
             this.Controls.Add(this.pictureBox1);
             this.Name = "MainForm";
             this.Text = "呵呵";
@@ -122,8 +124,8 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label Sign_label;
+        private System.Windows.Forms.Label NickName_label;
         private Widget._TabControl.TabControlEx tabControl;
         private System.Windows.Forms.TabPage friendPage;
         private System.Windows.Forms.TabPage groupPage;
