@@ -1,0 +1,13 @@
+E:\visual stadio workplace\QQChat-master\QQChat\Widget\bin\Release\Widget.dll
+E:\visual stadio workplace\QQChat-master\QQChat\Widget\bin\Release\Widget.pdb
+E:\visual stadio workplace\QQChat-master\QQChat\Widget\obj\Release\ResolveAssemblyReference.cache
+E:\visual stadio workplace\QQChat-master\QQChat\Widget\obj\Release\Widget.Properties.Resources.resources
+E:\visual stadio workplace\QQChat-master\QQChat\Widget\obj\Release\Widget.ChatListBox.resources
+E:\visual stadio workplace\QQChat-master\QQChat\Widget\obj\Release\GenerateResource-ResGen.read.1.tlog
+E:\visual stadio workplace\QQChat-master\QQChat\Widget\obj\Release\GenerateResource-ResGen.read.7.tlog
+E:\visual stadio workplace\QQChat-master\QQChat\Widget\obj\Release\GenerateResource-ResGen.read.9.tlog
+E:\visual stadio workplace\QQChat-master\QQChat\Widget\obj\Release\GenerateResource-ResGen.write.1.tlog
+E:\visual stadio workplace\QQChat-master\QQChat\Widget\obj\Release\GenerateResource-ResGen.write.7.tlog
+E:\visual stadio workplace\QQChat-master\QQChat\Widget\obj\Release\GenerateResource-ResGen.write.9.tlog
+E:\visual stadio workplace\QQChat-master\QQChat\Widget\obj\Release\Widget.dll
+E:\visual stadio workplace\QQChat-master\QQChat\Widget\obj\Release\Widget.pdb

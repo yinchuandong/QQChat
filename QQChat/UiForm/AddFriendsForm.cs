@@ -31,47 +31,62 @@ namespace QQChat.UiForm
         
         private void AddFriendsForm_Load(object sender, EventArgs e)
         {
-            ImageList faceList = new ImageList();
+            faceList = new ImageList();
             faceList.ImageSize = new Size(60, 80);
             friendsListView.LargeImageList = faceList;
             friendsListView.AutoArrange = true;
+            friendsListView.MultiSelect = false;
         }
         //加载查询到的信息
         private void loadSearchInfo(User user,int index) 
         {   
-            //为ImageList添加图片
-            faceList.Images.Add(user.Username.ToString(), Image.FromFile("Head/1 (" + 1 + ").png"));
+            
+            Random rnd=new Random();
+            string facePath = "Head/1 (" + rnd.Next(0, 45) + ").png";//为ImageList添加图片
+            faceList.Images.Add(user.Username.ToString(),Image.FromFile(facePath));
             friendsListView.BeginUpdate();
-            ListViewItem item = new ListViewItem();
-            item.ImageIndex = index-1;              
+            ListViewItem item = new ListViewItem();  
+            item.ImageIndex = index;              
             item.Text = user.Username;
             friendsListView.Items.Add(item);          
             friendsListView.EndUpdate();
-
         }
      
 
         private void friendsListView_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-            string text = "添加好友？";
-            string title = "添加好友信息";
-
-            if (MessageBox.Show(text, title, MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-               
-                Friend friend = new Friend();
-              
-                ListViewItem i = friendsListView.SelectedItems[0];
-                int index=i.Index;//选中的index
-                User user =(User) searchList[index];
-                //选择群
-                IList<Model.Group> groupList = groupBll.getGroupList(user.UId);
-                //弹出下拉表单进行选择分组
-                ChooseGroup chooseGroup = new ChooseGroup(currUser,user,groupList);
-                chooseGroup.Visible = true;            
-            }
            
+            if (friendsListView.SelectedItems.Count > 0)
+            {               
+                int index=0;
+                foreach (ListViewItem lvi in friendsListView.SelectedItems)  //选中项遍历  
+                {
+                    index = lvi.Index;
+                }
+
+                User selectedUser = (User)searchList[index];
+                //判断好友关系
+                bool isFriend = friendBll.isFriend(currUser.UId, selectedUser.UId);
+                if (isFriend)
+                {
+                    MessageBox.Show("对方已是您好友，重复添加无效！");
+                    return;
+                }       
+                string text = "添加好友？";
+                string title = "添加好友信息";
+                if (MessageBox.Show(text, title, MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    Friend friend = new Friend();
+                    //选择群
+                    IList<Model.Group> groupList = groupBll.getGroupList(currUser.UId);
+                    //弹出下拉表单进行选择分组
+                    ChooseGroup chooseGroup = new ChooseGroup(currUser, selectedUser, groupList);
+                    chooseGroup.Visible = true;
+                }
+            }
+            else {
+                return;
+            }        
 
         }
 
@@ -79,8 +94,15 @@ namespace QQChat.UiForm
         {
             friendsListView.Clear();                //清理上次查询结果
             string key = checkTextBox.Text.Trim();
-            searchList = friendBll.searchUser(key);
-            int i = 1;
+            if(key.Length<=0||key==null){
+                return;
+            }
+            searchList = friendBll.searchUser(currUser.UId, key);
+           if(searchList.Count==0){
+             
+               return;
+           }
+            int i = 0;
             foreach (User user in searchList)
             {
                 loadSearchInfo(user,i);
@@ -88,9 +110,5 @@ namespace QQChat.UiForm
             }
           
         }
-      
-
-       
-
-    }
+ }
 }

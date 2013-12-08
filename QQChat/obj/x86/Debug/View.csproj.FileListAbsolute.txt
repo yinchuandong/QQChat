@@ -82,12 +82,12 @@ C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.P2pC
 C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.RegisterForm.resources
 C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.UserInfoForm.resources
 C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\obj\x86\Debug\View.csproj.GenerateResource.Cache
-<<<<<<< HEAD
 >>>>>>> 913df0672ff7529ed1475b39b053c5150d50af11
 E:\visual stadio workplace\QQChat-master\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.UserInfoForm.resources
 E:\visual stadio workplace\QQChat-master\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.Test.resources
 E:\visual stadio workplace\QQChat-master\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.ChooseGroup.resources
-=======
 C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.GroupChatForm.resources
 C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.GroupListForm.resources
 >>>>>>> f4834623f93eade1b69378474ef8482456ac5eb0
+E:\visual stadio workplace\QQChat-master\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.GroupChatForm.resources
+E:\visual stadio workplace\QQChat-master\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.GroupListForm.resources

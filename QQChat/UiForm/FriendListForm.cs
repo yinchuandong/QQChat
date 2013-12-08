@@ -61,12 +61,22 @@ namespace QQChat.UiForm
             Random rnd = new Random();
             
             IList<Group> groupList = groupBll.getGroupList(user.UId);
+            Console.WriteLine("user.UId----------------------->>>>>>>>" + user.UId+"count----->"+groupList.Count);
+            
             foreach (Group group in groupList)
             {
+
+                Console.WriteLine("group" + group.Name + "groupid" + group.GId);
+
+
+
                 ChatListItem groupItem = new ChatListItem(group.Name);
                 IList<Friend> friendList = friendBll.getFriendByGroup(user.UId, group.GId);
+                Console.WriteLine("user.UId" + user.UId + "group.GId" + group.GId);
+                Console.WriteLine("friendList" + friendList.Count);
                 foreach (Friend friend in friendList)
                 {
+                    Console.WriteLine("friendList" + friend.NickName);
                     User fModel = userBll.getUser(friend.FriendId);
                     ChatListSubItem friendItem = new ChatListSubItem();
                     friendItem.DisplayName = friend.FriendName;
@@ -118,7 +128,7 @@ namespace QQChat.UiForm
         //添加好友
         private void addFriendButton_Click(object sender, EventArgs e)
         {
-            new AddFriendsForm(user);
+            new AddFriendsForm(user).Visible=true;
         }
 
        

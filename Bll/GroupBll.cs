@@ -35,5 +35,22 @@ namespace Bll
                 return false;
             }
         }
+        //获得到最大的groupID，返回最大+1作为新groupID
+        public int getMaxGroupID(int uId) 
+        {
+         int i = groupDal.getMax_g_ID(uId);
+            return i+1;
+        }
+        //获得groupID
+        public int getGroupID(int uId,string name)
+        {
+            return groupDal.get_g_ID(uId,name);
+        }
+        //判断分组是否存在
+        public bool isGroupByName(int uId,string groupName) 
+        {
+            return groupDal.isGroupByName(uId, groupName);
+        }
+
     }
 }

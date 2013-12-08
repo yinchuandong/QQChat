@@ -1,0 +1,11 @@
+E:\visual stadio workplace\QQChat-master\QQChat\Bll\bin\Release\Bll.dll
+E:\visual stadio workplace\QQChat-master\QQChat\Bll\bin\Release\Bll.pdb
+E:\visual stadio workplace\QQChat-master\QQChat\Bll\bin\Release\Model.dll
+E:\visual stadio workplace\QQChat-master\QQChat\Bll\bin\Release\SqlDal.dll
+E:\visual stadio workplace\QQChat-master\QQChat\Bll\bin\Release\Util.dll
+E:\visual stadio workplace\QQChat-master\QQChat\Bll\bin\Release\Model.pdb
+E:\visual stadio workplace\QQChat-master\QQChat\Bll\bin\Release\SqlDal.pdb
+E:\visual stadio workplace\QQChat-master\QQChat\Bll\bin\Release\Util.pdb
+E:\visual stadio workplace\QQChat-master\QQChat\Bll\obj\Release\ResolveAssemblyReference.cache
+E:\visual stadio workplace\QQChat-master\QQChat\Bll\obj\Release\Bll.dll
+E:\visual stadio workplace\QQChat-master\QQChat\Bll\obj\Release\Bll.pdb

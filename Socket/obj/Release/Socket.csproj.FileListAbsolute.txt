@@ -1,0 +1,9 @@
+E:\visual stadio workplace\QQChat-master\QQChat\Socket\bin\Release\Socket.dll
+E:\visual stadio workplace\QQChat-master\QQChat\Socket\bin\Release\Socket.pdb
+E:\visual stadio workplace\QQChat-master\QQChat\Socket\bin\Release\Model.dll
+E:\visual stadio workplace\QQChat-master\QQChat\Socket\bin\Release\Util.dll
+E:\visual stadio workplace\QQChat-master\QQChat\Socket\bin\Release\Model.pdb
+E:\visual stadio workplace\QQChat-master\QQChat\Socket\bin\Release\Util.pdb
+E:\visual stadio workplace\QQChat-master\QQChat\Socket\obj\Release\ResolveAssemblyReference.cache
+E:\visual stadio workplace\QQChat-master\QQChat\Socket\obj\Release\Socket.dll
+E:\visual stadio workplace\QQChat-master\QQChat\Socket\obj\Release\Socket.pdb

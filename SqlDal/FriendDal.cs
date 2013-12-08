@@ -117,7 +117,7 @@ namespace SqlDal
         }
 
         //查找用户
-        public ArrayList searchUser(string key)
+        public ArrayList searchUser(int currenID,string key)
         {
             ArrayList userList = new ArrayList();
             SqlDataReader reader = searchFriendByName(key);
@@ -167,7 +167,11 @@ namespace SqlDal
                     {
                         user.Status = Convert.ToInt32(reader["status"].ToString());
                     }
-                    userList.Add(user);
+                    if (user.UId != currenID)
+                    {
+                     userList.Add(user);
+                    }
+                   
                 }
             }
 

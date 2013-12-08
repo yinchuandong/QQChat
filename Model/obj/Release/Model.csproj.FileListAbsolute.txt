@@ -1,0 +1,5 @@
+E:\visual stadio workplace\QQChat-master\QQChat\Model\bin\Release\Model.dll
+E:\visual stadio workplace\QQChat-master\QQChat\Model\bin\Release\Model.pdb
+E:\visual stadio workplace\QQChat-master\QQChat\Model\obj\Release\ResolveAssemblyReference.cache
+E:\visual stadio workplace\QQChat-master\QQChat\Model\obj\Release\Model.dll
+E:\visual stadio workplace\QQChat-master\QQChat\Model\obj\Release\Model.pdb

@@ -39,36 +39,34 @@ namespace Bll
             IList<Friend> list = ModelConvertUtil<Friend>.ConvertToModel(result);
             return list;
         }
-        
+        //好友关系
+        public bool isFriend(int currUserID,int friendID) 
+        {
+            return friendDal.IsFriend(currUserID, friendID);
+        }
+
         //添加好友
         public string addFriend(Friend friend)
         {
             string msg = "";
             bool isFriend = friendDal.IsFriend(friend.UId, friend.FriendId);
-            if (isFriend)
-            {
-                int  isAdded = friendDal.InsertFriend(friend);
-                if (isAdded==1)
-                {
-                    msg = "添加好友成功！";
-                }
-                else
-                {
-                    msg = "添加失败！";
-                }
-
+                     
+           int isAdded = friendDal.InsertFriend(friend);
+           if (isAdded == 1)
+           {
+               msg = "添加好友成功！";
             }
             else
             {
-                msg = "对方已是您好友，重复添加无效！";
-            }
+               msg = "添加失败！";
+            }           
             return msg;
   
         }
         //查找好友
-        public ArrayList searchUser(string key) 
+        public ArrayList searchUser(int currenID, string key) 
         {
-            return friendDal.searchUser(key);
+            return friendDal.searchUser(currenID,key);
         }
     }
 }
