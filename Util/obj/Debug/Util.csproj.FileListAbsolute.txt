@@ -16,3 +16,8 @@ C:\Users\Yuanyun\Documents\GitHub\QQChat\Util\obj\Debug\Util.csprojResolveAssemb
 C:\Users\Yuanyun\Documents\GitHub\QQChat\Util\obj\Debug\Util.dll
 C:\Users\Yuanyun\Documents\GitHub\QQChat\Util\obj\Debug\Util.pdb
 >>>>>>> f4834623f93eade1b69378474ef8482456ac5eb0
+E:\android\android_workplace2\QQ\QQChat\Util\bin\Debug\Util.dll
+E:\android\android_workplace2\QQ\QQChat\Util\bin\Debug\Util.pdb
+E:\android\android_workplace2\QQ\QQChat\Util\obj\Debug\ResolveAssemblyReference.cache
+E:\android\android_workplace2\QQ\QQChat\Util\obj\Debug\Util.dll
+E:\android\android_workplace2\QQ\QQChat\Util\obj\Debug\Util.pdb

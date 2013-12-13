@@ -34,3 +34,14 @@ C:\Users\Yuanyun\Documents\GitHub\QQChat\Bll\obj\Debug\Bll.csprojResolveAssembly
 C:\Users\Yuanyun\Documents\GitHub\QQChat\Bll\obj\Debug\Bll.dll
 C:\Users\Yuanyun\Documents\GitHub\QQChat\Bll\obj\Debug\Bll.pdb
 >>>>>>> 913df0672ff7529ed1475b39b053c5150d50af11
+E:\android\android_workplace2\QQ\QQChat\Bll\bin\Debug\Bll.dll
+E:\android\android_workplace2\QQ\QQChat\Bll\bin\Debug\Bll.pdb
+E:\android\android_workplace2\QQ\QQChat\Bll\bin\Debug\Model.dll
+E:\android\android_workplace2\QQ\QQChat\Bll\bin\Debug\SqlDal.dll
+E:\android\android_workplace2\QQ\QQChat\Bll\bin\Debug\Util.dll
+E:\android\android_workplace2\QQ\QQChat\Bll\bin\Debug\Model.pdb
+E:\android\android_workplace2\QQ\QQChat\Bll\bin\Debug\SqlDal.pdb
+E:\android\android_workplace2\QQ\QQChat\Bll\bin\Debug\Util.pdb
+E:\android\android_workplace2\QQ\QQChat\Bll\obj\Debug\ResolveAssemblyReference.cache
+E:\android\android_workplace2\QQ\QQChat\Bll\obj\Debug\Bll.dll
+E:\android\android_workplace2\QQ\QQChat\Bll\obj\Debug\Bll.pdb
