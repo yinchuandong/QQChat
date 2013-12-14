@@ -124,3 +124,4 @@ E:\android\android_workplace2\QQ\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.Test.
 E:\android\android_workplace2\QQ\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.UserInfoForm.resources
 E:\android\android_workplace2\QQ\QQChat\QQChat\obj\x86\Debug\GenerateResource.read.1.tlog
 E:\android\android_workplace2\QQ\QQChat\QQChat\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\android\android_workplace2\QQ\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.AddChatRoomForm.resources

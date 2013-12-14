@@ -60,7 +60,6 @@ namespace SqlDal
 
         public bool register(User  user)
         {
-            Console.WriteLine("Dallllllll我去不大啊----------------------->>>>>>" + user.Photo);
             string sql = "insert into [user] (username,email,password,regTime,age,sex,sign,photo) values (@Username,@Email, @Password, @Time,@Age,@Sex,@Sign,@Photo)";
  
             List<SqlParameter> parameters = new List<SqlParameter>();
