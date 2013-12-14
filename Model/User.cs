@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+
 namespace Model
 {
     public class User
@@ -63,8 +64,8 @@ namespace Model
             set { this.sign = value; }
         }
 
-        private string photo = "";
-        public string Photo
+        private byte[]  photo = null;
+        public byte[] Photo
         {
             get { return this.photo; }
             set { this.photo = value; }

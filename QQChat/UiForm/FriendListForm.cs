@@ -81,7 +81,19 @@ namespace QQChat.UiForm
                     ChatListSubItem friendItem = new ChatListSubItem();
                     friendItem.DisplayName = friend.FriendName;
                     friendItem.ID = friend.FriendId;
-                    friendItem.HeadImage = Image.FromFile("Head/1 (" + rnd.Next(0, 45) + ").png");
+                    //设置好友头像  
+                    if (friend.Photo == null)
+                    {
+                        Image errorIm = Image.FromFile("Head/error.jpg");
+                        Size size = new Size(60, 60);
+                        friendItem.HeadImage = new Bitmap(errorIm, size);
+                    }
+                    else
+                    {
+                        MemoryStream stream = new MemoryStream(friend.Photo);
+                        friendItem.HeadImage = new Bitmap(stream);
+                    }
+
                     friendItem.NicName = friend.NickName;
                     friendItem.PersonalMsg = fModel.Sign;
                     friendItem.IpAddress = fModel.LastLoginIp;

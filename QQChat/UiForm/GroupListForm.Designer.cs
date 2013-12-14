@@ -41,6 +41,7 @@
             this.newGroup_button.TabIndex = 1;
             this.newGroup_button.Text = "新建群组";
             this.newGroup_button.UseVisualStyleBackColor = true;
+            this.newGroup_button.Click += new System.EventHandler(this.newGroup_button_Click);
             // 
             // groupListBox
             // 

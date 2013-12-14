@@ -35,11 +35,12 @@ namespace SqlDal
             DataTable result = SqlDbHelper.ExecueteDataTable(sql, CommandType.Text, parameters);
             return result;
         }
-
+        //按组查找好友
         public DataTable getFriendByGroup(int uId, int groupId)
         {
             string sql = "select f.friend_id as FriendId, f.g_id as GId, f.time as Time, f.nick_name as NickName, "
-                + " u.[username] as FriendName"
+                + " u.[username] as FriendName,"
+                + "u.[photo] as FriendPhoto"
                 + " from [friend] as f,[user] as u"
                 + " where u.[u_id]=f.[friend_id] and f.g_id=@GroupId and f.u_id=@UId";
             List<SqlParameter> parameters = new List<SqlParameter>();
@@ -153,7 +154,10 @@ namespace SqlDal
                     }
                     if (!(reader["photo"] is System.DBNull))
                     {
-                        user.Photo = reader["photo"].ToString();
+                        //定义获取图片
+                        byte[] photo=null;
+                        photo = (byte[])reader["photo"];
+                        user.Photo = photo;
                     }
                     if (!(reader["last_login_ip"] is System.DBNull))
                     {

@@ -49,9 +49,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(31, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 12);
+            this.label1.Size = new System.Drawing.Size(209, 12);
             this.label1.TabIndex = 1;
-            this.label1.Text = "查找好友";
+            this.label1.Text = "查找好友(请输入需要寻找用户的昵称)";
             // 
             // checkTextBox
             // 

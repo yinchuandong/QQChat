@@ -1,0 +1,83 @@
+﻿
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is ahead of 'origin/master' by 1 commit.
+#   (use "git push" to publish your local commits)
+#
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	modified:   Bll/UserBll.cs
+#	modified:   Bll/bin/Debug/Bll.dll
+#	modified:   Bll/bin/Debug/Bll.pdb
+#	modified:   Bll/bin/Debug/Model.dll
+#	modified:   Bll/bin/Debug/Model.pdb
+#	modified:   Bll/bin/Debug/SqlDal.dll
+#	modified:   Bll/bin/Debug/SqlDal.pdb
+#	modified:   Bll/bin/Debug/Util.dll
+#	modified:   Bll/bin/Debug/Util.pdb
+#	modified:   Bll/obj/Debug/Bll.dll
+#	modified:   Bll/obj/Debug/Bll.pdb
+#	modified:   Bll/obj/Debug/ResolveAssemblyReference.cache
+#	modified:   Model/Friend.cs
+#	modified:   Model/User.cs
+#	modified:   Model/bin/Debug/Model.dll
+#	modified:   Model/bin/Debug/Model.pdb
+#	modified:   Model/obj/Debug/Model.dll
+#	modified:   Model/obj/Debug/Model.pdb
+#	modified:   QQChat.suo
+#	modified:   QQChat/App.config
+#	modified:   QQChat/UiForm/AddFriendsForm.Designer.cs
+#	modified:   QQChat/UiForm/FriendListForm.cs
+#	modified:   QQChat/UiForm/GroupListForm.Designer.cs
+#	modified:   QQChat/UiForm/GroupListForm.cs
+#	modified:   QQChat/UiForm/MainForm.cs
+#	modified:   QQChat/UiForm/RegisterForm.cs
+#	modified:   QQChat/UiForm/UserInfoForm.Designer.cs
+#	modified:   QQChat/UiForm/UserInfoForm.cs
+#	modified:   QQChat/bin/Debug/Bll.dll
+#	modified:   QQChat/bin/Debug/Bll.pdb
+#	new file:   QQChat/bin/Debug/Head/error.jpg
+#	modified:   QQChat/bin/Debug/Model.dll
+#	modified:   QQChat/bin/Debug/Model.pdb
+#	modified:   QQChat/bin/Debug/QQChat.exe
+#	modified:   QQChat/bin/Debug/QQChat.exe.config
+#	modified:   QQChat/bin/Debug/QQChat.pdb
+#	modified:   QQChat/bin/Debug/QQChat.vshost.exe.config
+#	modified:   QQChat/bin/Debug/Socket.dll
+#	modified:   QQChat/bin/Debug/Socket.pdb
+#	modified:   QQChat/bin/Debug/SqlDal.dll
+#	modified:   QQChat/bin/Debug/SqlDal.pdb
+#	modified:   QQChat/bin/Debug/Util.dll
+#	modified:   QQChat/bin/Debug/Util.pdb
+#	modified:   QQChat/obj/x86/Debug/DesignTimeResolveAssemblyReferences.cache
+#	modified:   QQChat/obj/x86/Debug/GenerateResource.read.1.tlog
+#	modified:   QQChat/obj/x86/Debug/QQChat.exe
+#	modified:   QQChat/obj/x86/Debug/QQChat.pdb
+#	modified:   QQChat/obj/x86/Debug/ResolveAssemblyReference.cache
+#	modified:   Socket/bin/Debug/Model.dll
+#	modified:   Socket/bin/Debug/Model.pdb
+#	modified:   Socket/bin/Debug/Socket.dll
+#	modified:   Socket/bin/Debug/Socket.pdb
+#	modified:   Socket/bin/Debug/Util.dll
+#	modified:   Socket/bin/Debug/Util.pdb
+#	modified:   Socket/obj/Debug/ResolveAssemblyReference.cache
+#	modified:   Socket/obj/Debug/Socket.dll
+#	modified:   Socket/obj/Debug/Socket.pdb
+#	modified:   SqlDal/FriendDal.cs
+#	modified:   SqlDal/UserDal.cs
+#	modified:   SqlDal/bin/Debug/Model.dll
+#	modified:   SqlDal/bin/Debug/Model.pdb
+#	modified:   SqlDal/bin/Debug/SqlDal.dll
+#	modified:   SqlDal/bin/Debug/SqlDal.pdb
+#	modified:   SqlDal/bin/Debug/Util.dll
+#	modified:   SqlDal/bin/Debug/Util.pdb
+#	modified:   SqlDal/obj/Debug/SqlDal.dll
+#	modified:   SqlDal/obj/Debug/SqlDal.pdb
+#	modified:   Util/bin/Debug/Util.dll
+#	modified:   Util/bin/Debug/Util.pdb
+#	modified:   Util/obj/Debug/Util.dll
+#	modified:   Util/obj/Debug/Util.pdb
+#
+
