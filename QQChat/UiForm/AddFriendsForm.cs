@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Collections;
+using System.IO;
 
 using  Bll;
 using Model;
@@ -39,11 +40,22 @@ namespace QQChat.UiForm
         }
         //加载查询到的信息
         private void loadSearchInfo(User user,int index) 
-        {   
-            
-            Random rnd=new Random();
-            string facePath = "Head/1 (" + rnd.Next(0, 45) + ").png";//为ImageList添加图片
-            faceList.Images.Add(user.Username.ToString(),Image.FromFile(facePath));
+        {            
+            Bitmap image = null;
+            if (user.Photo == null)
+            {
+                Image errorIm = Image.FromFile("Head/error.jpg");
+                Size size = new Size(60, 60);
+                image = new Bitmap(errorIm, size);
+            }
+            else
+            {
+                MemoryStream stream = new MemoryStream(user.Photo);
+                Size size = new Size(60, 60);
+                Bitmap im = new Bitmap(stream);
+                image = new Bitmap(im, size);
+            }
+            faceList.Images.Add(user.Username.ToString(),image);
             friendsListView.BeginUpdate();
             ListViewItem item = new ListViewItem();  
             item.ImageIndex = index;              
@@ -95,11 +107,12 @@ namespace QQChat.UiForm
             friendsListView.Clear();                //清理上次查询结果
             string key = checkTextBox.Text.Trim();
             if(key.Length<=0||key==null){
+                MessageBox.Show("请输入查询用户的名字");
                 return;
             }
             searchList = friendBll.searchUser(currUser.UId, key);
            if(searchList.Count==0){
-             
+               MessageBox.Show("找不到用户");
                return;
            }
             int i = 0;
