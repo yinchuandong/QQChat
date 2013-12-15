@@ -8,7 +8,6 @@ using System.Text;
 using System.Windows.Forms;
 
 using System.Text.RegularExpressions;
-using System.Data;
 
 using SqlDal;
 using Model;

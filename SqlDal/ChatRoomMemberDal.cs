@@ -57,7 +57,7 @@ namespace SqlDal
       //查询最新插入的chatRoom的id
       public int getLasteID() 
       {
-          string sqlStr = "select top 1 c_id from [chatRoom] order by time Desc ;";
+          string sqlStr = "select top 1 [c_id] as c_id  from [chatRoom] order by time Desc ;";
           int id = 0;
           SqlDataReader reader = SqlDbHelper.ExecuteReader(sqlStr, CommandType.Text, null);
           if (reader.HasRows)

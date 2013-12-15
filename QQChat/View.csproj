@@ -53,11 +53,6 @@
     </Compile>
     <Compile Include="UiForm\AddNewChatRoom.Designer.cs">
       <DependentUpon>AddNewChatRoom.cs</DependentUpon>
-    <Compile Include="UiForm\AddChatRoomForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UiForm\AddChatRoomForm.Designer.cs">
-      <DependentUpon>AddChatRoomForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UiForm\AddFriendsForm.cs">
       <SubType>Form</SubType>
