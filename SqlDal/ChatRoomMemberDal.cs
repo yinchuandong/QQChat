@@ -26,5 +26,74 @@ namespace SqlDal
            DataTable result = SqlDbHelper.ExecueteDataTable(sql, CommandType.Text, parameters);
            return result;
        }
-    }
+   
+      public int addChatRoom(Model.Chatroom chatroom)
+        {
+            string sql = "insert into [chatroom] ([name],[time],[limit_num],[leader_id]) values (@Name,@Time,@LimitNum,@LeaderId)" ;
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            SqlParameter Name = new SqlParameter("@Name", SqlDbType.VarChar, 50);
+            SqlParameter Time= new SqlParameter("@Time", SqlDbType.DateTime);
+            SqlParameter LimitNum = new SqlParameter("@LimitNum", SqlDbType.Int);
+            SqlParameter LeaderId = new SqlParameter("@LeaderId", SqlDbType.Int);
+            SqlParameter CId = new SqlParameter("@CId", SqlDbType.Int);
+            
+            
+            Name.Value = chatroom.Name;
+            parameters.Add(Name);
+            Time.Value = chatroom.Time;
+            parameters.Add(Time);
+            LimitNum.Value = chatroom.LimitNum;
+            parameters.Add(LimitNum);
+            LeaderId.Value = chatroom.LeaderId;
+            parameters.Add(LeaderId);
+            CId.Value = chatroom.CId;
+            parameters.Add(CId);
+
+            int id = 0;
+            int result = SqlDbHelper.ExecuteNoQuery(sql, CommandType.Text, parameters);            
+            return id;
+        }
+
+      //查询最新插入的chatRoom的id
+      public int getLasteID() 
+      {
+          string sqlStr = "select top 1 c_id from [chatRoom] order by time Desc ;";
+          int id = 0;
+          SqlDataReader reader = SqlDbHelper.ExecuteReader(sqlStr, CommandType.Text, null);
+          if (reader.HasRows)
+          {
+
+              while (reader.Read())
+              {
+                  id = Convert.ToInt32(reader["c_id"].ToString());
+              }
+          }
+               
+          return id;
+      
+      }
+
+
+
+
+
+      public int addChatRoomMember(Model.Chatroom chatroom)
+      {
+          string sql = "insert into [chatroom_member] ([chatroom_id],[time],[u_id]) values (@CId,@Time,@LeaderId)";
+          List<SqlParameter> parameters = new List<SqlParameter>();
+          SqlParameter CId = new SqlParameter("@CId", SqlDbType.Int);
+          SqlParameter Time = new SqlParameter("@Time", SqlDbType.DateTime);
+          SqlParameter LeaderId = new SqlParameter("@LeaderId", SqlDbType.Int);
+
+          Time.Value = chatroom.Time;
+          parameters.Add(Time);
+          LeaderId.Value = chatroom.LeaderId;
+          parameters.Add(LeaderId);
+          CId.Value = chatroom.CId;
+          parameters.Add(CId);
+
+          int result = SqlDbHelper.ExecuteNoQuery(sql, CommandType.Text, parameters);
+          return result;
+      }
+}
 }

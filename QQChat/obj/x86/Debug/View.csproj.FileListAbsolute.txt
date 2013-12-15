@@ -54,3 +54,4 @@ C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.User
 C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\obj\x86\Debug\View.csproj.GenerateResource.Cache
 C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.GroupChatForm.resources
 C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.GroupListForm.resources
+C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.AddNewChatRoom.resources

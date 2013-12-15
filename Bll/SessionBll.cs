@@ -32,5 +32,12 @@ namespace Bll
             get { return this.isLogin; }
             set { this.isLogin = value; }
         }
+        private Chatroom chatroom = null;
+        public Chatroom Chatroom
+        {
+            get { return this.chatroom; }
+            set { this.chatroom = value; }
+        }
+
     }
 }

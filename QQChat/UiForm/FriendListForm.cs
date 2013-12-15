@@ -58,8 +58,7 @@ namespace QQChat.UiForm
         private void FriendListForm_Load(object sender, EventArgs e)
         {
             friendListBox.IconSizeMode = ChatListItemIcon.Large;
-            Random rnd = new Random();
-            
+            Random rnd = new Random(); 
             IList<Group> groupList = groupBll.getGroupList(user.UId);
             foreach (Group group in groupList)
             {
