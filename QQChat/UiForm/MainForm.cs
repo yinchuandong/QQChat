@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Net;
 using System.Net.Sockets;
+using System.IO;
 
 using SqlDal;
 using Model;
@@ -35,6 +36,21 @@ namespace QQChat.UiForm
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
+            //添加头像
+            if (user.Photo == null)
+            {
+                Image errorIm = Image.FromFile("Head/error.jpg");
+                Size size=new Size(60, 60);
+                pictureBox1.Image = new Bitmap(errorIm, size);
+               
+            }
+            else {
+                MemoryStream stream = new MemoryStream(user.Photo);
+                Size size = new Size(60, 60);
+               Bitmap im=new Bitmap(stream);
+               pictureBox1.Image = new Bitmap(im,size);
+            }
+           
             FriendListForm friendListForm = new FriendListForm();
             friendListForm.TopLevel = false;
             friendListForm.Dock = DockStyle.Fill;

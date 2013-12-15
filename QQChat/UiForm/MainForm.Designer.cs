@@ -106,7 +106,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(255, 528);
+            this.ClientSize = new System.Drawing.Size(252, 522);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.NickName_label);
             this.Controls.Add(this.Sign_label);

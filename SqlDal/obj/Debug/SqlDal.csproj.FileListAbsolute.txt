@@ -7,6 +7,17 @@ E:\c#\QQChat\SqlDal\bin\Debug\Util.pdb
 E:\c#\QQChat\SqlDal\obj\Debug\ResolveAssemblyReference.cache
 E:\c#\QQChat\SqlDal\obj\Debug\SqlDal.dll
 E:\c#\QQChat\SqlDal\obj\Debug\SqlDal.pdb
+<<<<<<< HEAD
+E:\visual stadio workplace\QQChat-master\QQChat\SqlDal\bin\Debug\SqlDal.dll
+E:\visual stadio workplace\QQChat-master\QQChat\SqlDal\bin\Debug\SqlDal.pdb
+E:\visual stadio workplace\QQChat-master\QQChat\SqlDal\bin\Debug\Model.dll
+E:\visual stadio workplace\QQChat-master\QQChat\SqlDal\bin\Debug\Util.dll
+E:\visual stadio workplace\QQChat-master\QQChat\SqlDal\bin\Debug\Model.pdb
+E:\visual stadio workplace\QQChat-master\QQChat\SqlDal\bin\Debug\Util.pdb
+E:\visual stadio workplace\QQChat-master\QQChat\SqlDal\obj\Debug\ResolveAssemblyReference.cache
+E:\visual stadio workplace\QQChat-master\QQChat\SqlDal\obj\Debug\SqlDal.dll
+E:\visual stadio workplace\QQChat-master\QQChat\SqlDal\obj\Debug\SqlDal.pdb
+=======
 C:\Users\Yuanyun\Documents\GitHub\QQChat\SqlDal\bin\Debug\SqlDal.dll
 C:\Users\Yuanyun\Documents\GitHub\QQChat\SqlDal\bin\Debug\SqlDal.pdb
 C:\Users\Yuanyun\Documents\GitHub\QQChat\SqlDal\bin\Debug\Model.dll
@@ -15,4 +26,15 @@ C:\Users\Yuanyun\Documents\GitHub\QQChat\SqlDal\bin\Debug\Model.pdb
 C:\Users\Yuanyun\Documents\GitHub\QQChat\SqlDal\bin\Debug\Util.pdb
 C:\Users\Yuanyun\Documents\GitHub\QQChat\SqlDal\obj\Debug\SqlDal.dll
 C:\Users\Yuanyun\Documents\GitHub\QQChat\SqlDal\obj\Debug\SqlDal.pdb
+>>>>>>> 913df0672ff7529ed1475b39b053c5150d50af11
 C:\Users\Yuanyun\Documents\GitHub\QQChat\SqlDal\obj\Debug\SqlDal.csprojResolveAssemblyReference.cache
+>>>>>>> f4834623f93eade1b69378474ef8482456ac5eb0
+E:\android\android_workplace2\QQ\QQChat\SqlDal\bin\Debug\SqlDal.dll
+E:\android\android_workplace2\QQ\QQChat\SqlDal\bin\Debug\SqlDal.pdb
+E:\android\android_workplace2\QQ\QQChat\SqlDal\bin\Debug\Model.dll
+E:\android\android_workplace2\QQ\QQChat\SqlDal\bin\Debug\Util.dll
+E:\android\android_workplace2\QQ\QQChat\SqlDal\bin\Debug\Model.pdb
+E:\android\android_workplace2\QQ\QQChat\SqlDal\bin\Debug\Util.pdb
+E:\android\android_workplace2\QQ\QQChat\SqlDal\obj\Debug\ResolveAssemblyReference.cache
+E:\android\android_workplace2\QQ\QQChat\SqlDal\obj\Debug\SqlDal.dll
+E:\android\android_workplace2\QQ\QQChat\SqlDal\obj\Debug\SqlDal.pdb

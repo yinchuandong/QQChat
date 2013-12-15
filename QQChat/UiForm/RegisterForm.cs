@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.IO;
 
 using Bll;
 using Model;
@@ -67,17 +68,34 @@ namespace QQChat.UiForm
         private void submitBtn_Click(object sender, EventArgs e)
         {
             if(checkForm())
-            {
+            {  //系统随机分配一个头像
+                Random rnd = new Random();          
+                FileStream headFile = new FileStream("Head/1 (" + rnd.Next(0, 45) + ").png", FileMode.Open, FileAccess.Read);
+                int length = (int)headFile.Length;
+                Byte[] headBytes = new Byte[length];
+                headFile.Read(headBytes, 0, length);
+                headFile.Close();
                 //处理注册逻辑
                 User user = new User();
                 user.Email = emailTxt.Text.Trim();
                 user.Username = usernameTxt.Text.Trim();
                 user.Password = passwordTxt.Text.Trim();
+                
+                user.Age = 0;
+                user.Sex = 0;
+                user.Sign = "我刚刚申请账号成功！";
+                user.Photo = headBytes;      
+     
                 bool result = userBll.register(user);
                 if (result)
                 {
-                    MessageBox.Show("注册成功");
-                    this.Close();
+                    MessageBox.Show("注册成功");                  
+                   new UiForm.LoginForm().Visible = true;
+                   this.Close();
+                }
+                else {
+                    MessageBox.Show("注册失败，请检查格式或网络！");
+                    return;
                 }  
             }
         }

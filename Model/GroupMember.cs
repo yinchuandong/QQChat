@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Model
 {
-    class GroupMember
+   public class GroupMember
     {
         private int groupId;
         public int GroupId

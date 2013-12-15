@@ -25,6 +25,36 @@ E:\c#\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.P2pChatForm.resources
 E:\c#\QQChat\QQChat\bin\Debug\Socket.dll
 E:\c#\QQChat\QQChat\bin\Debug\Socket.pdb
 E:\c#\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.FriendListForm.resources
+<<<<<<< HEAD
+E:\visual stadio workplace\QQChat-master\QQChat\QQChat\bin\Debug\QQChat.exe.config
+E:\visual stadio workplace\QQChat-master\QQChat\QQChat\obj\x86\Debug\QQChat.exe
+E:\visual stadio workplace\QQChat-master\QQChat\QQChat\obj\x86\Debug\QQChat.pdb
+E:\visual stadio workplace\QQChat-master\QQChat\QQChat\bin\Debug\QQChat.exe
+E:\visual stadio workplace\QQChat-master\QQChat\QQChat\bin\Debug\QQChat.pdb
+E:\visual stadio workplace\QQChat-master\QQChat\QQChat\bin\Debug\Bll.dll
+E:\visual stadio workplace\QQChat-master\QQChat\QQChat\bin\Debug\Model.dll
+E:\visual stadio workplace\QQChat-master\QQChat\QQChat\bin\Debug\Socket.dll
+E:\visual stadio workplace\QQChat-master\QQChat\QQChat\bin\Debug\SqlDal.dll
+E:\visual stadio workplace\QQChat-master\QQChat\QQChat\bin\Debug\Util.dll
+E:\visual stadio workplace\QQChat-master\QQChat\QQChat\bin\Debug\Widget.dll
+E:\visual stadio workplace\QQChat-master\QQChat\QQChat\bin\Debug\Bll.pdb
+E:\visual stadio workplace\QQChat-master\QQChat\QQChat\bin\Debug\Model.pdb
+E:\visual stadio workplace\QQChat-master\QQChat\QQChat\bin\Debug\Socket.pdb
+E:\visual stadio workplace\QQChat-master\QQChat\QQChat\bin\Debug\SqlDal.pdb
+E:\visual stadio workplace\QQChat-master\QQChat\QQChat\bin\Debug\Util.pdb
+E:\visual stadio workplace\QQChat-master\QQChat\QQChat\bin\Debug\Widget.pdb
+E:\visual stadio workplace\QQChat-master\QQChat\QQChat\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\visual stadio workplace\QQChat-master\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.BaseForm.resources
+E:\visual stadio workplace\QQChat-master\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.FriendListForm.resources
+E:\visual stadio workplace\QQChat-master\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.LoginForm.resources
+E:\visual stadio workplace\QQChat-master\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.MainForm.resources
+E:\visual stadio workplace\QQChat-master\QQChat\QQChat\obj\x86\Debug\QQChat.Properties.Resources.resources
+E:\visual stadio workplace\QQChat-master\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.P2pChatForm.resources
+E:\visual stadio workplace\QQChat-master\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.RegisterForm.resources
+E:\visual stadio workplace\QQChat-master\QQChat\QQChat\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\visual stadio workplace\QQChat-master\QQChat\QQChat\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\visual stadio workplace\QQChat-master\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.AddFriendsForm.resources
+=======
 C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\bin\Debug\QQChat.exe.config
 C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\obj\x86\Debug\QQChat.exe
 C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\obj\x86\Debug\QQChat.pdb
@@ -52,6 +82,50 @@ C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.P2pC
 C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.RegisterForm.resources
 C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.UserInfoForm.resources
 C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\obj\x86\Debug\View.csproj.GenerateResource.Cache
+>>>>>>> 913df0672ff7529ed1475b39b053c5150d50af11
+E:\visual stadio workplace\QQChat-master\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.UserInfoForm.resources
+E:\visual stadio workplace\QQChat-master\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.Test.resources
+E:\visual stadio workplace\QQChat-master\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.ChooseGroup.resources
 C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.GroupChatForm.resources
 C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.GroupListForm.resources
+<<<<<<< HEAD
 C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.AddNewChatRoom.resources
+=======
+>>>>>>> f4834623f93eade1b69378474ef8482456ac5eb0
+E:\visual stadio workplace\QQChat-master\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.GroupChatForm.resources
+E:\visual stadio workplace\QQChat-master\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.GroupListForm.resources
+E:\android\android_workplace2\QQ\QQChat\QQChat\bin\Debug\QQChat.exe.config
+E:\android\android_workplace2\QQ\QQChat\QQChat\obj\x86\Debug\QQChat.exe
+E:\android\android_workplace2\QQ\QQChat\QQChat\obj\x86\Debug\QQChat.pdb
+E:\android\android_workplace2\QQ\QQChat\QQChat\bin\Debug\QQChat.exe
+E:\android\android_workplace2\QQ\QQChat\QQChat\bin\Debug\QQChat.pdb
+E:\android\android_workplace2\QQ\QQChat\QQChat\bin\Debug\Bll.dll
+E:\android\android_workplace2\QQ\QQChat\QQChat\bin\Debug\Model.dll
+E:\android\android_workplace2\QQ\QQChat\QQChat\bin\Debug\Socket.dll
+E:\android\android_workplace2\QQ\QQChat\QQChat\bin\Debug\SqlDal.dll
+E:\android\android_workplace2\QQ\QQChat\QQChat\bin\Debug\Util.dll
+E:\android\android_workplace2\QQ\QQChat\QQChat\bin\Debug\Widget.dll
+E:\android\android_workplace2\QQ\QQChat\QQChat\bin\Debug\Bll.pdb
+E:\android\android_workplace2\QQ\QQChat\QQChat\bin\Debug\Model.pdb
+E:\android\android_workplace2\QQ\QQChat\QQChat\bin\Debug\Socket.pdb
+E:\android\android_workplace2\QQ\QQChat\QQChat\bin\Debug\SqlDal.pdb
+E:\android\android_workplace2\QQ\QQChat\QQChat\bin\Debug\Util.pdb
+E:\android\android_workplace2\QQ\QQChat\QQChat\bin\Debug\Widget.pdb
+E:\android\android_workplace2\QQ\QQChat\QQChat\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\android\android_workplace2\QQ\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.AddFriendsForm.resources
+E:\android\android_workplace2\QQ\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.BaseForm.resources
+E:\android\android_workplace2\QQ\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.ChooseGroup.resources
+E:\android\android_workplace2\QQ\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.FriendListForm.resources
+E:\android\android_workplace2\QQ\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.GroupChatForm.resources
+E:\android\android_workplace2\QQ\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.GroupListForm.resources
+E:\android\android_workplace2\QQ\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.LoginForm.resources
+E:\android\android_workplace2\QQ\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.MainForm.resources
+E:\android\android_workplace2\QQ\QQChat\QQChat\obj\x86\Debug\QQChat.Properties.Resources.resources
+E:\android\android_workplace2\QQ\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.P2pChatForm.resources
+E:\android\android_workplace2\QQ\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.RegisterForm.resources
+E:\android\android_workplace2\QQ\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.Test.resources
+E:\android\android_workplace2\QQ\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.UserInfoForm.resources
+E:\android\android_workplace2\QQ\QQChat\QQChat\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\android\android_workplace2\QQ\QQChat\QQChat\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\android\android_workplace2\QQ\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.AddChatRoomForm.resources
+>>>>>>> ba606788eebcca5ac14ac62c7a0986b4c268e964

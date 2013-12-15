@@ -60,17 +60,39 @@ namespace QQChat.UiForm
             friendListBox.IconSizeMode = ChatListItemIcon.Large;
             Random rnd = new Random(); 
             IList<Group> groupList = groupBll.getGroupList(user.UId);
+            Console.WriteLine("user.UId----------------------->>>>>>>>" + user.UId+"count----->"+groupList.Count);
+            
             foreach (Group group in groupList)
             {
+
+                Console.WriteLine("group" + group.Name + "groupid" + group.GId);
+
+
+
                 ChatListItem groupItem = new ChatListItem(group.Name);
                 IList<Friend> friendList = friendBll.getFriendByGroup(user.UId, group.GId);
+                Console.WriteLine("user.UId" + user.UId + "group.GId" + group.GId);
+                Console.WriteLine("friendList" + friendList.Count);
                 foreach (Friend friend in friendList)
                 {
+                    Console.WriteLine("friendList" + friend.NickName);
                     User fModel = userBll.getUser(friend.FriendId);
                     ChatListSubItem friendItem = new ChatListSubItem();
                     friendItem.DisplayName = friend.FriendName;
                     friendItem.ID = friend.FriendId;
-                    friendItem.HeadImage = Image.FromFile("Head/1 (" + rnd.Next(0, 45) + ").png");
+                    //设置好友头像  
+                    if (friend.Photo == null)
+                    {
+                        Image errorIm = Image.FromFile("Head/error.jpg");
+                        Size size = new Size(60, 60);
+                        friendItem.HeadImage = new Bitmap(errorIm, size);
+                    }
+                    else
+                    {
+                        MemoryStream stream = new MemoryStream(friend.Photo);
+                        friendItem.HeadImage = new Bitmap(stream);
+                    }
+
                     friendItem.NicName = friend.NickName;
                     friendItem.PersonalMsg = fModel.Sign;
                     friendItem.IpAddress = fModel.LastLoginIp;
@@ -113,6 +135,11 @@ namespace QQChat.UiForm
             //    }
             //}
             form.Show();
+        }
+        //添加好友
+        private void addFriendButton_Click(object sender, EventArgs e)
+        {
+            new AddFriendsForm(user).Visible=true;
         }
 
        

@@ -53,9 +53,26 @@
     </Compile>
     <Compile Include="UiForm\AddNewChatRoom.Designer.cs">
       <DependentUpon>AddNewChatRoom.cs</DependentUpon>
+    <Compile Include="UiForm\AddChatRoomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UiForm\AddChatRoomForm.Designer.cs">
+      <DependentUpon>AddChatRoomForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UiForm\AddFriendsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UiForm\AddFriendsForm.Designer.cs">
+      <DependentUpon>AddFriendsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UiForm\BaseForm.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UiForm\ChooseGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UiForm\ChooseGroup.Designer.cs">
+      <DependentUpon>ChooseGroup.cs</DependentUpon>
     </Compile>
     <Compile Include="UiForm\FriendListForm.cs">
       <SubType>Form</SubType>
@@ -101,6 +118,18 @@
     <Compile Include="UiForm\RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UiForm\AddChatRoomForm.resx">
+      <DependentUpon>AddChatRoomForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UiForm\AddFriendsForm.resx">
+      <DependentUpon>AddFriendsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="UiForm\Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UiForm\Test.Designer.cs">
+      <DependentUpon>Test.cs</DependentUpon>
+    </Compile>
     <Compile Include="UiForm\UserInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UiForm\BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UiForm\ChooseGroup.resx">
+      <DependentUpon>ChooseGroup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UiForm\FriendListForm.resx">
       <DependentUpon>FriendListForm.cs</DependentUpon>
@@ -144,10 +176,15 @@
     <EmbeddedResource Include="UiForm\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UiForm\Test.resx">
+      <DependentUpon>Test.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UiForm\UserInfoForm.resx">
       <DependentUpon>UserInfoForm.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -60,22 +60,39 @@ namespace SqlDal
 
         public bool register(User  user)
         {
-            string sql = "insert into [user] (username,email,password,regTime) values (@Username,@Email, @Password, @Time)";
+            string sql = "insert into [user] (username,email,password,regTime,age,sex,sign,photo) values (@Username,@Email, @Password, @Time,@Age,@Sex,@Sign,@Photo)";
  
             List<SqlParameter> parameters = new List<SqlParameter>();
             parameters.Add(new SqlParameter("@Username",SqlDbType.VarChar,50));
             parameters.Add(new SqlParameter("@Email", SqlDbType.VarChar, 50));
             parameters.Add(new SqlParameter("@Password", SqlDbType.VarChar, 50));
             parameters.Add(new SqlParameter("@Time",SqlDbType.DateTime));
+
+            parameters.Add(new SqlParameter("@Age", SqlDbType.Int, 50));
+            parameters.Add(new SqlParameter("@Sex", SqlDbType.Int));
+            parameters.Add(new SqlParameter("@Sign", SqlDbType.VarChar, 50));
+            parameters.Add(new SqlParameter("@Photo", SqlDbType.Image));
+
             parameters[0].Value = user.Username;
             parameters[1].Value = user.Email;
             parameters[2].Value = AppUtil.Encrypt(user.Password);
             parameters[3].Value = DateTime.Now;
+
+            parameters[4].Value = user.Age;
+            parameters[5].Value = user.Sex;
+            parameters[6].Value = user.Sign;
+            parameters[7].Value = user.Photo;
+
             int row = SqlDbHelper.ExecuteNoQuery(sql,CommandType.Text, parameters);
-            if (row == 1)
+            if (row == 1){
+                
                 return true;
-            else
+            }else{
+               
                 return false;
+            }
+                
+            
         }
 
         public bool checkUniqueEmail(String email)
@@ -132,10 +149,10 @@ namespace SqlDal
                 Sign.Value = user.Sign;
                 parameters.Add(Sign);
             }
-            if (!user.Photo.Equals(""))
+            if (user.Photo!=null)
             {
                 sql.Append(" photo=@Photo,");
-                SqlParameter Photo =  new SqlParameter("@photo", SqlDbType.VarChar,50);
+                SqlParameter Photo =  new SqlParameter("@photo", SqlDbType.Image);
                 Photo.Value = user.Photo;
                 parameters.Add(Photo);
             }
@@ -169,9 +186,10 @@ namespace SqlDal
             UId.Value = uId;
             parameters.Add(UId);
 
+            Console.WriteLine("查询语句。。。。。。。。。。。。。。。"+sqlStr);
             int row = SqlDbHelper.ExecuteNoQuery(sqlStr, CommandType.Text, parameters);
             if (row >= 1)
-                return false;
+                return true;
             else
                 return false;
         }

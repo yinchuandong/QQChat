@@ -37,7 +37,8 @@ namespace Bll
         //注册用户
         public bool register(User user)
         {
-            return userDal.register(user);
+            bool isOk=userDal.register(user);
+            return isOk;
         }
 
         //检查邮箱是否唯一

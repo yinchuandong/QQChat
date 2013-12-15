@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Data;
+using System.Collections;
 
 using SqlDal;
 using Model;
@@ -38,18 +39,34 @@ namespace Bll
             IList<Friend> list = ModelConvertUtil<Friend>.ConvertToModel(result);
             return list;
         }
-
-        public bool addFriend(Friend friend)
+        //好友关系
+        public bool isFriend(int currUserID,int friendID) 
         {
-            int result = friendDal.InsertFriend(friend);
-            if (result == 1)
-            {
-                return true;
+            return friendDal.IsFriend(currUserID, friendID);
+        }
+
+        //添加好友
+        public string addFriend(Friend friend)
+        {
+            string msg = "";
+            bool isFriend = friendDal.IsFriend(friend.UId, friend.FriendId);
+                     
+           int isAdded = friendDal.InsertFriend(friend);
+           if (isAdded == 1)
+           {
+               msg = "添加好友成功！";
             }
             else
             {
-                return false;
-            }
+               msg = "添加失败！";
+            }           
+            return msg;
+  
+        }
+        //查找好友
+        public ArrayList searchUser(int currenID, string key) 
+        {
+            return friendDal.searchUser(currenID,key);
         }
     }
 }

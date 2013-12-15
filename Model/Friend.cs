@@ -48,6 +48,12 @@ namespace Model
             get { return this.nickName; }
             set {this.nickName = value;}
         }
+        private Byte[] photo;
+        public Byte[] Photo
+        {
+            get { return this.photo; }
+            set { this.photo = value; }
+        }
 
 
     }

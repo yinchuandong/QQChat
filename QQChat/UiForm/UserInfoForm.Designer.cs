@@ -88,6 +88,7 @@
             this.Sign_textBox.Size = new System.Drawing.Size(163, 64);
             this.Sign_textBox.TabIndex = 2;
             this.Sign_textBox.Text = "";
+            this.Sign_textBox.TextChanged += new System.EventHandler(this.Sign_textBox_TextChanged);
             // 
             // UserName_label
             // 
@@ -108,6 +109,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(92, 108);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // EditInfo
             // 
@@ -396,6 +398,7 @@
             this.Controls.Add(this.EditInfo_Panel);
             this.Name = "UserInfoForm";
             this.Text = "个人资料";
+            this.Load += new System.EventHandler(this.UserInfoForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
