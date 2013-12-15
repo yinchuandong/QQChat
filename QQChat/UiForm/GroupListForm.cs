@@ -58,10 +58,6 @@ namespace QQChat.UiForm
             groupListBox.Items.Add(listItem);
         }
 
-        //创建新群
-        private void newGroup_button_Click(object sender, EventArgs e)
-        {
-            new AddChatRoomForm(user).Visible = true;
-        }
+        
     }
 }
