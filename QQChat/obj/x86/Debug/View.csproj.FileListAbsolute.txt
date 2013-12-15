@@ -88,6 +88,9 @@ E:\visual stadio workplace\QQChat-master\QQChat\QQChat\obj\x86\Debug\QQChat.UiFo
 E:\visual stadio workplace\QQChat-master\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.ChooseGroup.resources
 C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.GroupChatForm.resources
 C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.GroupListForm.resources
+<<<<<<< HEAD
+C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.AddNewChatRoom.resources
+=======
 >>>>>>> f4834623f93eade1b69378474ef8482456ac5eb0
 E:\visual stadio workplace\QQChat-master\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.GroupChatForm.resources
 E:\visual stadio workplace\QQChat-master\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.GroupListForm.resources
@@ -125,3 +128,4 @@ E:\android\android_workplace2\QQ\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.UserI
 E:\android\android_workplace2\QQ\QQChat\QQChat\obj\x86\Debug\GenerateResource.read.1.tlog
 E:\android\android_workplace2\QQ\QQChat\QQChat\obj\x86\Debug\GenerateResource.write.1.tlog
 E:\android\android_workplace2\QQ\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.AddChatRoomForm.resources
+>>>>>>> ba606788eebcca5ac14ac62c7a0986b4c268e964

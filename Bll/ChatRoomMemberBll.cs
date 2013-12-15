@@ -20,5 +20,18 @@ namespace Bll
             IList<Chatroom> list = ModelConvertUtil<Chatroom>.ConvertToModel(result);
             return list;
         }
-    }
+
+     public bool addChatRoom(Model.Chatroom chatroom)//添加群
+        {
+            int result = chatRoomMemberDal.addChatRoom(chatroom);
+            if (result == 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+} 
 }

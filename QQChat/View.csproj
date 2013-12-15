@@ -48,6 +48,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UiForm\AddNewChatRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UiForm\AddNewChatRoom.Designer.cs">
+      <DependentUpon>AddNewChatRoom.cs</DependentUpon>
+    <Compile Include="UiForm\AddChatRoomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UiForm\AddChatRoomForm.Designer.cs">
+      <DependentUpon>AddChatRoomForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UiForm\AddFriendsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +133,9 @@
     <Compile Include="UiForm\UserInfoForm.designer.cs">
       <DependentUpon>UserInfoForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UiForm\AddNewChatRoom.resx">
+      <DependentUpon>AddNewChatRoom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UiForm\BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </EmbeddedResource>
