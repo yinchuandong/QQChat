@@ -128,3 +128,6 @@ E:\android\android_workplace2\QQ\QQChat\QQChat\obj\x86\Debug\GenerateResource.wr
 E:\android\android_workplace2\QQ\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.AddChatRoomForm.resources
 >>>>>>> ba606788eebcca5ac14ac62c7a0986b4c268e964
 E:\android\android_workplace2\QQ\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.AddNewChatRoom.resources
+C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.AddFriendsForm.resources
+C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.ChooseGroup.resources
+C:\Users\Yuanyun\Documents\GitHub\QQChat\QQChat\obj\x86\Debug\QQChat.UiForm.Test.resources
