@@ -48,12 +48,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UiForm\AddNewChatRoom.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UiForm\AddNewChatRoom.Designer.cs">
-      <DependentUpon>AddNewChatRoom.cs</DependentUpon>
-    </Compile>
     <Compile Include="UiForm\AddFriendsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +95,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UiForm\AddNewChatRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UiForm\AddNewChatRoom.Designer.cs">
+      <DependentUpon>AddNewChatRoom.cs</DependentUpon>
+    </Compile>
     <Compile Include="UiForm\P2pChatForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,21 +116,12 @@
     <EmbeddedResource Include="UiForm\AddFriendsForm.resx">
       <DependentUpon>AddFriendsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="UiForm\Test.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UiForm\Test.Designer.cs">
-      <DependentUpon>Test.cs</DependentUpon>
-    </Compile>
     <Compile Include="UiForm\UserInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UiForm\UserInfoForm.designer.cs">
       <DependentUpon>UserInfoForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UiForm\AddNewChatRoom.resx">
-      <DependentUpon>AddNewChatRoom.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UiForm\BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,14 +153,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UiForm\AddNewChatRoom.resx">
+      <DependentUpon>AddNewChatRoom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UiForm\P2pChatForm.resx">
       <DependentUpon>P2pChatForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UiForm\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UiForm\Test.resx">
-      <DependentUpon>Test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UiForm\UserInfoForm.resx">
       <DependentUpon>UserInfoForm.cs</DependentUpon>

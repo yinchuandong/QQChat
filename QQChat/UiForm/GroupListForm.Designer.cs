@@ -39,7 +39,7 @@
             this.newGroup_button.Name = "newGroup_button";
             this.newGroup_button.Size = new System.Drawing.Size(235, 38);
             this.newGroup_button.TabIndex = 1;
-            this.newGroup_button.Text = "新建群组";
+            this.newGroup_button.Text = "群组管理";
             this.newGroup_button.UseVisualStyleBackColor = true;
             this.newGroup_button.Click += new System.EventHandler(this.newGroup_button_Click);
             // 
