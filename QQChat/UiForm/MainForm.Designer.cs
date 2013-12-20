@@ -31,9 +31,9 @@
             this.Sign_label = new System.Windows.Forms.Label();
             this.NickName_label = new System.Windows.Forms.Label();
             this.tabControl = new Widget._TabControl.TabControlEx();
-            this.friendPage = new System.Windows.Forms.TabPage();
             this.groupPage = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.friendPage = new System.Windows.Forms.TabPage();
             this.tabControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -73,16 +73,6 @@
             this.tabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl.TabIndex = 4;
             // 
-            // friendPage
-            // 
-            this.friendPage.Location = new System.Drawing.Point(4, 29);
-            this.friendPage.Name = "friendPage";
-            this.friendPage.Padding = new System.Windows.Forms.Padding(3);
-            this.friendPage.Size = new System.Drawing.Size(246, 419);
-            this.friendPage.TabIndex = 0;
-            this.friendPage.Text = "friendPage";
-            this.friendPage.UseVisualStyleBackColor = true;
-            // 
             // groupPage
             // 
             this.groupPage.Location = new System.Drawing.Point(4, 29);
@@ -101,6 +91,16 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // friendPage
+            // 
+            this.friendPage.BackColor = System.Drawing.Color.White;
+            this.friendPage.Location = new System.Drawing.Point(4, 29);
+            this.friendPage.Name = "friendPage";
+            this.friendPage.Padding = new System.Windows.Forms.Padding(3);
+            this.friendPage.Size = new System.Drawing.Size(246, 419);
+            this.friendPage.TabIndex = 0;
+            this.friendPage.Text = "friendPage";
             // 
             // MainForm
             // 
@@ -127,8 +127,8 @@
         private System.Windows.Forms.Label Sign_label;
         private System.Windows.Forms.Label NickName_label;
         private Widget._TabControl.TabControlEx tabControl;
-        private System.Windows.Forms.TabPage friendPage;
         private System.Windows.Forms.TabPage groupPage;
+        private System.Windows.Forms.TabPage friendPage;
     }
 }
 
