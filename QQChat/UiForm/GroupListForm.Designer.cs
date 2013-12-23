@@ -34,7 +34,7 @@
             // 
             // newGroup_button
             // 
-            this.newGroup_button.ForeColor = System.Drawing.Color.Cyan;
+            this.newGroup_button.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.newGroup_button.Location = new System.Drawing.Point(3, 369);
             this.newGroup_button.Name = "newGroup_button";
             this.newGroup_button.Size = new System.Drawing.Size(235, 38);
@@ -52,6 +52,7 @@
             this.groupListBox.Size = new System.Drawing.Size(235, 363);
             this.groupListBox.TabIndex = 2;
             this.groupListBox.Text = "groupListBox";
+            this.groupListBox.DoubleClickSubItem += new Widget.ChatListBox.ChatListEventHandler(this.GroupListBox_DoubleClickSubItem);
             // 
             // GroupListForm
             // 
