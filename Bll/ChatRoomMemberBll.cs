@@ -10,6 +10,7 @@ using System.Data;
 using SqlDal;
 using Model;
 using Util;
+
 namespace Bll
 {
     public class ChatRoomMemberBll

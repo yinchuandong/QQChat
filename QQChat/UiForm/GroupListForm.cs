@@ -57,7 +57,11 @@ namespace QQChat.UiForm
             }
             groupListBox.Items.Add(listItem);
         }
-
+        private void GroupListBox_DoubleClickSubItem(object sender, ChatListEventArgs e)
+        {
+            GroupChatForm form = new GroupChatForm(e.SelectSubItem);
+            form.Show();
+        }
         private void newGroup_button_Click(object sender, EventArgs e)
         {
             new AddNewChatRoom().Show();
