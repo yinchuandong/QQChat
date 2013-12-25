@@ -43,6 +43,7 @@ namespace QQChat.UiForm
                 User updateUser = new User();
                 updateUser.LastLoginIp = user.LastLoginIp;
                 updateUser.LastLoginTime = user.LastLoginTime;
+                updateUser.Status =1;
                 userBll.update(updateUser, user.UId);
                 new MainForm().Show();
                 this.Hide();
@@ -50,7 +51,6 @@ namespace QQChat.UiForm
                 MessageBox.Show("用户名或密码错误");
             }
         }
-
         //去注册的label click事件
         private void register_Click(object sender, EventArgs e)
         {

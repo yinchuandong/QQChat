@@ -107,6 +107,21 @@ namespace Bll
                 return false;
             }
         }
+        //发起群组聊天，查找群内成员在线人员IP
+        public ArrayList searchIp(int Cid)
+        {
+            if (chatRoomMemberDal.searchIp(Cid) != null)
+            {
+                ArrayList result = new ArrayList();
+                result = chatRoomMemberDal.searchIp(Cid);
+                return result;
+            }
+            else
+            {
+                ArrayList noIp = new ArrayList();
+                return noIp;
+            }
+        }
 
     } 
 }

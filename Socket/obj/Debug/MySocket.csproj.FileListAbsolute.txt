@@ -1,0 +1,9 @@
+C:\Users\Yuanyun\Documents\GitHub\QQChat\Socket\bin\Debug\Socket.dll
+C:\Users\Yuanyun\Documents\GitHub\QQChat\Socket\bin\Debug\Socket.pdb
+C:\Users\Yuanyun\Documents\GitHub\QQChat\Socket\bin\Debug\Model.dll
+C:\Users\Yuanyun\Documents\GitHub\QQChat\Socket\bin\Debug\Util.dll
+C:\Users\Yuanyun\Documents\GitHub\QQChat\Socket\bin\Debug\Model.pdb
+C:\Users\Yuanyun\Documents\GitHub\QQChat\Socket\bin\Debug\Util.pdb
+C:\Users\Yuanyun\Documents\GitHub\QQChat\Socket\obj\Debug\MySocket.csprojResolveAssemblyReference.cache
+C:\Users\Yuanyun\Documents\GitHub\QQChat\Socket\obj\Debug\Socket.dll
+C:\Users\Yuanyun\Documents\GitHub\QQChat\Socket\obj\Debug\Socket.pdb

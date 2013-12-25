@@ -43,3 +43,11 @@ E:\visual stadio workplace\QQChat-master\QQChat\Widget\obj\Debug\GenerateResourc
 E:\visual stadio workplace\QQChat-master\QQChat\Widget\obj\Debug\GenerateResource-ResGen.write.9.tlog
 E:\visual stadio workplace\QQChat-master\QQChat\Widget\obj\Debug\Widget.dll
 E:\visual stadio workplace\QQChat-master\QQChat\Widget\obj\Debug\Widget.pdb
+C:\Users\Yuanyun\Documents\GitHub\QQChat\Widget\bin\Debug\Widget.dll
+C:\Users\Yuanyun\Documents\GitHub\QQChat\Widget\bin\Debug\Widget.pdb
+C:\Users\Yuanyun\Documents\GitHub\QQChat\Widget\obj\Debug\Widget.csprojResolveAssemblyReference.cache
+C:\Users\Yuanyun\Documents\GitHub\QQChat\Widget\obj\Debug\Widget.Properties.Resources.resources
+C:\Users\Yuanyun\Documents\GitHub\QQChat\Widget\obj\Debug\Widget.ChatListBox.resources
+C:\Users\Yuanyun\Documents\GitHub\QQChat\Widget\obj\Debug\Widget.csproj.GenerateResource.Cache
+C:\Users\Yuanyun\Documents\GitHub\QQChat\Widget\obj\Debug\Widget.dll
+C:\Users\Yuanyun\Documents\GitHub\QQChat\Widget\obj\Debug\Widget.pdb

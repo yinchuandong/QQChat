@@ -79,7 +79,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.chechFrinedsBut);
             this.Name = "AddFriendsForm";
-            this.Text = "AddFriendsForm";
+            this.Text = "查找好友";
             this.Load += new System.EventHandler(this.AddFriendsForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

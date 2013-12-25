@@ -13,7 +13,7 @@ using SqlDal;
 using Model;
 using Bll;
 using Util;
-using Socket;
+using MySocket;
 
 using Widget._ChatListBox;
 using Widget._TabControl;

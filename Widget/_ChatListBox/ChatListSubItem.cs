@@ -92,6 +92,11 @@ namespace Widget._ChatListBox
             set { headImage = value; RedrawSubItem(); }
         }
 
+        private int chatRoomPort;
+        public int ChatRoomPort {
+            get { return chatRoomPort; }
+            set { chatRoomPort = value; }
+        }
         private UserStatus status;
         /// <summary>
         /// 获取或者设置用户当前状态
@@ -235,11 +240,12 @@ namespace Widget._ChatListBox
             this.displayName = displayname;
             this.personalMsg = personalmsg;
         }
-        public ChatListSubItem(string nicname, string displayname, string personalmsg, UserStatus status) {
+        public ChatListSubItem(string nicname, string displayname, string personalmsg, UserStatus status,int chatRoomPort ) {
             this.nicName = nicname;
             this.displayName = displayname;
             this.personalMsg = personalmsg;
             this.status = status;
+            this.chatRoomPort = chatRoomPort;
         }
         public ChatListSubItem(int id, string nicname, string displayname, string personalmsg, UserStatus status, Bitmap head) {
             this.id = id;
