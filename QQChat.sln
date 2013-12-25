@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bll", "Bll\Bll.csproj", "{B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Widget", "Widget\Widget.csproj", "{8F34E30F-DE61-416F-A3B0-B015AF578489}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Socket", "Socket\Socket.csproj", "{C02BD425-101C-4B72-A041-EC01C339F8E2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySocket", "Socket\MySocket.csproj", "{C02BD425-101C-4B72-A041-EC01C339F8E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

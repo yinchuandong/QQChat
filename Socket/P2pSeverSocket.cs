@@ -11,7 +11,7 @@ using System.Numerics;
 using Util;
 using Model;
 
-namespace Socket
+namespace MySocket
 {
     public class P2pServerSocket
     {

@@ -15,11 +15,9 @@ namespace SqlDal
    public class ChatRoomMemberDal
     {
 
-       public DataTable getChatRoomDetail(int uId)//获得每个群组具体信息
+       public DataTable getChatRoomDetail(int uId)//获得所在的每个群组具体信息
        {
-           string sql = "select c.c_id as  CId, c.name as Name, c.time as Time, c.limit_num as LimitNum,c.leader_id as LeaderID "
-               + " from [chatroom] as c,[chatroom_member] as cm"
-               + " where c.[c_id]=cm.[chatroom_id] and cm.u_id=@UId";
+           string sql = "select [chatRoom].c_id as  CId, [chatRoom].name as Name, [chatRoom].time as Time, [chatRoom].limit_num as LimitNum,[chatRoom].leader_id as LeaderID,[chatRoom].chatroom_port as ChatRoomPort  from [chatroom],[chatroom_member] where [chatRoom].[c_id]=[chatroom_member].chatroom_id and [chatroom_member].u_id=@UId";
            List<SqlParameter> parameters = new List<SqlParameter>();
            SqlParameter UId = new SqlParameter("@UId", SqlDbType.Int);
            UId.Value = uId;
@@ -35,9 +33,7 @@ namespace SqlDal
             SqlParameter Name = new SqlParameter("@Name", SqlDbType.VarChar, 50);
             SqlParameter Time= new SqlParameter("@Time", SqlDbType.DateTime);
             SqlParameter LimitNum = new SqlParameter("@LimitNum", SqlDbType.Int);
-            SqlParameter LeaderId = new SqlParameter("@LeaderId", SqlDbType.Int);
-            SqlParameter CId = new SqlParameter("@CId", SqlDbType.Int);
-            
+            SqlParameter LeaderId = new SqlParameter("@LeaderId", SqlDbType.Int);           
             
             Name.Value = chatroom.Name;
             parameters.Add(Name);
@@ -47,18 +43,27 @@ namespace SqlDal
             parameters.Add(LimitNum);
             LeaderId.Value = chatroom.LeaderId;
             parameters.Add(LeaderId);
-            CId.Value = chatroom.CId;
-            parameters.Add(CId);
-
-
             int result = SqlDbHelper.ExecuteNoQuery(sql, CommandType.Text, parameters);
+            setPort();//设置端口号
             return result;
         }
+       //设置chatPoomport
+      public bool setPort() 
+      {
+          int c_id=getLasteID();
+          int port =c_id+10000;
+          string sqlStr = "update [chatroom] set chatroom_port =" + port + " where c_id =" + c_id;
+          int row = SqlDbHelper.ExecuteNoQuery(sqlStr, CommandType.Text, null);
+          if (row >= 1)
+              return true;
+          else
+              return false;
+      }
 
       //查询最新插入的chatRoom的id
       public int getLasteID() 
       {
-          string sqlStr = "select top 1 [c_id] as c_id  from [chatRoom] order by time Desc ;";
+          string sqlStr = "select top 1 [c_id] as c_id  from [chatRoom] order by time Desc";
           int id = 0;
           SqlDataReader reader = SqlDbHelper.ExecuteReader(sqlStr, CommandType.Text, null);
           if (reader.HasRows)
@@ -73,6 +78,7 @@ namespace SqlDal
           return id;
       
       }
+       //增加群组成员
       public int addChatRoomMember(Model.Chatroom chatroom)
       {
           string sql = "insert into [chatroom_member] ([chatroom_id],[time],[u_id]) values (@CId,@Time,@LeaderId)";
@@ -218,6 +224,27 @@ namespace SqlDal
           {
               return true;
           }
+      }
+        //发起群组聊天，查找群内成员在线人员IP
+      public ArrayList searchIp(int Cid)
+      {
+          string sqlStr = "select last_login_ip from [user] where status=1 and u_id in (select u_id from [chatroom_member] where chatroom_id=@Cid)";
+          ArrayList onlineIp = new ArrayList();
+          List<SqlParameter> parameters = new List<SqlParameter>();
+          SqlParameter chatroom_id = new SqlParameter("@Cid", SqlDbType.Int);
+          chatroom_id.Value = Cid;
+          parameters.Add(chatroom_id);
+          SqlDataReader reader = SqlDbHelper.ExecuteReader(sqlStr, CommandType.Text, parameters);
+          if (reader.HasRows)
+          {
+
+              while (reader.Read())
+              {
+                  onlineIp.Add(reader["last_login_ip"].ToString());
+              }
+          }
+
+          return onlineIp;
       }
      
 

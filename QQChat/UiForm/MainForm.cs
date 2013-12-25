@@ -14,7 +14,7 @@ using SqlDal;
 using Model;
 using Bll;
 using Util;
-using Socket;
+using MySocket;
 
 using Widget._ChatListBox;
 using Widget._TabControl;
@@ -62,13 +62,36 @@ namespace QQChat.UiForm
             groupListForm.Dock = DockStyle.Fill;
             groupPage.Controls.Add(groupListForm);
             groupListForm.Show();
-
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             new UserInfoForm().Show();
         }
+
+        private void formClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                DialogResult result = MessageBox.Show("确定退出吗？", "提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                if (result == DialogResult.OK)
+                {
+                    Application.Exit();
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
+            } 
+            
+        }
+
+        private void formClosed(object sender, FormClosedEventArgs e)
+        {
+            user.Status = 0;
+        }
+
+
 
 
         

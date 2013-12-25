@@ -41,5 +41,11 @@ namespace Model
             get { return this.leaderId; }
             set { this.leaderId = value; }
         }
+        private int chatRoomPort;
+        public int ChatRoomPort
+        {
+            get { return this.chatRoomPort; }
+            set { this.chatRoomPort= value; }
+        }
     }
 }

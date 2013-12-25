@@ -8,7 +8,7 @@
     <ProjectGuid>{C02BD425-101C-4B72-A041-EC01C339F8E2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Socket</RootNamespace>
+    <RootNamespace>MySocket</RootNamespace>
     <AssemblyName>Socket</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

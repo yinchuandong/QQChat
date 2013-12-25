@@ -32,6 +32,7 @@
             this.GroupChat_Input = new System.Windows.Forms.RichTextBox();
             this.headPicBox = new System.Windows.Forms.PictureBox();
             this.nameTxt = new System.Windows.Forms.Label();
+            this.sendMsgbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.headPicBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,17 +69,29 @@
             this.nameTxt.TabIndex = 3;
             this.nameTxt.Text = "label1";
             // 
+            // sendMsgbutton
+            // 
+            this.sendMsgbutton.Location = new System.Drawing.Point(411, 437);
+            this.sendMsgbutton.Name = "sendMsgbutton";
+            this.sendMsgbutton.Size = new System.Drawing.Size(75, 23);
+            this.sendMsgbutton.TabIndex = 4;
+            this.sendMsgbutton.Text = " 发送";
+            this.sendMsgbutton.UseVisualStyleBackColor = true;
+            this.sendMsgbutton.Click += new System.EventHandler(this.sendMsgbutton_Click);
+            // 
             // GroupChatForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(498, 471);
+            this.Controls.Add(this.sendMsgbutton);
             this.Controls.Add(this.nameTxt);
             this.Controls.Add(this.headPicBox);
             this.Controls.Add(this.GroupChat_Input);
             this.Controls.Add(this.GroupChat_Output);
             this.Name = "GroupChatForm";
-            this.Text = "GroupChatForm";
+            this.Text = "一群呵呵在聊天";
+            this.Load += new System.EventHandler(this.GroupChatForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.headPicBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -91,5 +104,6 @@
         private System.Windows.Forms.RichTextBox GroupChat_Input;
         private System.Windows.Forms.PictureBox headPicBox;
         private System.Windows.Forms.Label nameTxt;
+        private System.Windows.Forms.Button sendMsgbutton;
     }
 }

@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.Sign_label = new System.Windows.Forms.Label();
             this.NickName_label = new System.Windows.Forms.Label();
             this.tabControl = new Widget._TabControl.TabControlEx();
+            this.friendPage = new System.Windows.Forms.TabPage();
             this.groupPage = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.friendPage = new System.Windows.Forms.TabPage();
             this.tabControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -73,6 +74,16 @@
             this.tabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl.TabIndex = 4;
             // 
+            // friendPage
+            // 
+            this.friendPage.BackColor = System.Drawing.Color.White;
+            this.friendPage.Location = new System.Drawing.Point(4, 29);
+            this.friendPage.Name = "friendPage";
+            this.friendPage.Padding = new System.Windows.Forms.Padding(3);
+            this.friendPage.Size = new System.Drawing.Size(246, 419);
+            this.friendPage.TabIndex = 0;
+            this.friendPage.Text = "friendPage";
+            // 
             // groupPage
             // 
             this.groupPage.Location = new System.Drawing.Point(4, 29);
@@ -92,27 +103,20 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // friendPage
-            // 
-            this.friendPage.BackColor = System.Drawing.Color.White;
-            this.friendPage.Location = new System.Drawing.Point(4, 29);
-            this.friendPage.Name = "friendPage";
-            this.friendPage.Padding = new System.Windows.Forms.Padding(3);
-            this.friendPage.Size = new System.Drawing.Size(246, 419);
-            this.friendPage.TabIndex = 0;
-            this.friendPage.Text = "friendPage";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(252, 522);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.NickName_label);
             this.Controls.Add(this.Sign_label);
             this.Controls.Add(this.pictureBox1);
             this.Name = "MainForm";
-            this.Text = "呵呵";
+            this.Text = "呵呵的日子";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.formClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.formClosed);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.tabControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

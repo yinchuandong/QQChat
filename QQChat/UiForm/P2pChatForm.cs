@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,7 +12,7 @@ using Widget._ImagePopup;
 using Model;
 using Bll;
 using Widget._ChatListBox;
-using Socket;
+using MySocket;
 
 using System.Net.Sockets;
 using System.Threading;
@@ -31,13 +32,13 @@ namespace QQChat.UiForm
         private int hostId; // 用户自己的id
         private SessionBll session;
         private UserBll userBll = new UserBll();
-
         private ChatListSubItem guestItem; //当前对话方的实体
         private User guestModel; //当前对话用户的数据库信息
         private ImagePopup faceForm = null;
         //表情框
         public ImagePopup FaceForm
         {
+            
             get
             {
                 if (this.faceForm == null)
@@ -91,6 +92,8 @@ namespace QQChat.UiForm
             initData();
             initSocket();
         }
+        //获得群组内在线成员的ip地址
+        
 
         //初始化相关数据
         private void initData()
