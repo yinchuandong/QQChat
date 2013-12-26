@@ -59,7 +59,6 @@ namespace QQChat.UiForm
                 MessageBox.Show("他已经是你好友，重复添加无效");
                 return;
             }
-            MessageBox.Show("jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj");
             Friend friend = new Friend();
             friend.UId = currUser.UId;
             friend.FriendId = user.UId;

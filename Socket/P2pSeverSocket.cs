@@ -59,7 +59,7 @@ namespace MySocket
                         socketDict[guestId] = client;
                     }  
                 }
-                catch (System.Exception ex)
+                catch 
                 {
                     guestId = -1;
                 }

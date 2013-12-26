@@ -186,7 +186,7 @@ namespace QQChat.UiForm
                     writer.Flush();
                     this.ServerSocket = client;
                 }
-                catch (System.Exception ex)
+                catch
                 {
 
                 }
@@ -235,7 +235,7 @@ namespace QQChat.UiForm
                     string test = ex.Message;
                     //appendText(msg);
                 }
-                catch (System.Exception ex)//如果对方退出了程序
+                catch //如果对方退出了程序
                 {
                     if (serverSocket != null)
                     {
