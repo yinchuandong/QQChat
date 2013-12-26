@@ -14,6 +14,9 @@ using Model;
 using Util;
 using Bll;
 
+using Widget._ChatListBox;
+using Widget._TabControl;
+
 namespace QQChat.UiForm
 {
     public partial class AddNewChatRoom : Form
@@ -91,6 +94,16 @@ namespace QQChat.UiForm
             chatroom1.CId = id;
             chatroommemberdal2.addChatRoomMember(chatroom1); //往群成员中添加作为当前用户作为群主   
             MessageBox.Show("群组创建成功");
+            this.Hide();
+            Random rnd = new Random();
+            Chatroom chatroomdetail = chatroom1;
+            ChatListSubItem subItem = new ChatListSubItem();
+            subItem.DisplayName = chatroomdetail.Name;
+            subItem.ID = chatroomdetail.CId;
+            subItem.ChatRoomPort = chatroomdetail.ChatRoomPort;
+            subItem.HeadImage = Image.FromFile("Head/1 (" + rnd.Next(0, 45) + ").png");
+            Program.mWin.groupListForm.listItem.SubItems.Add(subItem); 
+
         }
 
         //查找群
@@ -146,8 +159,17 @@ namespace QQChat.UiForm
                     string msg= chatRoomMemberBll.addMember(u_id, c_id);
                     if(msg==null){
                        MessageBox.Show("加入群成功！");
+                       Random rnd = new Random();
+                       Chatroom chatroomdetail = chatroom;
+                       ChatListSubItem subItem = new ChatListSubItem();
+                       subItem.DisplayName = chatroomdetail.Name;
+                       subItem.ID = chatroomdetail.CId;
+                       subItem.ChatRoomPort = chatroomdetail.ChatRoomPort;
+                       subItem.HeadImage = Image.FromFile("Head/1 (" + rnd.Next(0, 45) + ").png");
+                       Program.mWin.groupListForm.listItem.SubItems.Add(subItem); ;
+                       this.Hide();           
                     }else{
-                        MessageBox.Show(msg);
+                        MessageBox.Show(msg);        
                     }
                       return;
                    }         

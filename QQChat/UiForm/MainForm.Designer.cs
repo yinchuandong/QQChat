@@ -133,6 +133,8 @@
         private Widget._TabControl.TabControlEx tabControl;
         private System.Windows.Forms.TabPage groupPage;
         private System.Windows.Forms.TabPage friendPage;
+        public FriendListForm friendListForm;
+        public GroupListForm groupListForm;
     }
 }
 

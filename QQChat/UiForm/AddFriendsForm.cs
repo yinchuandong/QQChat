@@ -101,7 +101,6 @@ namespace QQChat.UiForm
             }        
 
         }
-
         private void chechFrinedsBut_Click(object sender, EventArgs e)
         {
             friendsListView.Clear();                //清理上次查询结果

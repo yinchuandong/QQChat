@@ -18,13 +18,14 @@ using MySocket;
 using Widget._ChatListBox;
 using Widget._TabControl;
 using System.IO;
+using  System.Collections;
 
 namespace QQChat.UiForm
 {
     public partial class FriendListForm : BaseForm
     {
-       
 
+        private Hashtable openWith = new Hashtable();
         #region 成员变量
 
         private UserBll userBll;
@@ -97,6 +98,16 @@ namespace QQChat.UiForm
                     friendItem.PersonalMsg = fModel.Sign;
                     friendItem.IpAddress = fModel.LastLoginIp;
                     groupItem.SubItems.Add(friendItem);
+                  
+                }
+                
+                try
+                {
+                    openWith.Add(group.GId, groupItem);
+                }
+                catch
+                {
+                    Console.WriteLine("An element with Key = \"txt\" already exists.");
                 }
                 friendListBox.Items.Add(groupItem);
             }
@@ -140,6 +151,38 @@ namespace QQChat.UiForm
         private void addFriendButton_Click(object sender, EventArgs e)
         {
             new AddFriendsForm(user).Visible=true;
+        }
+        public void addPengyou(int gid,Friend friend)
+        {
+            
+            User fModel = userBll.getUser(friend.FriendId);
+            ChatListSubItem friendItem = new ChatListSubItem();
+            friendItem.DisplayName = friend.FriendName;
+            friendItem.ID = friend.FriendId;
+            if (friend.Photo == null)
+            {
+                Image errorIm = Image.FromFile("Head/error.jpg");
+                Size size = new Size(60, 60);
+                friendItem.HeadImage = new Bitmap(errorIm, size);
+            }
+            else
+            {
+                MemoryStream stream = new MemoryStream(friend.Photo);
+                friendItem.HeadImage = new Bitmap(stream);
+            }
+
+            friendItem.NicName = friend.NickName;
+            friendItem.PersonalMsg = fModel.Sign;
+            friendItem.IpAddress = fModel.LastLoginIp;
+          
+            Object obj = openWith[gid];
+            if (obj != null)
+            {
+                System.Console.WriteLine("sdasdasddasdasdasscdasdasdasd");
+                ChatListItem groupItem = (ChatListItem)obj;
+                groupItem.SubItems.Add(friendItem);
+            }
+
         }
 
        

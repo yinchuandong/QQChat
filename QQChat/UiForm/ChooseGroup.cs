@@ -58,14 +58,19 @@ namespace QQChat.UiForm
             if(isFriend){
                 MessageBox.Show("他已经是你好友，重复添加无效");
                 return;
-            }         
+            }
+            MessageBox.Show("jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj");
             Friend friend = new Friend();
             friend.UId = currUser.UId;
             friend.FriendId = user.UId;
             friend.Time =(DateTime?) System.DateTime.Now;
             friend.NickName = user.Username;
             friend.GId = groupID;  //d当前friend所属的分组的groupID
+            friend.FriendName = friend.NickName;
+            Program.mWin.friendListForm.addPengyou(groupID, friend);
             string msg = friendBll.addFriend(friend);
+
+           
             MessageBox.Show(msg);
 
             //添加到GroupMember中去
@@ -80,7 +85,7 @@ namespace QQChat.UiForm
             catch (Exception ex){
                 Console.WriteLine(ex.Message);
             }
-            
+         
 
         }
 

@@ -45,7 +45,7 @@ namespace QQChat.UiForm
         {
             groupListBox.IconSizeMode = ChatListItemIcon.Large;
             Random rnd = new Random();
-            ChatListItem listItem = new ChatListItem("我的群组");
+            listItem = new ChatListItem("我的群组");
             IList<Chatroom> chatRoommemberBll = chatRoomMemberBll.getChatRoomDetail(user.UId);
             foreach (Chatroom chatroomdetail in chatRoommemberBll)
             {
@@ -67,8 +67,5 @@ namespace QQChat.UiForm
         {
             new AddNewChatRoom().Show();
         }
-
-        
-       
     }
 }

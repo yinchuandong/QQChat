@@ -51,13 +51,13 @@ namespace QQChat.UiForm
                pictureBox1.Image = new Bitmap(im,size);
             }
            
-            FriendListForm friendListForm = new FriendListForm();
+             friendListForm = new FriendListForm();
             friendListForm.TopLevel = false;
             friendListForm.Dock = DockStyle.Fill;
             friendPage.Controls.Add(friendListForm);
             friendListForm.Show();
 
-            GroupListForm groupListForm = new GroupListForm();
+             groupListForm = new GroupListForm();
             groupListForm.TopLevel = false;
             groupListForm.Dock = DockStyle.Fill;
             groupPage.Controls.Add(groupListForm);

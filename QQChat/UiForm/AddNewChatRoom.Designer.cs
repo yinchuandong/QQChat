@@ -78,7 +78,7 @@
             // 
             // Sure_button
             // 
-            this.Sure_button.Location = new System.Drawing.Point(291, 214);
+            this.Sure_button.Location = new System.Drawing.Point(333, 315);
             this.Sure_button.Name = "Sure_button";
             this.Sure_button.Size = new System.Drawing.Size(73, 26);
             this.Sure_button.TabIndex = 9;

@@ -1,4 +1,5 @@
-﻿namespace QQChat.UiForm
+﻿using Widget._ChatListBox;
+namespace QQChat.UiForm
 {
     partial class GroupListForm
     {
@@ -76,5 +77,6 @@
 
         private System.Windows.Forms.Button newGroup_button;
         private Widget.ChatListBox groupListBox;
+        public ChatListItem listItem;
     }
 }

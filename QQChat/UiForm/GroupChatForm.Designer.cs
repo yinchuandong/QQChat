@@ -71,12 +71,13 @@
             // 
             // sendMsgbutton
             // 
+            this.sendMsgbutton.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.sendMsgbutton.Location = new System.Drawing.Point(411, 437);
             this.sendMsgbutton.Name = "sendMsgbutton";
-            this.sendMsgbutton.Size = new System.Drawing.Size(75, 23);
+            this.sendMsgbutton.Size = new System.Drawing.Size(75, 29);
             this.sendMsgbutton.TabIndex = 4;
             this.sendMsgbutton.Text = " 发送";
-            this.sendMsgbutton.UseVisualStyleBackColor = true;
+            this.sendMsgbutton.UseVisualStyleBackColor = false;
             this.sendMsgbutton.Click += new System.EventHandler(this.sendMsgbutton_Click);
             // 
             // GroupChatForm

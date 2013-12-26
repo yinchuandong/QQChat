@@ -73,9 +73,9 @@ namespace QQChat.UiForm
             ClientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);//创建Socket
             MsgBuffer = new Byte[65535];
             MsgSend = new Byte[65535];
-           // CheckForIllegalCrossThreadCalls = false;//不捕获对错误线程的调用
+            CheckForIllegalCrossThreadCalls = false;//不捕获对错误线程的调用
             //链接服务器
-            ServerInfo = new IPEndPoint(IPAddress.Parse(serverIP), Convert.ToInt32(9000));//服务器的地址
+            ServerInfo = new IPEndPoint(IPAddress.Parse(serverIP), Convert.ToInt32(9001));//服务器的地址
             try
             {
                 ClientSocket.Connect(ServerInfo);
@@ -95,7 +95,7 @@ namespace QQChat.UiForm
               try
               {
                   int REnd = ClientSocket.EndReceive(AR);
-                  this.GroupChat_Output.Text=Encoding.Unicode.GetString(MsgBuffer, 0, REnd);
+                  this.GroupChat_Output.Text+=(Encoding.Unicode.GetString(MsgBuffer, 0, REnd)+"\n");
                   ClientSocket.BeginReceive(MsgBuffer, 0, MsgBuffer.Length, 0, new AsyncCallback(ReceiveCallBack), null);
   
               }
@@ -134,5 +134,5 @@ namespace QQChat.UiForm
         }
     }
        
-    }
-}
+ }
+

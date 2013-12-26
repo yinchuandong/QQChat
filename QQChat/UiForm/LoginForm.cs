@@ -45,7 +45,8 @@ namespace QQChat.UiForm
                 updateUser.LastLoginTime = user.LastLoginTime;
                 updateUser.Status =1;
                 userBll.update(updateUser, user.UId);
-                new MainForm().Show();
+               Program.mWin=  new MainForm();
+               Program.mWin.Show();
                 this.Hide();
             }else{
                 MessageBox.Show("用户名或密码错误");

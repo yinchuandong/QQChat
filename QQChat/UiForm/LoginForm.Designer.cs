@@ -28,54 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.emailTxt = new System.Windows.Forms.TextBox();
-            this.passwordTxt = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
+            this.banner = new System.Windows.Forms.PictureBox();
             this.register = new System.Windows.Forms.Label();
             this.loginBtn = new System.Windows.Forms.Button();
-            this.banner = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.passwordTxt = new System.Windows.Forms.TextBox();
+            this.emailTxt = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.banner)).BeginInit();
             this.SuspendLayout();
             // 
-            // emailTxt
+            // banner
             // 
-            this.emailTxt.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.emailTxt.Location = new System.Drawing.Point(103, 140);
-            this.emailTxt.Name = "emailTxt";
-            this.emailTxt.Size = new System.Drawing.Size(171, 29);
-            this.emailTxt.TabIndex = 0;
-            this.emailTxt.Text = "yincd520@sina.com";
-            // 
-            // passwordTxt
-            // 
-            this.passwordTxt.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.passwordTxt.Location = new System.Drawing.Point(103, 178);
-            this.passwordTxt.Name = "passwordTxt";
-            this.passwordTxt.PasswordChar = '*';
-            this.passwordTxt.Size = new System.Drawing.Size(171, 29);
-            this.passwordTxt.TabIndex = 1;
-            this.passwordTxt.Text = "123456";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(42, 140);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 21);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "邮箱：";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(42, 174);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 21);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "密码：";
+            this.banner.Location = new System.Drawing.Point(70, 12);
+            this.banner.Name = "banner";
+            this.banner.Size = new System.Drawing.Size(247, 107);
+            this.banner.TabIndex = 6;
+            this.banner.TabStop = false;
             // 
             // register
             // 
@@ -101,18 +71,50 @@
             this.loginBtn.UseVisualStyleBackColor = true;
             this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
             // 
-            // banner
+            // label2
             // 
-            this.banner.Location = new System.Drawing.Point(70, 12);
-            this.banner.Name = "banner";
-            this.banner.Size = new System.Drawing.Size(247, 107);
-            this.banner.TabIndex = 6;
-            this.banner.TabStop = false;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label2.Location = new System.Drawing.Point(42, 174);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(58, 21);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "密码：";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Location = new System.Drawing.Point(42, 140);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 21);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "邮箱：";
+            // 
+            // passwordTxt
+            // 
+            this.passwordTxt.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.passwordTxt.Location = new System.Drawing.Point(103, 178);
+            this.passwordTxt.Name = "passwordTxt";
+            this.passwordTxt.PasswordChar = '*';
+            this.passwordTxt.Size = new System.Drawing.Size(171, 29);
+            this.passwordTxt.TabIndex = 1;
+            this.passwordTxt.Text = "123456";
+            // 
+            // emailTxt
+            // 
+            this.emailTxt.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.emailTxt.Location = new System.Drawing.Point(103, 140);
+            this.emailTxt.Name = "emailTxt";
+            this.emailTxt.Size = new System.Drawing.Size(171, 29);
+            this.emailTxt.TabIndex = 0;
+            this.emailTxt.Text = "670467728@qq.com";
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(396, 278);
             this.Controls.Add(this.banner);
             this.Controls.Add(this.register);
