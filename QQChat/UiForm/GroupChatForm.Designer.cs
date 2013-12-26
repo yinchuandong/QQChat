@@ -43,6 +43,7 @@
             this.GroupChat_Output.Size = new System.Drawing.Size(499, 215);
             this.GroupChat_Output.TabIndex = 0;
             this.GroupChat_Output.Text = "";
+            this.GroupChat_Output.TextChanged += new System.EventHandler(this.GroupChat_Output_TextChanged);
             // 
             // GroupChat_Input
             // 
