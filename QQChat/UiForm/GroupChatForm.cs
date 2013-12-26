@@ -50,11 +50,11 @@ namespace QQChat.UiForm
             user = session.User;
             chatRoomId = session.Chatroom.CId;
             chatRoomPort = session.Chatroom.ChatRoomPort;
-          
+
         }
         public GroupChatForm(ChatListSubItem guestItem)
         {
-            InitializeComponent();     
+            InitializeComponent();
             session = SessionBll.GetInstance();
             user = session.User;
             this.guestItem = guestItem;
@@ -67,7 +67,7 @@ namespace QQChat.UiForm
         {
             onlineip = chatroommemberbll.searchIp(chatRoomId);
             headPicBox.Image = guestItem.HeadImage;
-            nameTxt.Text = guestItem.DisplayName ;
+            nameTxt.Text = guestItem.DisplayName;
         }
 
         private void GroupChatForm_Load(object sender, EventArgs e)
@@ -77,11 +77,11 @@ namespace QQChat.UiForm
             MsgSend = new Byte[65535];
             CheckForIllegalCrossThreadCalls = false;//不捕获对错误线程的调用
             //链接服务器
-            ServerInfo = new IPEndPoint(IPAddress.Parse(serverIP), Convert.ToInt32(9001));//服务器的地址
+            ServerInfo = new IPEndPoint(IPAddress.Parse(serverIP), Convert.ToInt32(9000));//服务器的地址
             try
             {
                 ClientSocket.Connect(ServerInfo);
-               // ClientSocket.Send(Encoding.Unicode.GetBytes("用户：" + nicName + "进入系统！\n"));
+                // ClientSocket.Send(Encoding.Unicode.GetBytes("用户：" + nicName + "进入系统！\n"));
                 ClientSocket.BeginReceive(MsgBuffer, 0, MsgBuffer.Length, 0, new AsyncCallback(ReceiveCallBack), null);
             }
             catch
@@ -105,24 +105,6 @@ namespace QQChat.UiForm
                 this.Close();
             }
         }
-<<<<<<< HEAD
-         private void ReceiveCallBack(IAsyncResult AR)
-          {
-              try
-              {
-                  int REnd = ClientSocket.EndReceive(AR);
-                  this.GroupChat_Output.Text+=(Encoding.Unicode.GetString(MsgBuffer, 0, REnd)+"\n");
-                  ClientSocket.BeginReceive(MsgBuffer, 0, MsgBuffer.Length, 0, new AsyncCallback(ReceiveCallBack), null);
-  
-              }
-              catch
-             {
-                 this.GroupChat_Output.Text="已经与服务器断开连接！";
-                 this.Close();
-              }
-          }
-=======
->>>>>>> d72d5f6db7b0d2361f5b0540de2ff784405dc3d0
         //断开链接
         private void Discon_server_Click(object sender, EventArgs e)
         {
@@ -159,11 +141,7 @@ namespace QQChat.UiForm
             GroupChat_Output.ScrollToCaret();
         }
     }
-<<<<<<< HEAD
-       
- }
-=======
 
 }
->>>>>>> d72d5f6db7b0d2361f5b0540de2ff784405dc3d0
+
 
