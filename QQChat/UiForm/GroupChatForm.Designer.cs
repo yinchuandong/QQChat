@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GroupChatForm));
             this.GroupChat_Output = new Widget._RichTextBox.ExRichTextBox();
             this.GroupChat_Input = new Widget._RichTextBox.ExRichTextBox();
             this.headPicBox = new System.Windows.Forms.PictureBox();
@@ -65,6 +67,7 @@
             // nameTxt
             // 
             this.nameTxt.AutoSize = true;
+            this.nameTxt.BackColor = System.Drawing.Color.Transparent;
             this.nameTxt.Location = new System.Drawing.Point(93, 2);
             this.nameTxt.Name = "nameTxt";
             this.nameTxt.Size = new System.Drawing.Size(41, 12);
@@ -96,6 +99,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(498, 471);
             this.Controls.Add(this.faceBtn);
             this.Controls.Add(this.sendMsgbutton);

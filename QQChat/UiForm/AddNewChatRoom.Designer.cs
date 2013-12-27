@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddNewChatRoom));
             this.searchChatRoom = new System.Windows.Forms.TabControl();
             this.newPage = new System.Windows.Forms.TabPage();
             this.Sure_button = new System.Windows.Forms.Button();
@@ -62,6 +63,7 @@
             // newPage
             // 
             this.newPage.BackColor = System.Drawing.Color.Transparent;
+            this.newPage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("newPage.BackgroundImage")));
             this.newPage.Controls.Add(this.Sure_button);
             this.newPage.Controls.Add(this.LimitNum_comboBox);
             this.newPage.Controls.Add(this.ChatroomName_textBox);
@@ -110,7 +112,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(112, 145);
+            this.label2.Location = new System.Drawing.Point(98, 150);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 14);
             this.label2.TabIndex = 6;
@@ -120,7 +122,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(112, 87);
+            this.label1.Location = new System.Drawing.Point(112, 93);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 14);
             this.label1.TabIndex = 5;
@@ -129,6 +131,7 @@
             // searchPage
             // 
             this.searchPage.BackColor = System.Drawing.Color.Transparent;
+            this.searchPage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("searchPage.BackgroundImage")));
             this.searchPage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.searchPage.Controls.Add(this.chatRoomListView);
             this.searchPage.Controls.Add(this.nameTextBox);
