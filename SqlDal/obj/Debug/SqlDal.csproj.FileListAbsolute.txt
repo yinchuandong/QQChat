@@ -38,3 +38,12 @@ E:\android\android_workplace2\QQ\QQChat\SqlDal\bin\Debug\Util.pdb
 E:\android\android_workplace2\QQ\QQChat\SqlDal\obj\Debug\ResolveAssemblyReference.cache
 E:\android\android_workplace2\QQ\QQChat\SqlDal\obj\Debug\SqlDal.dll
 E:\android\android_workplace2\QQ\QQChat\SqlDal\obj\Debug\SqlDal.pdb
+E:\android\android_workplace2\QQChat\SqlDal\bin\Debug\SqlDal.dll
+E:\android\android_workplace2\QQChat\SqlDal\bin\Debug\SqlDal.pdb
+E:\android\android_workplace2\QQChat\SqlDal\bin\Debug\Model.dll
+E:\android\android_workplace2\QQChat\SqlDal\bin\Debug\Util.dll
+E:\android\android_workplace2\QQChat\SqlDal\bin\Debug\Model.pdb
+E:\android\android_workplace2\QQChat\SqlDal\bin\Debug\Util.pdb
+E:\android\android_workplace2\QQChat\SqlDal\obj\Debug\ResolveAssemblyReference.cache
+E:\android\android_workplace2\QQChat\SqlDal\obj\Debug\SqlDal.dll
+E:\android\android_workplace2\QQChat\SqlDal\obj\Debug\SqlDal.pdb

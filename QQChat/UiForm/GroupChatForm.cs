@@ -31,7 +31,7 @@ namespace QQChat.UiForm
         private ChatListSubItem guestItem;
         private int chatRoomId;
         private int chatRoomPort;
-
+        private ImagePopup faceForm = null;
         private User user;
         private IPEndPoint ServerInfo;//存储服务器ip和端口信息
         private Socket ClientSocket;//客户端的Socket
@@ -42,6 +42,31 @@ namespace QQChat.UiForm
 
         ChatRoomMemberBll chatroommemberbll = new ChatRoomMemberBll();
         private ArrayList onlineip;
+
+        //表情框
+        public ImagePopup FaceForm
+        {
+
+            get
+            {
+                if (this.faceForm == null)
+                {
+                    this.faceForm = new ImagePopup
+                    {
+                        ImagePath = "Face\\",
+                        CustomImagePath = "Face\\Custom\\",
+                        CanManage = true,
+                        ShowDemo = true,
+                    };
+
+                    this.faceForm.Init(24, 24, 8, 8, 12, 8);
+                    this.faceForm.Selected += this.faceForm_AddFace;
+
+                }
+
+                return this.faceForm;
+            }
+        }
 
         public GroupChatForm()
         {
@@ -77,11 +102,10 @@ namespace QQChat.UiForm
             MsgSend = new Byte[65535];
             CheckForIllegalCrossThreadCalls = false;//不捕获对错误线程的调用
             //链接服务器
-            ServerInfo = new IPEndPoint(IPAddress.Parse(serverIP), Convert.ToInt32(9000));//服务器的地址
+            ServerInfo = new IPEndPoint(IPAddress.Parse(serverIP), Convert.ToInt32(chatRoomPort));//服务器的地址
             try
             {
                 ClientSocket.Connect(ServerInfo);
-                // ClientSocket.Send(Encoding.Unicode.GetBytes("用户：" + nicName + "进入系统！\n"));
                 ClientSocket.BeginReceive(MsgBuffer, 0, MsgBuffer.Length, 0, new AsyncCallback(ReceiveCallBack), null);
             }
             catch
@@ -111,7 +135,6 @@ namespace QQChat.UiForm
 
             if (ClientSocket.Connected)
             {
-                //ClientSocket.Send(Encoding.Unicode.GetBytes(this.GroupChat_Output.Text + "离开了房间！\n"));
                 ClientSocket.Shutdown(SocketShutdown.Both);
                 ClientSocket.Disconnect(false);
                 ClientSocket.Close();
@@ -120,7 +143,7 @@ namespace QQChat.UiForm
         }
         private void sendMsgbutton_Click(object sender, EventArgs e)
         {
-            string msg = DateTime.Now.ToString() + "#" + user.Username + "#" + "   说：\n" + GroupChat_Input.Text + "\n";
+            string msg= user.Username + " [" + DateTime.Now.ToString() + "] \r\n" + GroupChat_Input.Text + "\r\n";
             MsgSend = Encoding.Unicode.GetBytes(msg);
             if (ClientSocket.Connected)
             {
@@ -139,6 +162,19 @@ namespace QQChat.UiForm
         {
             GroupChat_Output.SelectionStart = GroupChat_Output.TextLength;
             GroupChat_Output.ScrollToCaret();
+        }
+
+        //表情框选择了表情之后的事件
+        void faceForm_AddFace(object sender, SelectFaceArgs e)
+        {
+            this.GroupChat_Input.InsertImage(e.Img.Image);
+        }
+
+        //显示表情button按钮
+        private void faceBtn_Click(object sender, EventArgs e)
+        {
+            Point pt = this.PointToScreen(new Point(((Button)sender).Left, ((Button)sender).Height + 5));
+            this.FaceForm.Show(pt.X, pt.Y, ((Button)sender).Height);
         }
     }
 

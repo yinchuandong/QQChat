@@ -193,6 +193,21 @@ namespace SqlDal
             else
                 return false;
         }
+
+        //设置statue
+        public bool updateOutStatue(int uId)
+         {
+             List<SqlParameter> parameters = new List<SqlParameter>();
+             String sqlStr = "update [user] set status =0 where u_id=@uId;";
+             parameters.Add(new SqlParameter("@uId", SqlDbType.Int));
+             parameters[0].Value = uId;
+             int row = SqlDbHelper.ExecuteNoQuery(sqlStr, CommandType.Text, parameters);
+             if (row == 1)
+                 return true;
+             else
+                 return false;
+         }
+        
     }
 
    

@@ -44,6 +44,7 @@
     <Compile Include="FriendBll.cs" />
     <Compile Include="GroupBll.cs" />
     <Compile Include="GroupMemberBll.cs" />
+    <Compile Include="P2pMessageBll.cs" />
     <Compile Include="SessionBll.cs" />
     <Compile Include="UserBll.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

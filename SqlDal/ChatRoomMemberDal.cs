@@ -51,7 +51,7 @@ namespace SqlDal
       public bool setPort() 
       {
           int c_id=getLasteID();
-          int port =c_id+10000;
+          int port =c_id+9000;
           string sqlStr = "update [chatroom] set chatroom_port =" + port + " where c_id =" + c_id;
           int row = SqlDbHelper.ExecuteNoQuery(sqlStr, CommandType.Text, null);
           if (row >= 1)
@@ -77,6 +77,24 @@ namespace SqlDal
                
           return id;
       
+      }
+      //查询最新插入的chatRoom的端口
+      public int getLastePort()
+      {
+          string sqlStr = "select top 1 [chatroom_port] as port  from [chatRoom] order by time Desc";
+          int port = 0;
+          SqlDataReader reader = SqlDbHelper.ExecuteReader(sqlStr, CommandType.Text, null);
+          if (reader.HasRows)
+          {
+
+              while (reader.Read())
+              {
+                  port = Convert.ToInt32(reader["port"].ToString());
+              }
+          }
+
+          return port;
+
       }
        //增加群组成员
       public int addChatRoomMember(Model.Chatroom chatroom)

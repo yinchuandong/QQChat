@@ -100,7 +100,7 @@ namespace QQChat.UiForm
             ChatListSubItem subItem = new ChatListSubItem();
             subItem.DisplayName = chatroomdetail.Name;
             subItem.ID = chatroomdetail.CId;
-            subItem.ChatRoomPort = chatroomdetail.ChatRoomPort;
+            subItem.ChatRoomPort = chatRoomMemberBll.getLastePort();//获取当前创建的新群
             subItem.HeadImage = Image.FromFile("Head/1 (" + rnd.Next(0, 45) + ").png");
             Program.mWin.groupListForm.listItem.SubItems.Add(subItem); 
 

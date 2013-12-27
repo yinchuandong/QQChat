@@ -26,6 +26,7 @@ namespace QQChat.UiForm
     {
         private User user;
         private SessionBll session;
+        private UserBll userBll = new UserBll();
         public MainForm()
         {
             session = SessionBll.GetInstance();
@@ -76,6 +77,8 @@ namespace QQChat.UiForm
                 DialogResult result = MessageBox.Show("确定退出吗？", "提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                 if (result == DialogResult.OK)
                 {
+                    //修改退出状态为0
+                    userBll.updateOutStatue(user.UId);
                     Application.Exit();
                 }
                 else
