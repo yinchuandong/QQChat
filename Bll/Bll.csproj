@@ -50,13 +50,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DALFactory\DALFactory.csproj">
+      <Project>{423F819D-5CAE-425E-91B5-9E17F57AD91B}</Project>
+      <Name>DALFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IDal\IDal.csproj">
+      <Project>{35861004-9D19-48B4-AC62-247D8676C0D5}</Project>
+      <Name>IDal</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Model\Model.csproj">
       <Project>{3681DE5C-2973-40F9-890E-62BE9195B280}</Project>
       <Name>Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SqlDal\SqlDal.csproj">
-      <Project>{52A923AE-116C-4C92-B465-313EB52C1212}</Project>
-      <Name>SqlDal</Name>
     </ProjectReference>
     <ProjectReference Include="..\Util\Util.csproj">
       <Project>{6AF2077F-86FE-49AF-B5BC-5605877C4617}</Project>
