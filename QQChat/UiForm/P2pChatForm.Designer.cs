@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(P2pChatForm));
             this.messageRichBox = new Widget._RichTextBox.ExRichTextBox();
             this.toolPanel = new System.Windows.Forms.Panel();
             this.faceBtn = new System.Windows.Forms.Button();
@@ -100,6 +101,7 @@
             // nameTxt
             // 
             this.nameTxt.AutoSize = true;
+            this.nameTxt.BackColor = System.Drawing.Color.Transparent;
             this.nameTxt.Font = new System.Drawing.Font("微软雅黑", 14F);
             this.nameTxt.Location = new System.Drawing.Point(75, 6);
             this.nameTxt.Name = "nameTxt";
@@ -110,6 +112,7 @@
             // signTxt
             // 
             this.signTxt.AutoSize = true;
+            this.signTxt.BackColor = System.Drawing.Color.Transparent;
             this.signTxt.Location = new System.Drawing.Point(83, 38);
             this.signTxt.Name = "signTxt";
             this.signTxt.Size = new System.Drawing.Size(89, 12);
@@ -120,6 +123,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(498, 449);
             this.Controls.Add(this.signTxt);
             this.Controls.Add(this.nameTxt);
