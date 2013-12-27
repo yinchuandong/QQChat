@@ -21,3 +21,8 @@ E:\android\android_workplace2\QQ\QQChat\Util\bin\Debug\Util.pdb
 E:\android\android_workplace2\QQ\QQChat\Util\obj\Debug\ResolveAssemblyReference.cache
 E:\android\android_workplace2\QQ\QQChat\Util\obj\Debug\Util.dll
 E:\android\android_workplace2\QQ\QQChat\Util\obj\Debug\Util.pdb
+E:\android\android_workplace2\QQChat\Util\bin\Debug\Util.dll
+E:\android\android_workplace2\QQChat\Util\bin\Debug\Util.pdb
+E:\android\android_workplace2\QQChat\Util\obj\Debug\ResolveAssemblyReference.cache
+E:\android\android_workplace2\QQChat\Util\obj\Debug\Util.dll
+E:\android\android_workplace2\QQChat\Util\obj\Debug\Util.pdb

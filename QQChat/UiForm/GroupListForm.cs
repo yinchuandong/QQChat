@@ -53,7 +53,9 @@ namespace QQChat.UiForm
                 subItem.DisplayName = chatroomdetail.Name;
                 subItem.ID = chatroomdetail.CId;
                 subItem.ChatRoomPort = chatroomdetail.ChatRoomPort;
-                subItem.HeadImage = Image.FromFile("Head/1 (" + rnd.Next(0, 45) + ").png");               
+                Size size = new Size(84, 79);
+                Bitmap image = new Bitmap(Image.FromFile("Head/1 (" + rnd.Next(0, 45) + ").png"), size);
+                subItem.HeadImage = image;            
                 listItem.SubItems.Add(subItem);             
             }
             groupListBox.Items.Add(listItem);
@@ -66,6 +68,11 @@ namespace QQChat.UiForm
         private void newGroup_button_Click(object sender, EventArgs e)
         {
             new AddNewChatRoom().Show();
+        }
+
+        private void groupListBox_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

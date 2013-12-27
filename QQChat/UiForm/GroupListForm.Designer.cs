@@ -54,6 +54,7 @@ namespace QQChat.UiForm
             this.groupListBox.TabIndex = 2;
             this.groupListBox.Text = "groupListBox";
             this.groupListBox.DoubleClickSubItem += new Widget.ChatListBox.ChatListEventHandler(this.GroupListBox_DoubleClickSubItem);
+            this.groupListBox.Click += new System.EventHandler(this.groupListBox_Click);
             // 
             // GroupListForm
             // 
