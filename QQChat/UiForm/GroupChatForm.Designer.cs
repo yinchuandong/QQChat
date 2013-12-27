@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GroupChatForm));
-            this.GroupChat_Output = new System.Windows.Forms.RichTextBox();
-            this.GroupChat_Input = new System.Windows.Forms.RichTextBox();
+            this.GroupChat_Output = new Widget._RichTextBox.ExRichTextBox();
+            this.GroupChat_Input = new Widget._RichTextBox.ExRichTextBox();
             this.headPicBox = new System.Windows.Forms.PictureBox();
             this.nameTxt = new System.Windows.Forms.Label();
             this.sendMsgbutton = new System.Windows.Forms.Button();
+            this.faceBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.headPicBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,12 +85,23 @@
             this.sendMsgbutton.UseVisualStyleBackColor = false;
             this.sendMsgbutton.Click += new System.EventHandler(this.sendMsgbutton_Click);
             // 
+            // faceBtn
+            // 
+            this.faceBtn.Location = new System.Drawing.Point(3, 296);
+            this.faceBtn.Name = "faceBtn";
+            this.faceBtn.Size = new System.Drawing.Size(55, 29);
+            this.faceBtn.TabIndex = 5;
+            this.faceBtn.Text = "表情";
+            this.faceBtn.UseVisualStyleBackColor = true;
+            this.faceBtn.Click += new System.EventHandler(this.faceBtn_Click);
+            // 
             // GroupChatForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(498, 471);
+            this.Controls.Add(this.faceBtn);
             this.Controls.Add(this.sendMsgbutton);
             this.Controls.Add(this.nameTxt);
             this.Controls.Add(this.headPicBox);
@@ -105,10 +118,11 @@
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox GroupChat_Output;
-        private System.Windows.Forms.RichTextBox GroupChat_Input;
+        private Widget._RichTextBox.ExRichTextBox GroupChat_Input;
         private System.Windows.Forms.PictureBox headPicBox;
         private System.Windows.Forms.Label nameTxt;
         private System.Windows.Forms.Button sendMsgbutton;
+        private System.Windows.Forms.Button faceBtn;
+        private Widget._RichTextBox.ExRichTextBox GroupChat_Output;
     }
 }

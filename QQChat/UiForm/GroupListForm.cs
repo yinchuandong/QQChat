@@ -53,7 +53,7 @@ namespace QQChat.UiForm
                 subItem.DisplayName = chatroomdetail.Name;
                 subItem.ID = chatroomdetail.CId;
                 subItem.ChatRoomPort = chatroomdetail.ChatRoomPort;
-                subItem.HeadImage = Image.FromFile("Head/1 (" + rnd.Next(0, 45) + ").png");
+                subItem.HeadImage = Image.FromFile("Head/1 (" + rnd.Next(0, 45) + ").png");               
                 listItem.SubItems.Add(subItem);             
             }
             groupListBox.Items.Add(listItem);

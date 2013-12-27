@@ -51,3 +51,16 @@ C:\Users\Yuanyun\Documents\GitHub\QQChat\Widget\obj\Debug\Widget.ChatListBox.res
 C:\Users\Yuanyun\Documents\GitHub\QQChat\Widget\obj\Debug\Widget.csproj.GenerateResource.Cache
 C:\Users\Yuanyun\Documents\GitHub\QQChat\Widget\obj\Debug\Widget.dll
 C:\Users\Yuanyun\Documents\GitHub\QQChat\Widget\obj\Debug\Widget.pdb
+E:\android\android_workplace2\QQChat\Widget\bin\Debug\Widget.dll
+E:\android\android_workplace2\QQChat\Widget\bin\Debug\Widget.pdb
+E:\android\android_workplace2\QQChat\Widget\obj\Debug\ResolveAssemblyReference.cache
+E:\android\android_workplace2\QQChat\Widget\obj\Debug\Widget.Properties.Resources.resources
+E:\android\android_workplace2\QQChat\Widget\obj\Debug\Widget.ChatListBox.resources
+E:\android\android_workplace2\QQChat\Widget\obj\Debug\GenerateResource-ResGen.read.1.tlog
+E:\android\android_workplace2\QQChat\Widget\obj\Debug\GenerateResource-ResGen.read.7.tlog
+E:\android\android_workplace2\QQChat\Widget\obj\Debug\GenerateResource-ResGen.read.9.tlog
+E:\android\android_workplace2\QQChat\Widget\obj\Debug\GenerateResource-ResGen.write.1.tlog
+E:\android\android_workplace2\QQChat\Widget\obj\Debug\GenerateResource-ResGen.write.7.tlog
+E:\android\android_workplace2\QQChat\Widget\obj\Debug\GenerateResource-ResGen.write.9.tlog
+E:\android\android_workplace2\QQChat\Widget\obj\Debug\Widget.dll
+E:\android\android_workplace2\QQChat\Widget\obj\Debug\Widget.pdb

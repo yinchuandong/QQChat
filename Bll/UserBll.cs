@@ -83,7 +83,18 @@ namespace Bll
             bool r = Regex.IsMatch(password, "^([a-zA-Z0-9]|[_]){6,16}$");
             return r;
         }
-
+         //设置statue
+        public bool updateOutStatue(int uId)
+        {
+            if (userDal.updateOutStatue(uId))
+            {
+                return true;
+            }
+            else 
+            {
+                return false;
+            }
+        }
         
     }
 }

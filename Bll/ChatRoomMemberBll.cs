@@ -122,6 +122,12 @@ namespace Bll
                 return noIp;
             }
         }
+        //获取最新插入的群的端口
+        public int getLastePort() 
+        {
+            int chatroomPort = chatRoomMemberDal.getLastePort();
+            return chatroomPort;
+        }
 
     } 
 }

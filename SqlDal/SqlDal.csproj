@@ -45,6 +45,7 @@
     <Compile Include="FriendDal.cs" />
     <Compile Include="GroupDal.cs" />
     <Compile Include="GroupMemberDal.cs" />
+    <Compile Include="P2pMessageDal.cs" />
     <Compile Include="SqlDbHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserDal.cs" />

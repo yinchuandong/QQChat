@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddNewChatRoom));
             this.searchChatRoom = new System.Windows.Forms.TabControl();
             this.newPage = new System.Windows.Forms.TabPage();
             this.Sure_button = new System.Windows.Forms.Button();
@@ -62,6 +63,7 @@
             // newPage
             // 
             this.newPage.BackColor = System.Drawing.Color.Transparent;
+            this.newPage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("newPage.BackgroundImage")));
             this.newPage.Controls.Add(this.Sure_button);
             this.newPage.Controls.Add(this.LimitNum_comboBox);
             this.newPage.Controls.Add(this.ChatroomName_textBox);
@@ -129,6 +131,7 @@
             // searchPage
             // 
             this.searchPage.BackColor = System.Drawing.Color.Transparent;
+            this.searchPage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("searchPage.BackgroundImage")));
             this.searchPage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.searchPage.Controls.Add(this.chatRoomListView);
             this.searchPage.Controls.Add(this.nameTextBox);

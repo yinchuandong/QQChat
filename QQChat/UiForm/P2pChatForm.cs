@@ -35,6 +35,8 @@ namespace QQChat.UiForm
         private ChatListSubItem guestItem; //当前对话方的实体
         private User guestModel; //当前对话用户的数据库信息
         private ImagePopup faceForm = null;
+
+        private P2pMessageBll MessageBll = new P2pMessageBll();//P2p消息处理
         //表情框
         public ImagePopup FaceForm
         {
@@ -150,10 +152,23 @@ namespace QQChat.UiForm
             P2pMessage message = new P2pMessage();
             message.HostId = hostId;
             message.GuestId = guestItem.ID;
-            message.GuestName = guestItem.DisplayName;
+            message.GuestName = session.User.Username;
             message.Contents = msg;
             message.Time = DateTime.Now;
-            this.send(message);
+            message.Face = "";
+            message.image = "";
+            //判断对方是否在线，不在就存到数据库中
+            if (guestModel.Status == 1)
+            {
+                this.send(message);
+            }
+            else 
+            {
+                MessageBll.addP2pMessage(message);//保存数据库
+            
+            }
+                
+            
             this.appendText(message);
         }
 
