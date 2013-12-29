@@ -1,1 +1,2 @@
 C:\Users\Yuanyun\Documents\GitHub\QQChat\IDal\obj\x86\Debug\IDal.csprojResolveAssemblyReference.cache
+E:\android\android_workplace2\QQChat\IDal\obj\x86\Debug\ResolveAssemblyReference.cache
